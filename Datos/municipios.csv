@@ -1,0 +1,894 @@
+municipio_id,provincia_id,id_departamento,municipio,provincia,departamento
+CBA384,AR-X,1401,Villa Candelaria Norte,Cordoba,Rio Seco
+SFE042,AR-S,1693,Campo Piaggio,Santa Fe,San Jeronimo
+CBA071,AR-X,1382,Chucul,Cordoba,Rio Cuarto
+TUC100,AR-T,1648,Tafi del Valle,Tucuman,Tafi del Valle
+SCR016,AR-T,1648,Tafi del Valle,Tucuman,Tafi del Valle
+COR019,AR-T,1648,Tafi del Valle,Tucuman,Tafi del Valle
+CBA380,AR-Z,1607,Jaramillo,Santa Cruz,Deseado
+MZA003,AR-Z,1607,Jaramillo,Santa Cruz,Deseado
+SFE182,AR-W,1425,Garruchos,Corrientes,Santo Tome
+BUE043,AR-X,1382,Vicuna Mackenna,Cordoba,Rio Cuarto
+CBA277,AR-M,1517,Guaymallen,Mendoza,Guaymallen
+BUE089,AR-M,1517,Guaymallen,Mendoza,Guaymallen
+ERI037,AR-S,1685,Las Avispas,Santa Fe,San Cristobal
+MIS028,AR-B,1237,General Alvear,Buenos Aires,General Alvear
+CHU008,AR-X,1388,Pampayasta Sud,Cordoba,Tercero Arriba
+CHA024,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+LAP075,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+RNO028,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+LAP029,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+SJU017,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+MIS069,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+CHA059,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+BUE007,AR-B,1284,Nueve de Julio,Buenos Aires,Nueve de Julio
+CBA171,AR-E,1435,Nogoya,Entre Rios,Nogoya
+SFE033,AR-E,1435,Nogoya,Entre Rios,Nogoya
+TUC082,AR-E,1435,Nogoya,Entre Rios,Nogoya
+BUE056,AR-E,1435,Nogoya,Entre Rios,Nogoya
+CBA415,AR-N,1536,Dos de Mayo,Misiones,Cainguas
+CBA100,AR-U,1368,Colan Conhue,Chubut,Languineo
+ERI160,AR-H,1359,General Pinedo,Chaco,Doce de Octubre
+MIS052,AR-H,1359,General Pinedo,Chaco,Doce de Octubre
+CHU028,AR-L,1494,Veinticinco de Mayo,La Pampa,Puelen
+JUJ001,AR-L,1494,Veinticinco de Mayo,La Pampa,Puelen
+MZA010,AR-L,1494,Veinticinco de Mayo,La Pampa,Puelen
+MIS002,AR-R,1576,Norquinco,Rio Negro,Norquinco
+SAL014,AR-L,1477,General Pico,La Pampa,Maraco
+LRJ017,AR-J,1595,Valle Fertil,San Juan,Valle Fertil
+BUE031,AR-J,1595,Valle Fertil,San Juan,Valle Fertil
+CAT003,AR-N,1546,San Vicente,Misiones,Guarani
+TUC013,AR-N,1546,San Vicente,Misiones,Guarani
+SAL052,AR-H,1721,Quitilipi,Chaco,Quitilipi
+CHU043,AR-H,1721,Quitilipi,Chaco,Quitilipi
+BUE064,AR-H,1721,Quitilipi,Chaco,Quitilipi
+CBA307,AR-B,1202,Azul,Buenos Aires,Azul
+BUE101,AR-B,1202,Azul,Buenos Aires,Azul
+BUE014,AR-X,1396,La Falda,Cordoba,Punilla
+ERI005,AR-X,1396,La Falda,Cordoba,Punilla
+CBA218,AR-X,1396,La Falda,Cordoba,Punilla
+SJU015,AR-S,1691,Bigand,Santa Fe,Caseros
+ERI022,AR-S,1691,Bigand,Santa Fe,Caseros
+BUE066,AR-S,1691,Bigand,Santa Fe,Caseros
+CHA043,AR-T,1654,San Felipe y Santa Barbara,Tucuman,Lules
+TDF003,AR-B,1250,General Viamonte,Buenos Aires,General Viamonte
+JUJ030,AR-B,1250,General Viamonte,Buenos Aires,General Viamonte
+MZA013,AR-B,1250,General Viamonte,Buenos Aires,General Viamonte
+JUJ020,AR-B,1250,General Viamonte,Buenos Aires,General Viamonte
+RNO037,AR-B,1250,General Viamonte,Buenos Aires,General Viamonte
+SAL057,AR-B,1250,General Viamonte,Buenos Aires,General Viamonte
+MIS059,AR-X,1391,Villa Quillinzo,Cordoba,Calamuchita
+ERI056,AR-X,1406,Cordoba,Cordoba,Capital
+SFE271,AR-X,1406,Cordoba,Cordoba,Capital
+NEU043,AR-X,1406,Cordoba,Cordoba,Capital
+SAL006,AR-X,1406,Cordoba,Cordoba,Capital
+CAB000,AR-E,1433,Pueblo General Belgrano,Entre Rios,Gualeguaychu
+SFE362,AR-E,1433,Pueblo General Belgrano,Entre Rios,Gualeguaychu
+CBA107,AR-N,1541,Montecarlo,Misiones,Montecarlo
+TUC009,AR-N,1541,Montecarlo,Misiones,Montecarlo
+COR012,AR-U,1376,Lagunita Salada,Chubut,Gastre
+BUE131,AR-Y,1459,Abdon Castro Tolay,Jujuy,Cochinoca
+SFE054,AR-M,1524,Malargue,Mendoza,Malargue
+ERI068,AR-M,1524,Malargue,Mendoza,Malargue
+BUE069,AR-N,1534,Almafuerte,Misiones,Leandro N. Alem
+SGO057,AR-A,1667,El Carril,Salta,Chicoana
+RNO035,AR-F,1513,Sanagasta,La Rioja,Sanagasta
+NEU025,AR-B,1225,Coronel Pringles,Buenos Aires,Coronel Pringles
+BUE067,AR-B,1225,Coronel Pringles,Buenos Aires,Coronel Pringles
+SFE242,AR-B,1225,Coronel Pringles,Buenos Aires,Coronel Pringles
+CAT004,AR-B,1225,Coronel Pringles,Buenos Aires,Coronel Pringles
+RNO017,AR-B,1225,Coronel Pringles,Buenos Aires,Coronel Pringles
+SGO105,AR-B,1225,Coronel Pringles,Buenos Aires,Coronel Pringles
+BUE016,AR-K,1330,Andalgala,Catamarca,Andalgala
+COR062,AR-K,1330,Andalgala,Catamarca,Andalgala
+BUE088,AR-T,1644,Bella Vista,Tucuman,Leales
+SFE188,AR-A,1680,Santa Victoria Este,Salta,Rivadavia
+NEU020,AR-U,1371,Trevelin,Chubut,Futaleufu
+JUJ029,AR-B,1258,La Costa,Buenos Aires,La Costa
+SGO108,AR-B,1258,La Costa,Buenos Aires,La Costa
+RNO064,AR-B,1258,La Costa,Buenos Aires,La Costa
+CHA002,AR-B,1258,La Costa,Buenos Aires,La Costa
+SFE301,AR-B,1258,La Costa,Buenos Aires,La Costa
+CAT032,AR-B,1258,La Costa,Buenos Aires,La Costa
+BUE133,AR-X,1398,Rio Segundo,Cordoba,Rio Segundo
+JUJ047,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+SLU005,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+LAP060,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+JUJ038,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+SJU008,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+CHA007,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+JUJ051,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+CBA106,AR-B,1296,Quilmes,Buenos Aires,Quilmes
+TUC107,AR-B,1208,Berisso,Buenos Aires,Berisso
+SCR019,AR-B,1208,Berisso,Buenos Aires,Berisso
+COR033,AR-E,1436,Basavilbaso,Entre Rios,Uruguay
+BUE063,AR-E,1436,Basavilbaso,Entre Rios,Uruguay
+SFE224,AR-E,1436,Basavilbaso,Entre Rios,Uruguay
+BUE046,AR-E,1436,Basavilbaso,Entre Rios,Uruguay
+BUE125,AR-X,1386,Leones,Cordoba,Marcos Juarez
+BUE093,AR-X,1386,Leones,Cordoba,Marcos Juarez
+MIS032,AR-J,1593,Sarmiento,San Juan,Sarmiento
+CHU021,AR-E,1434,General Ramirez,Entre Rios,Diamante
+LRJ006,AR-B,1260,La Plata,Buenos Aires,La Plata
+LAP067,AR-B,1260,La Plata,Buenos Aires,La Plata
+BUE102,AR-B,1260,La Plata,Buenos Aires,La Plata
+SLU057,AR-B,1260,La Plata,Buenos Aires,La Plata
+NEU007,AR-B,1260,La Plata,Buenos Aires,La Plata
+SAL034,AR-B,1260,La Plata,Buenos Aires,La Plata
+CHU010,AR-B,1260,La Plata,Buenos Aires,La Plata
+SFE049,AR-H,1364,Machagai,Chaco,Veinticinco de Mayo
+COR069,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+BUE113,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+TUC109,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+CHA017,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+JUJ002,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+MIS068,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+JUJ011,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+LAP065,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+SAL046,AR-V,1642,Ushuaia,Tierra del Fuego,Ushuaia
+MIS016,AR-Y,1470,Mina Pirquitas,Jujuy,Rinconada
+CAT016,AR-Y,1470,Mina Pirquitas,Jujuy,Rinconada
+TUC034,AR-M,1527,San Carlos,Mendoza,San Carlos
+SAL059,AR-M,1527,San Carlos,Mendoza,San Carlos
+COR007,AR-M,1527,San Carlos,Mendoza,San Carlos
+SFE126,AR-M,1527,San Carlos,Mendoza,San Carlos
+BUE032,AR-M,1527,San Carlos,Mendoza,San Carlos
+CBA222,AR-M,1527,San Carlos,Mendoza,San Carlos
+ERI032,AR-M,1527,San Carlos,Mendoza,San Carlos
+BUE073,AR-Y,1468,El Talar,Jujuy,Santa Barbara
+CHA068,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+SLU019,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+SCR010,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+ERI035,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+MZA018,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+SFE360,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+NEU057,AR-R,1573,Viedma,Rio Negro,Adolfo Alsina
+SAL015,AR-A,1675,Vaqueros,Salta,La Caldera
+SGO066,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+CBA157,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+COR027,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+SFE108,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+FOR031,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+RNO043,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+SFE257,AR-N,1544,Puerto Iguazu,Misiones,Iguazu
+CAT018,AR-E,1439,Viale,Entre Rios,Parana
+BUE045,AR-E,1439,Viale,Entre Rios,Parana
+SJU014,AR-S,1700,San Agustin,Santa Fe,Las Colonias
+CHU031,AR-Q,1552,Villa del Nahueve,Neuquen,Minas
+COR068,AR-A,1664,Cafayate,Salta,Cafayate
+SFE203,AR-A,1664,Cafayate,Salta,Cafayate
+NEU026,AR-A,1664,Cafayate,Salta,Cafayate
+BUE111,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+SJU003,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+RNO069,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+NEU031,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+SFE335,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+CBA052,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+CBA357,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+SFE175,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+BUE036,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+CBA233,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+BUE076,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+MIS013,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+CHU004,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+MZA016,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+JUJ042,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+BUE126,AR-C,,Ciudad Autonoma de Buenos Aires,Ciudad Autonoma de Buenos Aires,
+SJU016,AR-S,1690,Colonia Dolores,Santa Fe,San Justo
+MIS063,AR-X,1386,Cruz Alta,Cordoba,Marcos Juarez
+TUC112,AR-X,1386,Cruz Alta,Cordoba,Marcos Juarez
+COR048,AR-X,1386,Cruz Alta,Cordoba,Marcos Juarez
+BUE083,AR-T,1649,Anca Juli,Tucuman,Tafi Viejo
+SFE227,AR-T,1649,Anca Juli,Tucuman,Tafi Viejo
+TUC036,AR-W,1419,Corrientes,Corrientes,Capital
+CBA404,AR-W,1419,Corrientes,Corrientes,Capital
+ERI064,AR-W,1419,Corrientes,Corrientes,Capital
+MIS047,AR-W,1419,Corrientes,Corrientes,Capital
+CHU022,AR-W,1419,Corrientes,Corrientes,Capital
+MIS057,AR-W,1419,Corrientes,Corrientes,Capital
+LRJ013,AR-W,1419,Corrientes,Corrientes,Capital
+LRJ012,AR-W,1419,Corrientes,Corrientes,Capital
+BUE130,AR-W,1419,Corrientes,Corrientes,Capital
+TUC012,AR-W,1419,Corrientes,Corrientes,Capital
+SAL044,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+CHU025,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+CBA296,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+SFE094,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+BUE010,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+CBA207,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+BUE099,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+BUE072,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+CHA028,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+JUJ024,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+JUJ013,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+CBA381,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+COR026,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+CBA014,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+TUC055,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+SCR014,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+COR011,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+BUE068,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+SAL005,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+SFE348,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+BUE118,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+TUC007,AR-B,1326,Vicente Lopez,Buenos Aires,Vicente Lopez
+ERI058,AR-S,1684,Carmen del Sauce,Santa Fe,Rosario
+SGO035,AR-E,1436,Pronunciamiento,Entre Rios,Uruguay
+RNO032,AR-B,1263,Las Flores,Buenos Aires,Las Flores
+SAL031,AR-B,1263,Las Flores,Buenos Aires,Las Flores
+TUC004,AR-B,1263,Las Flores,Buenos Aires,Las Flores
+SGO081,AR-G,1631,Nueva Esperanza,Santiago del Estero,Pellegrini
+CBA158,AR-R,1578,Sierra Grande,Rio Negro,San Antonio
+COR049,AR-R,1578,Sierra Grande,Rio Negro,San Antonio
+SFE143,AR-Q,1556,Neuquen,Neuquen,Confluencia
+NEU015,AR-Q,1556,Neuquen,Neuquen,Confluencia
+LRJ014,AR-Q,1556,Neuquen,Neuquen,Confluencia
+RNO057,AR-Q,1556,Neuquen,Neuquen,Confluencia
+SFE290,AR-Q,1556,Neuquen,Neuquen,Confluencia
+SLU003,AR-Q,1556,Neuquen,Neuquen,Confluencia
+CHU047,AR-Q,1556,Neuquen,Neuquen,Confluencia
+ERI020,AR-Q,1556,Neuquen,Neuquen,Confluencia
+MZA017,AR-Q,1556,Neuquen,Neuquen,Confluencia
+SFE245,AR-Q,1556,Neuquen,Neuquen,Confluencia
+NEU032,AR-Q,1556,Neuquen,Neuquen,Confluencia
+SCR006,AR-Q,1556,Neuquen,Neuquen,Confluencia
+SJU007,AR-Q,1556,Neuquen,Neuquen,Confluencia
+CBA397,AR-Q,1556,Neuquen,Neuquen,Confluencia
+SGO900,AR-B,1261,Lanus,Buenos Aires,Lanus
+CBA091,AR-B,1261,Lanus,Buenos Aires,Lanus
+SCR018,AR-B,1261,Lanus,Buenos Aires,Lanus
+COR025,AR-B,1261,Lanus,Buenos Aires,Lanus
+SFE199,AR-B,1261,Lanus,Buenos Aires,Lanus
+BUE044,AR-B,1261,Lanus,Buenos Aires,Lanus
+CBA301,AR-B,1261,Lanus,Buenos Aires,Lanus
+COR002,AR-B,1261,Lanus,Buenos Aires,Lanus
+BUE090,AR-B,1261,Lanus,Buenos Aires,Lanus
+MIS030,AR-B,1261,Lanus,Buenos Aires,Lanus
+CHU011,AR-B,1261,Lanus,Buenos Aires,Lanus
+LAP034,AR-B,1261,Lanus,Buenos Aires,Lanus
+BUE001,AR-B,1261,Lanus,Buenos Aires,Lanus
+SJU019,AR-S,1701,Pozo Borrado,Santa Fe,Nueve de Julio
+MZA015,AR-K,1332,Antofagasta de la Sierra,Catamarca,Antofagasta de la Sierra
+CHA063,AR-K,1332,Antofagasta de la Sierra,Catamarca,Antofagasta de la Sierra
+CAT005,AR-R,1569,General Fernandez Oro,Rio Negro,General Roca
+SFE038,AR-R,1569,General Fernandez Oro,Rio Negro,General Roca
+COR064,AR-G,1627,Dona Luisa,Santiago del Estero,Guasayan
+TUC088,AR-B,1210,Bragado,Buenos Aires,Bragado
+CBA419,AR-B,1210,Bragado,Buenos Aires,Bragado
+MIS064,AR-B,1210,Bragado,Buenos Aires,Bragado
+JUJ004,AR-B,1210,Bragado,Buenos Aires,Bragado
+CBA317,AR-W,1411,Tapebicua,Corrientes,Paso de los Libres
+SAL022,AR-B,1283,Necochea,Buenos Aires,Necochea
+MIS012,AR-B,1283,Necochea,Buenos Aires,Necochea
+CAT009,AR-S,1692,Las Rosas,Santa Fe,Belgrano
+TUC030,AR-Q,1552,Las Ovejas,Neuquen,Minas
+SAL054,AR-Y,1469,Maimara,Jujuy,Tilcara
+COR006,AR-G,1630,El Colorado,Santiago del Estero,Juan Felipe Ibarra
+SFE115,AR-R,1577,Pichi Mahuida,Rio Negro,Pichi Mahuida
+CBA221,AR-H,1347,Barranqueras,Chaco,San Fernando
+ERI024,AR-H,1347,Barranqueras,Chaco,San Fernando
+CHA046,AR-H,1347,Barranqueras,Chaco,San Fernando
+JUJ037,AR-S,1683,Sancti Spiritu,Santa Fe,General Lopez
+JUJ023,AR-K,1337,Tinogasta,Catamarca,Tinogasta
+SFE284,AR-K,1337,Tinogasta,Catamarca,Tinogasta
+NEU045,AR-K,1337,Tinogasta,Catamarca,Tinogasta
+SGO034,AR-B,1328,Villarino,Buenos Aires,Villarino
+CBA140,AR-B,1328,Villarino,Buenos Aires,Villarino
+COR016,AR-Y,1474,San Salvador de Jujuy,Jujuy,Doctor Manuel Belgrano
+SFE073,AR-Y,1474,San Salvador de Jujuy,Jujuy,Doctor Manuel Belgrano
+FOR004,AR-D,1599,Bagual,San Luis,Gobernador Dupuy
+SGO064,AR-L,1476,Realico,La Pampa,Realico
+RNO041,AR-Y,1460,Puesto Viejo,Jujuy,El Carmen
+SFE243,AR-J,1586,Nueve de Julio,San Juan,Nueve de Julio
+SGO116,AR-J,1586,Nueve de Julio,San Juan,Nueve de Julio
+CBA193,AR-H,1350,Charata,Chaco,Chacabuco
+CHU029,AR-Y,1465,Susques,Jujuy,Susques
+COR067,AR-X,1398,Costa Sacate,Cordoba,Rio Segundo
+SFE202,AR-T,1650,Villa Chicligasta,Tucuman,Simoca
+NEU022,AR-Z,1607,Canadon Seco,Santa Cruz,Deseado
+SGO119,AR-W,1428,Loreto,Corrientes,San Miguel
+RNO065,AR-B,1257,Junin,Buenos Aires,Junin
+SFE318,AR-B,1257,Junin,Buenos Aires,Junin
+SAL018,AR-B,1257,Junin,Buenos Aires,Junin
+SLU007,AR-S,1692,Montes de Oca,Santa Fe,Belgrano
+ERI036,AR-B,1240,General Guido,Buenos Aires,General Guido
+CHU002,AR-B,1240,General Guido,Buenos Aires,General Guido
+JUJ040,AR-B,1320,Tornquist,Buenos Aires,Tornquist
+BUE030,AR-B,1288,Pellegrini,Buenos Aires,Pellegrini
+CHA041,AR-N,1544,Esperanza,Misiones,Iguazu
+CBA154,AR-N,1544,Esperanza,Misiones,Iguazu
+SCR020,AR-U,1375,Gan Gan,Chubut,Telsen
+COR035,AR-F,1502,Famatina,La Rioja,Famatina
+SFE225,AR-F,1502,Famatina,La Rioja,Famatina
+BUE048,AR-L,1483,Sarah,La Pampa,Chapaleufu
+CBA366,AR-B,1297,Ramallo,Buenos Aires,Ramallo
+ERI051,AR-D,1599,Union,San Luis,Gobernador Dupuy
+LRJ002,AR-Q,1555,Caviahue-Copahue,Neuquen,Norquin
+BUE104,AR-Q,1555,Caviahue-Copahue,Neuquen,Norquin
+TDF002,AR-A,1669,La Vina,Salta,La Vina
+SAL038,AR-U,1371,Corcovado,Chubut,Futaleufu
+CHU018,AR-S,1687,Capitan Bermudez,Santa Fe,San Lorenzo
+CBA264,AR-W,1431,Pago de los Deseos,Corrientes,Saladas
+SFE056,AR-B,1308,San Cayetano,Buenos Aires,San Cayetano
+COR071,AR-T,1643,Villa Quinteros,Tucuman,Monteros
+BUE114,AR-H,1349,Cote-Lai,Chaco,Tapenaga
+BUE119,AR-Y,1459,Abra Pampa,Jujuy,Cochinoca
+BUE071,AR-Y,1459,Abra Pampa,Jujuy,Cochinoca
+CHA018,AR-Y,1459,Abra Pampa,Jujuy,Cochinoca
+MIS070,AR-Y,1459,Abra Pampa,Jujuy,Cochinoca
+CAT019,AR-N,1549,San Pedro,Misiones,San Pedro
+TUC037,AR-Y,1465,Catua,Jujuy,Susques
+SCR007,AR-L,1480,Santa Rosa,La Pampa,Capital
+BUE065,AR-L,1480,Santa Rosa,La Pampa,Capital
+MZA008,AR-A,1672,Rosario de la Frontera,Salta,Rosario de la Frontera
+SFE144,AR-N,1534,Cerro Azul,Misiones,Leandro N. Alem
+CBA231,AR-K,1333,Londres,Catamarca,Belen
+SFE336,AR-T,1651,El Puestito,Tucuman,Burruyacu
+CBA066,AR-T,1651,El Puestito,Tucuman,Burruyacu
+SFE005,AR-A,1682,Tolar Grande,Salta,Los Andes
+ERI046,AR-A,1682,Tolar Grande,Salta,Los Andes
+SGO004,AR-W,1415,Colonia Carlos Pellegrini,Corrientes,San Martin
+RNO009,AR-W,1415,Colonia Carlos Pellegrini,Corrientes,San Martin
+SAL020,AR-W,1415,Colonia Carlos Pellegrini,Corrientes,San Martin
+BUE008,AR-S,1687,Fray Luis Beltran,Santa Fe,San Lorenzo
+SGO069,AR-B,1226,Coronel Suarez,Buenos Aires,Coronel Suarez
+SJU011,AR-X,1396,Los Cocos,Cordoba,Punilla
+COR037,AR-X,1396,Los Cocos,Cordoba,Punilla
+SFE129,AR-E,1433,Larroque,Entre Rios,Gualeguaychu
+FOR033,AR-B,1268,Lobos,Buenos Aires,Lobos
+RNO045,AR-B,1268,Lobos,Buenos Aires,Lobos
+TUC086,AR-B,1268,Lobos,Buenos Aires,Lobos
+SFE275,AR-B,1268,Lobos,Buenos Aires,Lobos
+CAT025,AR-H,1358,Villa Rio Bermejito,Chaco,General Guemes
+SCR011,AR-D,1599,Fortuna,San Luis,Gobernador Dupuy
+ERI004,AR-D,1599,Fortuna,San Luis,Gobernador Dupuy
+NEU027,AR-Z,1612,Puerto San Julian,Santa Cruz,Magallanes
+SFE264,AR-Z,1612,Puerto San Julian,Santa Cruz,Magallanes
+SJU004,AR-E,1446,Macia,Entre Rios,Tala
+RNO070,AR-E,1446,Macia,Entre Rios,Tala
+SJU010,AR-E,1446,Macia,Entre Rios,Tala
+COR018,AR-E,1446,Macia,Entre Rios,Tala
+BUE080,AR-M,1532,Tupungato,Mendoza,Tupungato
+CBA364,AR-S,1684,Zavalla,Santa Fe,Rosario
+SFE178,AR-Q,1558,Ramon Castro,Neuquen,Zapala
+BUE041,AR-A,1670,El Galpon,Salta,Metan
+CBA234,AR-G,1625,Real Sayana,Santiago del Estero,Avellaneda
+MIS023,AR-X,1388,James Craik,Cordoba,Tercero Arriba
+CHU006,AR-W,1417,Ituzaingo,Corrientes,Ituzaingo
+RNO021,AR-S,1694,Emilia,Santa Fe,La Capital
+COR056,AR-P,1453,San Martin Dos,Formosa,Patino
+BUE096,AR-R,1566,Arroyo de la Ventana,Rio Negro,Valcheta
+TUC071,AR-S,1689,Ramona,Santa Fe,Castellanos
+CBA405,AR-K,1342,Paclin,Catamarca,Paclin
+LRJ015,AR-B,1239,General Belgrano,Buenos Aires,General Belgrano
+LRJ016,AR-B,1239,General Belgrano,Buenos Aires,General Belgrano
+CHU032,AR-B,1239,General Belgrano,Buenos Aires,General Belgrano
+CBA306,AR-J,1592,Santa Lucia,San Juan,Santa Lucia
+SFE100,AR-J,1592,Santa Lucia,San Juan,Santa Lucia
+SAL041,AR-J,1592,Santa Lucia,San Juan,Santa Lucia
+ERI021,AR-U,1379,Paso de Indios,Chubut,Paso de Indios
+CHA039,AR-W,1414,Colonia Pando,Corrientes,San Roque
+JUJ017,AR-S,1687,Luis Palacios,Santa Fe,San Lorenzo
+SAL049,AR-S,1687,Luis Palacios,Santa Fe,San Lorenzo
+CBA260,AR-Q,1554,Octavio Pico,Neuquen,Pehuenches
+CBA051,AR-B,1306,San Andres de Giles,Buenos Aires,San Andres de Giles
+SFE266,AR-J,1581,Calingasta,San Juan,Calingasta
+SFE351,AR-J,1581,Calingasta,San Juan,Calingasta
+SFE028,AR-R,1576,Rio Chico,Rio Negro,Norquinco
+ERI061,AR-Q,1556,Plottier,Neuquen,Confluencia
+SGO040,AR-S,1692,Tortugas,Santa Fe,Belgrano
+SAL033,AR-X,1391,Villa Canada del Sauce,Cordoba,Calamuchita
+SGO102,AR-X,1393,Silvio Pellico,Cordoba,General San Martin
+CBA168,AR-S,1695,La Sarita,Santa Fe,General Obligado
+COR059,AR-B,1230,Escobar,Buenos Aires,Escobar
+NEU017,AR-B,1230,Escobar,Buenos Aires,Escobar
+SFE180,AR-B,1230,Escobar,Buenos Aires,Escobar
+SGO085,AR-X,1402,Los Talares,Cordoba,Pocho
+RNO058,AR-X,1402,Los Talares,Cordoba,Pocho
+SFE295,AR-B,1271,Magdalena,Buenos Aires,Magdalena
+ERI013,AR-B,1271,Magdalena,Buenos Aires,Magdalena
+SFE260,AR-B,1271,Magdalena,Buenos Aires,Magdalena
+JUJ032,AR-N,1538,Candelaria,Misiones,Candelaria
+CHA001,AR-U,1369,Buen Pasto,Chubut,Sarmiento
+CHU038,AR-U,1369,Buen Pasto,Chubut,Sarmiento
+CBA095,AR-M,1530,Santa Rosa,Mendoza,Santa Rosa
+TUC106,AR-M,1530,Santa Rosa,Mendoza,Santa Rosa
+COR030,AR-M,1530,Santa Rosa,Mendoza,Santa Rosa
+SFE217,AR-Y,1461,Rodeito,Jujuy,San Pedro
+CBA329,AR-Y,1461,Rodeito,Jujuy,San Pedro
+MZA012,AR-B,1321,Trenque Lauquen,Buenos Aires,Trenque Lauquen
+ERI041,AR-J,1594,Ullum,San Juan,Ullum
+CHU015,AR-J,1594,Ullum,San Juan,Ullum
+LRJ001,AR-N,1540,Ruiz de Montoya,Misiones,Libertador General San Martin
+BUE097,AR-T,1652,Yerba Buena,Tucuman,Yerba Buena
+SLU044,AR-T,1652,Yerba Buena,Tucuman,Yerba Buena
+NEU005,AR-T,1652,Yerba Buena,Tucuman,Yerba Buena
+CHU005,AR-W,1419,Riachuelo,Corrientes,Capital
+BUE042,AR-W,1419,Riachuelo,Corrientes,Capital
+SFE040,AR-B,1278,Monte,Buenos Aires,Monte
+COR065,AR-B,1278,Monte,Buenos Aires,Monte
+MZA011,AR-B,1278,Monte,Buenos Aires,Monte
+TUC097,AR-S,1694,Nelson,Santa Fe,La Capital
+CHA015,AR-S,1694,Nelson,Santa Fe,La Capital
+CBA246,AR-S,1694,Nelson,Santa Fe,La Capital
+JUJ010,AR-T,1651,El Timbo,Tucuman,Burruyacu
+SAL040,AR-X,1391,Villa General Belgrano,Cordoba,Calamuchita
+MIS015,AR-E,1438,Villa Paranacito,Entre Rios,Islas del Ibicuy
+CAT012,AR-N,1544,Puerto Libertad,Misiones,Iguazu
+SFE116,AR-U,1376,Gastre,Chubut,Gastre
+BUE025,AR-U,1376,Gastre,Chubut,Gastre
+CHA054,AR-U,1376,Gastre,Chubut,Gastre
+LAP007,AR-U,1376,Gastre,Chubut,Gastre
+MZA001,AR-N,1547,Posadas,Misiones,Capital
+SFE325,AR-N,1547,Posadas,Misiones,Capital
+NEU053,AR-N,1547,Posadas,Misiones,Capital
+SAL010,AR-N,1547,Posadas,Misiones,Capital
+CBA155,AR-N,1547,Posadas,Misiones,Capital
+CBA308,AR-F,1509,Independencia,La Rioja,Independencia
+TUC015,AR-F,1508,General San Martin,La Rioja,General San Martin
+COR020,AR-B,1325,Veinticinco de Mayo,Buenos Aires,Veinticinco de Mayo
+SFE101,AR-T,1646,Banda del Rio Sali,Tucuman,Cruz Alta
+FOR019,AR-T,1646,Banda del Rio Sali,Tucuman,Cruz Alta
+SGO068,AR-A,1680,Rivadavia Banda Norte,Salta,Rivadavia
+RNO042,AR-A,1680,Rivadavia Banda Norte,Salta,Rivadavia
+SFE255,AR-U,1377,Jose de San Martin,Chubut,Tehuelches
+CAT017,AR-X,1395,Quilino,Cordoba,Ischilin
+SJU006,AR-S,1696,Correa,Santa Fe,Iriondo
+CHU030,AR-B,1205,Baradero,Buenos Aires,Baradero
+CHU009,AR-B,1205,Baradero,Buenos Aires,Baradero
+NEU023,AR-X,1400,Las Penas,Cordoba,Totoral
+CAT015,AR-B,1294,Puan,Buenos Aires,Puan
+RNO068,AR-B,1294,Puan,Buenos Aires,Puan
+SFE326,AR-B,1267,Loberia,Buenos Aires,Loberia
+TDF001,AR-B,1267,Loberia,Buenos Aires,Loberia
+SLU011,AR-B,1267,Loberia,Buenos Aires,Loberia
+LAP070,AR-H,1360,Isla del Cerrito,Chaco,Bermejo
+JUJ041,AR-Y,1467,Humahuaca,Jujuy,Humahuaca
+MIS060,AR-Y,1467,Humahuaca,Jujuy,Humahuaca
+CHA049,AR-Y,1465,Coranzuli,Jujuy,Susques
+CBA160,AR-Y,1465,Coranzuli,Jujuy,Susques
+SFE015,AR-Y,1465,Coranzuli,Jujuy,Susques
+BUE115,AR-X,1383,Villa Allende,Cordoba,Colon
+CBA398,AR-X,1383,Villa Allende,Cordoba,Colon
+ERI054,AR-X,1383,Villa Allende,Cordoba,Colon
+MIS042,AR-X,1383,Villa Allende,Cordoba,Colon
+LRJ009,AR-X,1383,Villa Allende,Cordoba,Colon
+LRJ011,AR-X,1383,Villa Allende,Cordoba,Colon
+TUC006,AR-W,1427,Itati,Corrientes,Itati
+SAL043,AR-X,1387,Altos de Chipion,Cordoba,San Justo
+CHU024,AR-T,1649,Las Talitas,Tucuman,Tafi Viejo
+BUE049,AR-Z,1613,Veintiocho de Noviembre,Santa Cruz,Guer Aike
+CBA290,AR-W,1418,Concepcion,Corrientes,Concepcion
+SFE067,AR-B,1262,Laprida,Buenos Aires,Laprida
+BUE124,AR-B,1262,Laprida,Buenos Aires,Laprida
+CBA206,AR-A,1663,Cachi,Salta,Cachi
+CHA026,AR-S,1696,Villa Eloisa,Santa Fe,Iriondo
+SAL047,AR-B,1313,San Pedro,Buenos Aires,San Pedro
+MIS053,AR-B,1313,San Pedro,Buenos Aires,San Pedro
+FOR001,AR-T,1648,Amaicha del Valle,Tucuman,Tafi del Valle
+CAT028,AR-T,1648,Amaicha del Valle,Tucuman,Tafi del Valle
+TUC041,AR-E,1449,Villa Clara,Entre Rios,Villaguay
+COR010,AR-G,1625,Herrera,Santiago del Estero,Avellaneda
+CBA318,AR-R,1578,San Antonio Oeste,Rio Negro,San Antonio
+SFE160,AR-A,1671,La Candelaria,Salta,La Candelaria
+COR055,AR-T,1646,Alderetes,Tucuman,Cruz Alta
+SFE337,AR-G,1630,Vilelas,Santiago del Estero,Juan Felipe Ibarra
+CBA087,AR-X,1383,Jesus Maria,Cordoba,Colon
+SLU064,AR-X,1383,Jesus Maria,Cordoba,Colon
+SFE011,AR-X,1383,Jesus Maria,Cordoba,Colon
+MIS061,AR-W,1431,Saladas,Corrientes,Saladas
+SGO013,AR-S,1684,Granadero Baigorria,Santa Fe,Rosario
+SAL028,AR-S,1684,Granadero Baigorria,Santa Fe,Rosario
+SGO071,AR-S,1684,Granadero Baigorria,Santa Fe,Rosario
+COR045,AR-Q,1552,Guanacos,Neuquen,Minas
+NEU012,AR-F,1510,La Rioja,La Rioja,Capital
+SFE305,AR-R,1576,Mamuel Choique,Rio Negro,Norquinco
+SGO078,AR-S,1700,San Jeronimo Norte,Santa Fe,Las Colonias
+RNO053,AR-D,1599,Anchorena,San Luis,Gobernador Dupuy
+SFE288,AR-D,1599,Anchorena,San Luis,Gobernador Dupuy
+CAT031,AR-U,1377,Doctor Atilio Viglione,Chubut,Tehuelches
+CHU046,AR-E,1445,General Galarza,Entre Rios,Gualeguay
+SFE206,AR-M,1531,Tunuyan,Mendoza,Tunuyan
+NEU028,AR-M,1531,Tunuyan,Mendoza,Tunuyan
+RNO071,AR-S,1700,Providencia,Santa Fe,Las Colonias
+BUE117,AR-Q,1553,Quili Malal,Neuquen,Picunches
+MZA014,AR-Z,1611,Los Antiguos,Santa Cruz,Lago Buenos Aires
+CBA315,AR-J,1585,Jachal,San Juan,Jachal
+BUE132,AR-J,1585,Jachal,San Juan,Jachal
+BUE082,AR-J,1585,Jachal,San Juan,Jachal
+NEU038,AR-X,1398,Villa del Rosario,Cordoba,Rio Segundo
+RNO033,AR-G,1634,Alhuampa,Santiago del Estero,Moreno
+BUE009,AR-X,1387,Colonia San Pedro,Cordoba,San Justo
+ERI016,AR-Z,1609,El Chalten,Santa Cruz,Lago Argentino
+MIS031,AR-Z,1609,El Chalten,Santa Cruz,Lago Argentino
+ERI027,AR-W,1412,Ita Ibate,Corrientes,General Paz
+CBA263,AR-S,1695,Los Laureles,Santa Fe,General Obligado
+RNO052,AR-B,1238,General Arenales,Buenos Aires,General Arenales
+FOR002,AR-X,1398,Rincon,Cordoba,Rio Segundo
+CBA185,AR-W,1409,Bella Vista,Corrientes,Bella Vista
+CBA376,AR-B,1285,Olavarria,Buenos Aires,Olavarria
+BUE054,AR-B,1285,Olavarria,Buenos Aires,Olavarria
+CHU037,AR-B,1285,Olavarria,Buenos Aires,Olavarria
+BUE085,AR-B,1285,Olavarria,Buenos Aires,Olavarria
+SFE020,AR-N,1546,El Soberbio,Misiones,Guarani
+CBA011,AR-N,1546,El Soberbio,Misiones,Guarani
+BUE017,AR-U,1372,Cushamen,Chubut,Cushamen
+CBA258,AR-L,1483,Intendente Alvear,La Pampa,Chapaleufu
+BUE002,AR-L,1483,Intendente Alvear,La Pampa,Chapaleufu
+BUE094,AR-B,1195,Adolfo Alsina,Buenos Aires,Adolfo Alsina
+BUE053,AR-B,1195,Adolfo Alsina,Buenos Aires,Adolfo Alsina
+CBA223,AR-J,1597,Zonda,San Juan,Zonda
+BUE015,AR-M,1529,San Rafael,Mendoza,San Rafael
+BUE098,AR-H,1351,Santa Sylvina,Chaco,Fray Justo Santa Maria de Oro
+BUE035,AR-K,1333,Belen,Catamarca,Belen
+CBA411,AR-K,1333,Belen,Catamarca,Belen
+BUE050,AR-S,1688,Cacique Ariacaiquin,Santa Fe,San Javier
+JUJ033,AR-W,1417,Villa Olivari,Corrientes,Ituzaingo
+ERI040,AR-T,1653,San Pedro de Colalao,Tucuman,Trancas
+SFE105,AR-X,1389,Villa San Isidro,Cordoba,Santa Maria
+BUE024,AR-N,1543,San Ignacio,Misiones,San Ignacio
+ERI025,AR-N,1543,San Ignacio,Misiones,San Ignacio
+ERI048,AR-Y,1460,Aguas Calientes,Jujuy,El Carmen
+BUE105,AR-X,1383,Salsipuedes,Cordoba,Colon
+SAL009,AR-A,1666,General Guemes,Salta,General Guemes
+LAP072,AR-N,1539,Campo Viera,Misiones,Obera
+BUE004,AR-K,1337,Fiambala,Catamarca,Tinogasta
+CBA083,AR-T,1648,El Mollar,Tucuman,Tafi del Valle
+CBA359,AR-A,1679,Seclantas,Salta,Molinos
+NEU046,AR-W,1414,Chavarria,Corrientes,San Roque
+FOR008,AR-S,1701,Esteban Rams,Santa Fe,Nueve de Julio
+BUE121,AR-X,1385,Los Cisnes,Cordoba,Juarez Celman
+SGO082,AR-E,1445,Gualeguay,Entre Rios,Gualeguay
+SGO050,AR-H,1358,Miraflores,Chaco,General Guemes
+COR057,AR-Y,1459,Puesto del Marques,Jujuy,Cochinoca
+CBA042,AR-Y,1469,Huacalera,Jujuy,Tilcara
+BUE086,AR-S,1693,San Genaro,Santa Fe,San Jeronimo
+CBA148,AR-Q,1556,Villa el Chocon,Neuquen,Confluencia
+CBA038,AR-G,1616,Guardia Escolta,Santiago del Estero,Belgrano
+ERI015,AR-X,1385,General Deheza,Cordoba,Juarez Celman
+ERI044,AR-W,1423,Esquina,Corrientes,Esquina
+MZA006,AR-S,1689,Colonia Aldao,Santa Fe,Castellanos
+CBA311,AR-P,1453,Comandante Fontana,Formosa,Patino
+MZA004,AR-G,1634,Quimili,Santiago del Estero,Moreno
+SAL013,AR-R,1568,Aguada Guzman,Rio Negro,El Cuy
+SAL048,AR-S,1689,Presidente Roca,Santa Fe,Castellanos
+BUE120,AR-G,1634,Las Tinajas,Santiago del Estero,Moreno
+BUE091,AR-X,1407,Laboulaye,Cordoba,Presidente Roque Saenz Pena
+CBA012,AR-U,1378,Las Plumas,Chubut,Martires
+BUE075,AR-W,1413,Carolina,Corrientes,Goya
+,AR-W,1413,Carolina,Corrientes,Goya
+,AR-S,1696,Lucio V. Lopez,Santa Fe,Iriondo
+,AR-Q,1552,Los Miches,Neuquen,Minas
+,AR-G,1634,Lilo Viejo - Patay,Santiago del Estero,Moreno
+,AR-R,1572,Prahuaniyeu,Rio Negro,Nueve de Julio
+,AR-S,1694,Sauce Viejo,Santa Fe,La Capital
+,AR-A,1662,El Quebrachal,Salta,Anta
+,AR-D,1599,Batavia,San Luis,Gobernador Dupuy
+,AR-E,1439,Maria Grande,Entre Rios,Parana
+,AR-U,1368,Aldea Epulef,Chubut,Languineo
+,AR-Y,1472,Purmamarca,Jujuy,Tumbaya
+,AR-B,1224,Coronel Dorrego,Buenos Aires,Coronel Dorrego
+,AR-B,1224,Coronel Dorrego,Buenos Aires,Coronel Dorrego
+,AR-H,1360,Las Palmas,Chaco,Bermejo
+,AR-X,1386,Inriville,Cordoba,Marcos Juarez
+,AR-Z,1607,Koluel Kayke,Santa Cruz,Deseado
+,AR-W,1429,Mburucuya,Corrientes,Mburucuya
+,AR-S,1683,Murphy,Santa Fe,General Lopez
+,AR-B,1242,General la Madrid,Buenos Aires,General La Madrid
+,AR-X,1393,Ticino,Cordoba,General San Martin
+,AR-E,1443,Sauce de Luna,Entre Rios,Federal
+,AR-F,1498,Castro Barros,La Rioja,Castro Barros
+,AR-B,1299,Rivadavia,Buenos Aires,Rivadavia
+,AR-V,1723,Tolhuin,Tierra del Fuego,Tolhuin
+,AR-A,1679,Molinos,Salta,Molinos
+,AR-U,1371,Esquel,Chubut,Futaleufu
+,AR-X,1387,Morteros,Cordoba,San Justo
+,AR-S,1696,Carrizales,Santa Fe,Iriondo
+,AR-W,1409,Tres de Abril,Corrientes,Bella Vista
+,AR-B,1309,San Fernando,Buenos Aires,San Fernando
+,AR-B,1314,San Vicente,Buenos Aires,San Vicente
+,AR-B,1314,San Vicente,Buenos Aires,San Vicente
+,AR-B,1266,Lincoln,Buenos Aires,Lincoln
+,AR-H,1358,El Sauzalito,Chaco,General Guemes
+,AR-N,1538,Santa Ana,Misiones,Candelaria
+,AR-K,1341,Poman,Catamarca,Poman
+,AR-T,1656,Escaba,Tucuman,Juan Bautista Alberdi
+,AR-Z,1611,Perito Moreno,Santa Cruz,Lago Buenos Aires
+,AR-Z,1611,Perito Moreno,Santa Cruz,Lago Buenos Aires
+,AR-B,1259,La Matanza,Buenos Aires,La Matanza
+,AR-M,1522,Lujan de Cuyo,Mendoza,Lujan de Cuyo
+,AR-M,1522,Lujan de Cuyo,Mendoza,Lujan de Cuyo
+,AR-S,1701,Gregoria Perez de denis,Santa Fe,Nueve de Julio
+,AR-X,1391,Los Reartes,Cordoba,Calamuchita
+,AR-S,1701,Tostado,Santa Fe,Nueve de Julio
+,AR-X,1401,Chanar Viejo,Cordoba,Rio Seco
+,AR-S,1686,Alcorta,Santa Fe,Constitucion
+,AR-E,1441,San Jose,Entre Rios,Colon
+,AR-G,1616,Bandera,Santiago del Estero,Belgrano
+,AR-R,1569,Cipolletti,Rio Negro,General Roca
+,AR-R,1569,Cipolletti,Rio Negro,General Roca
+,AR-A,1660,Embarcacion,Salta,General Jose de San Martin
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-B,1203,Bahia Blanca,Buenos Aires,Bahia Blanca
+,AR-G,1638,Santiago del Estero,Santiago del Estero,Capital
+,AR-J,1589,Rivadavia,San Juan,Rivadavia
+,AR-W,1416,Mocoreta,Corrientes,Monte Caseros
+,AR-S,1684,Funes,Santa Fe,Rosario
+,AR-P,1453,Subteniente Perin,Formosa,Patino
+,AR-R,1572,Cona Niyeu,Rio Negro,Nueve de Julio
+,AR-T,1659,San Miguel de Tucuman,Tucuman,Capital
+,AR-T,1659,San Miguel de Tucuman,Tucuman,Capital
+,AR-T,1659,San Miguel de Tucuman,Tucuman,Capital
+,AR-S,1690,San Bernardo (S.J.),Santa Fe,San Justo
+,AR-K,1333,San Fernando,Catamarca,Belen
+,AR-Z,1608,Puerto Santa Cruz,Santa Cruz,Corpen Aike
+,AR-E,1435,Aranguren,Entre Rios,Nogoya
+,AR-Q,1559,Paso Aguerre,Neuquen,Picun Leufu
+,AR-S,1684,Rosario,Santa Fe,Rosario
+,AR-J,1582,Caucete,San Juan,Caucete
+,AR-R,1573,San Javier,Rio Negro,Adolfo Alsina
+,AR-J,1588,Rawson,San Juan,Rawson
+,AR-W,1424,Felipe Yofre,Corrientes,Mercedes
+,AR-B,1275,Marcos Paz,Buenos Aires,Marcos Paz
+,AR-X,1388,Tancacha,Cordoba,Tercero Arriba
+,AR-S,1694,Laguna Paiva,Santa Fe,La Capital
+,AR-B,1235,Florentino Ameghino,Buenos Aires,Florentino Ameghino
+,AR-X,1388,Los Zorros,Cordoba,Tercero Arriba
+,AR-N,1544,Colonia Wanda,Misiones,Iguazu
+,AR-U,1368,Carrenleufu,Chubut,Languineo
+,AR-R,1569,Ingeniero Luis A. Huergo,Rio Negro,General Roca
+,AR-W,1414,San Roque,Corrientes,San Roque
+,AR-B,1291,Pilar,Buenos Aires,Pilar
+,AR-B,1291,Pilar,Buenos Aires,Pilar
+,AR-T,1643,Monteros,Tucuman,Monteros
+,AR-X,1396,Villa Giardino,Cordoba,Punilla
+,AR-F,1511,Rosario Vera Penaloza,La Rioja,Rosario Vera Penaloza
+,AR-F,1512,San Blas de los Sauces,La Rioja,San Blas de los Sauces
+,AR-U,1368,Paso del Sapo,Chubut,Languineo
+,AR-X,1394,Rio Primero,Cordoba,Rio Primero
+,AR-S,1683,Diego de Alvear,Santa Fe,General Lopez
+,AR-A,1668,Pichanal,Salta,Oran
+,AR-E,1444,General Campos,Entre Rios,San Salvador
+,AR-H,1284,Las Brenas,Chaco,Nueve de Julio
+,AR-Y,1462,El Condor,Jujuy,Yavi
+,AR-A,1682,San Antonio de los Cobres,Salta,Los Andes
+,AR-X,1384,Monte Lena,Cordoba,Union
+,AR-X,1395,Canada de Rio Pinto,Cordoba,Ischilin
+,AR-S,1683,Rufino,Santa Fe,General Lopez
+,AR-S,1683,Rufino,Santa Fe,General Lopez
+,AR-S,1683,Rufino,Santa Fe,General Lopez
+,AR-S,1701,Villa Minetti,Santa Fe,Nueve de Julio
+,AR-S,1689,Bella Italia,Santa Fe,Castellanos
+,AR-E,1441,Villa Elisa,Entre Rios,Colon
+,AR-G,1617,La Canada,Santiago del Estero,Figueroa
+,AR-A,1677,La Poma,Salta,La Poma
+,AR-G,1626,Colonia Tinco,Santiago del Estero,Rio Hondo
+,AR-X,1391,La Cruz,Cordoba,Calamuchita
+,AR-W,1425,Santo Tome,Corrientes,Santo Tome
+,AR-Q,1560,Junin de los Andes,Neuquen,Huiliches
+,AR-S,1695,Lanteri,Santa Fe,General Obligado
+,AR-G,1639,Villa Ojo de Agua,Santiago del Estero,Ojo de Agua
+,AR-R,1568,Mencue,Rio Negro,El Cuy
+,AR-S,1690,San Justo,Santa Fe,San Justo
+,AR-E,1442,Concordia,Entre Rios,Concordia
+,AR-E,1442,Concordia,Entre Rios,Concordia
+,AR-S,1687,Ricardone,Santa Fe,San Lorenzo
+,AR-Y,1468,Palma Sola,Jujuy,Santa Barbara
+,AR-H,1346,Avia Terai,Chaco,Independencia
+,AR-U,1377,Rio Pico,Chubut,Tehuelches
+,AR-X,1387,Colonia Vignaud,Cordoba,San Justo
+,AR-T,1651,Villa Benjamin Araoz y el Tajamar,Tucuman,Burruyacu
+,AR-W,1415,La Cruz,Corrientes,San Martin
+,AR-S,1683,Miguel Torres,Santa Fe,General Lopez
+,AR-X,1391,San Ignacio,Cordoba,Calamuchita
+,AR-M,1526,Rivadavia,Mendoza,Rivadavia
+,AR-E,1438,Puerto Ibicuy,Entre Rios,Islas del Ibicuy
+,AR-U,1372,El Hoyo,Chubut,Cushamen
+,AR-F,1497,Arauco,La Rioja,Arauco
+,AR-B,1292,Pinamar,Buenos Aires,Pinamar
+,AR-B,1292,Pinamar,Buenos Aires,Pinamar
+,AR-D,1603,Papagayos,San Luis,Chacabuco
+,AR-Q,1554,Barrancas,Neuquen,Pehuenches
+,AR-U,1370,Camarones,Chubut,Florentino Ameghino
+,AR-B,1236,General Alvarado,Buenos Aires,General Alvarado
+,AR-S,1697,Calchaqui,Santa Fe,Vera
+,AR-W,1415,Yapeyu,Corrientes,San Martin
+,AR-M,1525,Mendoza,Mendoza,Capital
+,AR-M,1525,Mendoza,Mendoza,Capital
+,AR-T,1650,Simoca,Tucuman,Simoca
+,AR-H,1357,Coronel Du Graty,Chaco,Mayor Luis Jorge Fontana
+,AR-X,1386,Marcos Juarez,Cordoba,Marcos Juarez
+,AR-Y,1464,Caspala,Jujuy,Valle Grande
+,AR-A,1663,Payogasta,Salta,Cachi
+,AR-N,1541,Caraguatay,Misiones,Montecarlo
+,AR-K,1334,Huillapima,Catamarca,Capayan
+,AR-S,1690,Colonia Esther,Santa Fe,San Justo
+,AR-B,1220,Chascomus,Buenos Aires,Chascomus
+,AR-H,1719,Presidencia Roque Saenz Pena,Chaco,Comandante Fernandez
+,AR-L,1480,Anguil,La Pampa,Capital
+,AR-M,1515,General Alvear,Mendoza,General Alvear
+,AR-S,1689,Sunchales,Santa Fe,Castellanos
+,AR-Q,1550,Aguada San Roque,Neuquen,Anelo
+,AR-A,1667,Chicoana,Salta,Chicoana
+,AR-X,1386,Isla Verde,Cordoba,Marcos Juarez
+,AR-X,1388,Rio Tercero,Cordoba,Tercero Arriba
+,AR-X,1388,Rio Tercero,Cordoba,Tercero Arriba
+,AR-X,1388,Rio Tercero,Cordoba,Tercero Arriba
+,AR-X,1388,Rio Tercero,Cordoba,Tercero Arriba
+,AR-T,1651,Burruyacu,Tucuman,Burruyacu
+,AR-W,1425,Gobernador Agronomo Valentin Virasoro,Corrientes,Santo Tome
+,AR-S,1689,Egusquiza,Santa Fe,Castellanos
+,AR-P,1458,Laguna Yema,Formosa,Bermejo
+,AR-G,1627,San Pedro de Guasayan,Santiago del Estero,Guasayan
+,AR-R,1566,Arroyo los Berros,Rio Negro,Valcheta
+,AR-S,1689,Rafaela,Santa Fe,Castellanos
+,AR-K,1336,Los Varela,Catamarca,Ambato
+,AR-J,1584,Iglesia,San Juan,Iglesia
+,AR-U,1379,Los Altares,Chubut,Paso de Indios
+,AR-U,1373,Comodoro Rivadavia,Chubut,Escalante
+,AR-Q,1552,Manzano Amargo,Neuquen,Minas
+,AR-K,1336,Las Juntas,Catamarca,Ambato
+,AR-R,1572,Rincon Treneta,Rio Negro,Nueve de Julio
+,AR-S,1689,Susana,Santa Fe,Castellanos
+,AR-V,1641,Rio Grande,Tierra del Fuego,Rio Grande
+,AR-D,1601,Carolina,San Luis,Coronel Pringles
+,AR-L,1496,Toay,La Pampa,Toay
+,AR-L,1496,Toay,La Pampa,Toay
+,AR-Y,1470,Rinconada,Jujuy,Rinconada
+,AR-N,1540,Puerto Leoni,Misiones,Libertador General San Martin
+,AR-H,1352,Pampa Almiron,Chaco,Libertador General San Martin
+,AR-X,1384,Justiniano Posse,Cordoba,Union
+,AR-S,1692,Armstrong,Santa Fe,Belgrano
+,AR-B,1310,San Isidro,Buenos Aires,San Isidro
+,AR-B,1310,San Isidro,Buenos Aires,San Isidro
+,AR-X,1400,Villa del Totoral,Cordoba,Totoral
+,AR-E,1441,Ubajay,Entre Rios,Colon
+,AR-N,1539,Guarani,Misiones,Obera
+,AR-F,1505,General Juan Facundo Quiroga,La Rioja,General Juan Facundo Quiroga
+,AR-F,1507,General Ocampo,La Rioja,General Ortiz de Ocampo
+,AR-T,1647,Alto Verde y los Gucheas,Tucuman,Chicligasta
+,AR-A,1670,Rio Piedras,Salta,Metan
+,AR-U,1372,Gualjaina,Chubut,Cushamen
+,AR-B,1243,General las Heras,Buenos Aires,General las Heras
+,AR-B,1243,General las Heras,Buenos Aires,General las Heras
+,AR-B,1243,General las Heras,Buenos Aires,General las Heras
+,AR-X,1398,Pozo del Molle,Cordoba,Rio Segundo
+,AR-S,1691,Chabas,Santa Fe,Caseros
+,AR-B,1319,Tordillo,Buenos Aires,Tordillo
+,AR-X,1402,Las Palmas,Cordoba,Pocho
+,AR-H,1360,General Vedia,Chaco,Bermejo
+,AR-A,1665,Rosario de Lerma,Salta,Rosario de Lerma
+,AR-A,1665,Rosario de Lerma,Salta,Rosario de Lerma
+,AR-N,1542,Nueve de Julio,Misiones,Eldorado
+,AR-P,1450,Buena Vista,Formosa,Pilagas
+,AR-K,1344,Santa Maria,Catamarca,Santa Maria
+,AR-T,1647,Gastona y Belicha,Tucuman,Chicligasta
+,AR-W,1418,Colonia Santa Rosa,Corrientes,Concepcion
+,AR-X,1382,Sampacho,Cordoba,Rio Cuarto
+,AR-S,1689,Josefina,Santa Fe,Castellanos
+,AR-W,1428,San Miguel,Corrientes,San Miguel
+,AR-S,1696,Totoras,Santa Fe,Iriondo
+,AR-X,1387,Colonia las Pichanas,Cordoba,San Justo
+,AR-D,1598,Zanjitas,San Luis,Juan Martin de Pueyrredon
+,AR-S,1689,Angelica,Santa Fe,Castellanos
+,AR-N,1541,Puerto Piray,Misiones,Montecarlo
+,AR-G,1624,Colonia Alpina,Santiago del Estero,Rivadavia
+,AR-A,1674,Isla de Canas,Salta,Iruya
+,AR-G,1624,Selva,Santiago del Estero,Rivadavia
+,AR-W,1421,Perugorria,Corrientes,Curuzu Cuatia
+,AR-Q,1555,El Cholar,Neuquen,Norquin
+,AR-S,1694,Santa Fe,Santa Fe,La Capital
+,AR-S,1694,Santa Fe,Santa Fe,La Capital
+,AR-S,1694,Santa Fe,Santa Fe,La Capital
+,AR-S,1694,Santa Fe,Santa Fe,La Capital
+,AR-S,1694,Santa Fe,Santa Fe,La Capital
+,AR-G,1626,Termas de Rio Hondo,Santiago del Estero,Rio Hondo
+,AR-G,1626,Termas de Rio Hondo,Santiago del Estero,Rio Hondo
+,AR-G,1626,Termas de Rio Hondo,Santiago del Estero,Rio Hondo
+,AR-R,1567,El Cain,Rio Negro,Veinticinco de Mayo
+,AR-S,1688,San Javier,Santa Fe,San Javier
+,AR-K,1335,Tapso,Catamarca,El Alto
+,AR-U,1367,Aldea Apeleg,Chubut,Rio Senguer
+,AR-S,1695,Malabrigo,Santa Fe,General Obligado
+,AR-S,1695,Malabrigo,Santa Fe,General Obligado
+,AR-Q,1559,Picun Leufu,Neuquen,Picun Leufu
+,AR-R,1566,Sierra Paileman,Rio Negro,Valcheta
+,AR-B,1312,San Nicolas de los Arroyos,Buenos Aires,San Nicolas
+,AR-M,1528,San Martin,Mendoza,San Martin
+,AR-X,1383,Saldan,Cordoba,Colon
+,AR-X,1383,Saldan,Cordoba,Colon
+,AR-B,1327,Villa Gesell,Buenos Aires,Villa Gesell
+,AR-B,1327,Villa Gesell,Buenos Aires,Villa Gesell
+,AR-B,1277,Merlo,Buenos Aires,Merlo
+,AR-B,1277,Merlo,Buenos Aires,Merlo
+,AR-B,1277,Merlo,Buenos Aires,Merlo
+,AR-B,1277,Merlo,Buenos Aires,Merlo
+,AR-B,1277,Merlo,Buenos Aires,Merlo
+,AR-Q,1556,Senillosa,Neuquen,Confluencia
+,AR-R,1574,San Carlos de Bariloche,Rio Negro,Bariloche
+,AR-R,1574,San Carlos de Bariloche,Rio Negro,Bariloche
+,AR-R,1574,San Carlos de Bariloche,Rio Negro,Bariloche
+,AR-R,1574,San Carlos de Bariloche,Rio Negro,Bariloche
+,AR-B,1204,Balcarce,Buenos Aires,Balcarce
+,AR-E,1434,Diamante,Entre Rios,Diamante
+,AR-E,1434,Diamante,Entre Rios,Diamante
+,AR-E,1434,Diamante,Entre Rios,Diamante
+,AR-N,1542,Eldorado,Misiones,Eldorado
+,AR-E,1439,Hernandarias,Entre Rios,Parana
+,AR-X,1384,Morrison,Cordoba,Union
+,AR-X,1384,Morrison,Cordoba,Union
+,AR-R,1574,Dina Huapi,Rio Negro,Bariloche
+,AR-P,1451,Clorinda,Formosa,Pilcomayo
+,AR-X,1394,La Posta,Cordoba,Rio Primero
+,AR-X,1383,Unquillo,Cordoba,Colon
+,AR-X,1383,Unquillo,Cordoba,Colon
+,AR-B,1248,General Rodriguez,Buenos Aires,General Rodriguez
+,AR-B,1248,General Rodriguez,Buenos Aires,General Rodriguez
+,AR-B,1248,General Rodriguez,Buenos Aires,General Rodriguez
+,AR-B,1248,General Rodriguez,Buenos Aires,General Rodriguez
+,AR-U,1367,Rio Mayo,Chubut,Rio Senguer
+,AR-B,1280,Moreno,Buenos Aires,Moreno
+,AR-S,1684,Arroyo Seco,Santa Fe,Rosario
+,AR-X,1389,Alta Gracia,Cordoba,Santa Maria
+,AR-X,1389,Alta Gracia,Cordoba,Santa Maria
+,AR-B,1212,Campana,Buenos Aires,Campana
+,AR-X,1394,Monte Cristo,Cordoba,Rio Primero
+,AR-B,1196,Adolfo Gonzales Chaves,Buenos Aires,Adolfo Gonzales Chaves
+,AR-B,1289,Pergamino,Buenos Aires,Pergamino
+,AR-B,1289,Pergamino,Buenos Aires,Pergamino
+,AR-B,1289,Pergamino,Buenos Aires,Pergamino
+,AR-B,1289,Pergamino,Buenos Aires,Pergamino
+,AR-B,1247,General Pueyrredon,Buenos Aires,General Pueyrredon
+,AR-B,1247,General Pueyrredon,Buenos Aires,General Pueyrredon
+,AR-X,1391,Los Condores,Cordoba,Calamuchita
+,AR-B,1209,Bolivar,Buenos Aires,Bolivar
+,AR-B,1293,Presidente Peron,Buenos Aires,Presidente Peron
+,AR-B,1229,Ensenada,Buenos Aires,Ensenada
+,AR-X,1393,Villa Maria,Cordoba,General San Martin
+,AR-B,1244,General Lavalle,Buenos Aires,General Lavalle
+,AR-Y,1471,Palpala,Jujuy,Palpala
+,AR-E,1437,Piedras Blancas,Entre Rios,La Paz
+,AR-S,1698,El Trebol,Santa Fe,San Martin
+,AR-B,1219,Chacabuco,Buenos Aires,Chacabuco
+,AR-E,1433,Gualeguaychu,Entre Rios,Gualeguaychu
+,AR-E,1444,San Salvador,Entre Rios,San Salvador
+,AR-B,1300,Rojas,Buenos Aires,Rojas
+,AR-B,1300,Rojas,Buenos Aires,Rojas
+,AR-B,1300,Rojas,Buenos Aires,Rojas
+,AR-A,1676,San Jose de los Cerrillos,Salta,Cerrillos
+,AR-L,1481,Trenel,La Pampa,Trenel
+,AR-B,1198,Almirante Brown,Buenos Aires,Almirante Brown
+,AR-B,1198,Almirante Brown,Buenos Aires,Almirante Brown
+,AR-X,1383,Colonia Caroya,Cordoba,Colon
+,AR-X,1400,Sinsacate,Cordoba,Totoral
+,AR-Q,1565,Villa la Angostura,Neuquen,Los Lagos
+,AR-P,1452,Formosa,Formosa,Formosa
+,AR-B,1316,Tandil,Buenos Aires,Tandil
+,AR-G,1632,Villa Atamisqui,Santiago del Estero,Atamisqui
+,AR-G,1622,Los Telares,Santiago del Estero,Salavina
+,AR-W,1430,Santa Ana,Corrientes,San Cosme
+,AR-X,1398,Calchin,Cordoba,Rio Segundo
+,AR-X,1398,Calchin,Cordoba,Rio Segundo
+,AR-B,1281,Moron,Buenos Aires,Moron
+,AR-B,1281,Moron,Buenos Aires,Moron
+,AR-X,1388,Hernando,Cordoba,Tercero Arriba
+,AR-X,1388,Hernando,Cordoba,Tercero Arriba
+,AR-X,1387,Brinkmann,Cordoba,San Justo
+,AR-E,1439,Crespo,Entre Rios,Parana
+,AR-E,1439,San Benito,Entre Rios,Parana
+,AR-M,1520,Las Heras,Mendoza,Las Heras
+,AR-X,1387,Sacanta,Cordoba,San Justo
+,AR-X,1387,Sacanta,Cordoba,San Justo
+,AR-M,1518,Junin,Mendoza,Junin
+,AR-A,1666,El Bordo,Salta,General Guemes
+,AR-A,1681,Salta,Salta,Capital
+,AR-B,1315,Suipacha,Buenos Aires,Suipacha
+,AR-B,1286,Patagones,Buenos Aires,Patagones
+,AR-X,1384,Alto Alegre,Cordoba,Union
+,AR-B,1270,Lujan,Buenos Aires,Lujan
