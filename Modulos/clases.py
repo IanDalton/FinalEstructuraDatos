@@ -66,7 +66,7 @@ class Provincia():
     def __eq__(self, __o: object) -> bool:
         return self.nombre==__o.nombre
     
-class Muncipio():
+class Municipio():
     def __init__(self,id:int,nombre:str,provincia:Provincia) -> None:
         self.id = id
         self.nombre = nombre
@@ -78,7 +78,7 @@ class Muncipio():
         return self.id==__o.id
 
 class Departamento():
-    def __init__(self,id:int,nombre:str,municipio:Muncipio) -> None:
+    def __init__(self,id:int,nombre:str,municipio:Municipio) -> None:
         self.id = id
         self.nombre = nombre
         self.routers = set()
@@ -125,7 +125,7 @@ class Router(): # Armar un dict que le asigne la ip a una mac
 if __name__ == '__main__':
     arg = Pais('Argentina',4)
     bsas = Provincia('Buenos Aires',arg)
-    lomas = Muncipio(1,'Lomas de Zamora',bsas)
+    lomas = Municipio(1,'Lomas de Zamora',bsas)
     temperley = Departamento(1,'Temperley',lomas)
     router = Router(1,None,1,1,arg,temperley)
     celu = Disitivo(1)
