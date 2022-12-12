@@ -93,7 +93,6 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         self.ubicacion = ubicacion
         self.latitud = latitud
         self.longitud = longitud
-        self.longitus = longitud
         self.conexiones_max = conexiones_max
         self.conexiones = ListaEnlazada() #lista enlazada
         self.fecha_alta = fecha_alta
@@ -116,12 +115,12 @@ class Router(): # Armar un dict que le asigne la ip a una mac
                 break
             nro_esperado += 1
         return f'{base+str(nro_esperado)}'
+
     def desconectar(self,dispo:Disitivo):
         conexion = self.conexiones.delete_node(dispo)
         conexion.baja = datetime.now()
         
         
-
 if __name__ == '__main__':
     arg = Pais('Argentina',4)
     bsas = Provincia('Buenos Aires',arg)
