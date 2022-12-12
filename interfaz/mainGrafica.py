@@ -3,12 +3,13 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
 from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem
 from qtwidgets import AnimatedToggle
+
 import pickle
 
 import sys
 """ 
 dark_theme = QPalette()
-dark_theme.setColor(QPalette.Window, QColor(53, 53, 53))
+dark_theme.setColor(QPalette.Window, QColor(53, 53, 53)
 dark_theme.setColor(QPalette.WindowText, Qt.white)
 dark_theme.setColor(QPalette.Base, QColor(25, 25, 25))
 dark_theme.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
@@ -24,15 +25,14 @@ dark_theme.setColor(QPalette.HighlightedText, Qt.black)
 
  """
 
+
 class MainWindow(QMainWindow): 
       def __init__(self):
             super().__init__()
             self.setWindowTitle("Sistema de informacion - RED WIFI PAIS DIGITAL")
-            
-            self.setGeometry(500,500,1000,700)
+            self.setGeometry(500,200,1000,700)
             layoutPrincipal = QVBoxLayout()
-            #self.setPalette(dark_theme)
-      #Creo un label y lo agrego al layout
+            #self.setPalette(dark_theme
             
             menu = QHBoxLayout()
             contenido = QHBoxLayout()
@@ -40,9 +40,10 @@ class MainWindow(QMainWindow):
             cargarArchivos = QPushButton()      
             nuevaConexion = QPushButton() 
             preferencias = QPushButton()
-            cargarArchivos.setText('Cargar archivos')  #abrir ventana nueva --> municipios o routers? arrastrael archivo
-            #cargarArchivos.clicked.connect(self.abrirVentana_click)
+            cargarArchivos.setText('Cargar archivos')  #arrastra el archivo
+            cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             nuevaConexion.setText('Nueva conexion')
+            nuevaConexion.clicked.connect(self.abrirVentanaConexion_click)
             preferencias.setText('Preferencias')
             preferencias.setStyleSheet('background-color: red')
             menu.addWidget(cargarArchivos)
@@ -134,15 +135,88 @@ class MainWindow(QMainWindow):
       def seleccionar_router(self,router):
             print(router.id)
             pass
-class SegundaWindow(QMainWindow):
+
+      def abrirVentanaCarga_click(self):
+            self.cargando_datos = CargaWindow()
+            self.cargando_datos.show()
+
+      def abrirVentanaConexion_click(self):
+            self.estableciendo_conexion = ConexionWindow()
+            self.estableciendo_conexion.show()
+
+
+class CargaWindow(QMainWindow):
       def __init__(self):
             super().__init__()
-            self.setWindowTitle("")
-            self.setGeometry(200,200,500,500)
+            self.setWindowTitle("CARGA DE ARCHIVOS")
+            self.setGeometry(500,200,1000,700)
             layoutPrincipal = QVBoxLayout()
-            contenido = QHBoxLayout()
 
-class TercerWindow(QMainWindow): 
+            eleccion = QLabel()
+            eleccion.setText("Que tipo de datos va a ingresar?")
+            layoutPrincipal.addWidget(eleccion)
+            contenido = QHBoxLayout()
+            router = QPushButton(text="Routers")
+            contenido.addWidget(router)
+            municipio = QPushButton(text= "Municipios")
+            contenido.addWidget(municipio)
+            layoutPrincipal.addLayout(contenido)
+
+            link = QHBoxLayout()
+            text_link = QLabel(text="Link a archivo: ")
+            link.addWidget(text_link)
+            ingresar_link = QTextEdit()
+            link.addWidget(ingresar_link)
+            layoutPrincipal.addLayout(link)
+            
+            widgetLayout = QWidget()
+            widgetLayout.setLayout(layoutPrincipal)
+            self.setCentralWidget(widgetLayout)
+
+class ConexionWindow(QMainWindow):
+      def __init__(self):
+            super().__init__()
+            self.setWindowTitle("NUEVA CONEXION")
+            self.setGeometry(500,200,1000,700)
+            layoutPrincipal = QVBoxLayout()
+
+            disclaimer = QLabel(text="Ingrese los datos para completar la conexion: ")
+            layoutPrincipal.addWidget(disclaimer)
+
+            dispositivo = QHBoxLayout()
+            dispositivo_text = QLabel(text="Dispositivo: ")
+            dispositivo_box = QTextEdit()
+            dispositivo.addWidget(dispositivo_text)
+            dispositivo.addWidget(dispositivo_box)
+            layoutPrincipal.addLayout(dispositivo)
+            ip = QHBoxLayout()
+            ip_text = QLabel(text="Ip: ")
+            ip_box = QTextEdit()
+            ip.addWidget(ip_text)
+            ip.addWidget(ip_box)
+            layoutPrincipal.addLayout(ip)
+            router = QHBoxLayout()
+            router_text = QLabel(text="Router: ")
+            router_box = QTextEdit()
+            router.addWidget(router_text)
+            router.addWidget(router_box)
+            layoutPrincipal.addLayout(router)
+
+            alta = QFormLayout()
+            self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
+            self.datetime_edit.dateTimeChanged.connect(self.update)
+            alta.addRow('Alta:', self.datetime_edit)
+            layoutPrincipal.addLayout(alta)
+
+            confirmacion = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmacion)
+
+
+            widgetLayout = QWidget()
+            widgetLayout.setLayout(layoutPrincipal)
+            self.setCentralWidget(widgetLayout)
+
+class FechaWindow(QMainWindow): 
       def __init__(self):
             super().__init__()
             self.setWindowTitle("CONEXIONES POR HORA - ARGENTINA")
@@ -212,9 +286,11 @@ class TercerWindow(QMainWindow):
             self.tableWidget.horizontalHeader().setStretchLastSection(True)
             self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
+
+
 if __name__ == '__main__':
       app = QApplication(sys.argv)
-      main = MainWindow()
+      main = FechaWindow()
       main.show()
       app.exec()
 

@@ -24,7 +24,6 @@ for i in lista:
     mainWindow.provincias.addWidget(prov)
 
 
-
 mainWindow.show()
 app.exec()
 
