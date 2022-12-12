@@ -6,7 +6,6 @@ from qtwidgets import AnimatedToggle
 import pickle
 
 
-
 import sys
 
 dark_theme = QPalette()
@@ -98,11 +97,6 @@ class MainWindow(QMainWindow):
       self.setCentralWidget(widgetLayout)
 
       
-
-
-
-
-
 
 
 # #Grafico de torta para cantidad de usuarios en linea
