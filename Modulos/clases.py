@@ -2,8 +2,9 @@ import pickle
 from datetime import datetime
 from .claseArbol import Arbol,NodoArbol
 from .ListasEnlazadas import ListaEnlazada
+from .verificador import verificador_municipios
 import time
-
+import csv
 
 class Dispositivo():
     def __init__(self,mac) -> None:
@@ -47,12 +48,21 @@ class Pais():
         with open('archivo.pickle','wb') as arch:
             pickle.dump(self,arch,protocol=pickle.HIGHEST_PROTOCOL)
     def load_data(self,archivo,type):
-        match type: # Nos permite agregar mas funciones al archivo si es necesario 
-            case 'Municipio':
-                print('Cargando los municipios...')
-                pass
-            case 'Router':
-                print("Cargando los routers...")
+        with open(archivo, 'r') as arch:
+            data = csv.DictReader(arch)
+            match type: # Nos permite agregar mas funciones al archivo si es necesario 
+                case 'Municipio':
+                    print('Cargando los municipios...')
+                    for muni in data:
+                        if verificador_municipios(muni):
+                            self.create_municipio(muni)
+                        pass
+                    pass
+                case 'Router':
+                    print("Cargando los routers...")
+    def create_municipio(self,municipio):
+        
+        pass
     
 
 
@@ -99,7 +109,10 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         self.fecha_baja = fecha_baja
         self.pais = pais
         departamento.routers.add(self)
-        
+    
+    def __str__(self) -> str:
+        return str(self.id)
+
     def conectar(self,dispo:Dispositivo):
         if self.conexiones.len < self.conexiones_max:
             conexion = Conexion(dispo,self.generar_ip(),self,datetime.now())
