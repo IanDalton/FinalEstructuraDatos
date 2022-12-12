@@ -5,7 +5,6 @@ from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton
 from qtwidgets import AnimatedToggle
 import pickle
 
-
 import sys
 """ 
 dark_theme = QPalette()
@@ -110,55 +109,45 @@ class SegundaWindow(QMainWindow):
       def __init__(self):
             super().__init__()
             self.setWindowTitle("")
-            self.setGeometry(500,500,700,1000)
+            self.setGeometry(500,500,500,500)
             layoutPrincipal = QVBoxLayout()
             contenido = QHBoxLayout()
 
 class TercerWindow(QMainWindow): 
       def __init__(self):
             super().__init__()
-            self.setWindowTitle("Conexiones por hora")
-            
-            self.setGeometry(500,500,700,1000)
-            layoutPrincipal = QVBoxLayout()
-            contenido = QHBoxLayout()
+            self.setWindowTitle("CONEXIONES POR HORA - ARGENTINA")
+            self.setGeometry(200,200,500,500)
 
-      #self.setPalette(dark_theme)
+            layoutPrincipal = QVBoxLayout()
+            fechas = QHBoxLayout()
 
             layout1 = QFormLayout()
-            
             self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
             self.datetime_edit.dateTimeChanged.connect(self.update)
-
-            self.result_label = QLabel('', self)
-
             layout1.addRow('Desde:', self.datetime_edit)
-            layout1.addRow(self.result_label)
-
-            self.show()
-            contenido.addLayout(layout1)
+            fechas.addLayout(layout1)
 
             layout2 = QFormLayout()
-            
             self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
             self.datetime_edit.dateTimeChanged.connect(self.update)
-
-            self.result_label = QLabel('', self)
-
             layout2.addRow('Hasta:', self.datetime_edit)
-            layout2.addRow(self.result_label)
+            fechas.addLayout(layout2)
 
-            self.show()
-            contenido.addLayout(layout2)
+            confirmar = QPushButton()
+            confirmar.setText("Confirmar fecha y horario")
+            fechas.addWidget(confirmar)
 
-            layoutPrincipal.addLayout(contenido)
+            layoutPrincipal.addLayout(fechas)
+
             
             conexiones = QHBoxLayout()
             dispositivos = QVBoxLayout()
             informacion = QVBoxLayout()
             conexiones.addLayout(dispositivos)
             conexiones.addLayout(informacion) #Nombre,mac,hora alta,hora baja,router...
-            
+            layoutPrincipal.addLayout(conexiones)
+
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
@@ -166,11 +155,9 @@ class TercerWindow(QMainWindow):
 
       def update(self):
         value = self.datetime_edit.dateTime()
-        self.result_label.setText(value.toString("yyyy-MM-dd HH:mm"))
 
 if __name__ == '__main__':
       app = QApplication(sys.argv)
-      
       TercerWindows = TercerWindow()
       TercerWindows.show()
       app.exec()
