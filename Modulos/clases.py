@@ -1,11 +1,11 @@
 import pickle
 from datetime import datetime
-from claseArbol import Arbol,NodoArbol
-from ListasEnlazadas import ListaEnlazada
+from .claseArbol import Arbol,NodoArbol
+from .ListasEnlazadas import ListaEnlazada
 import time
 
 
-class Disitivo():
+class Dispositivo():
     def __init__(self,mac) -> None:
         self.mac = mac
     def conectar(self,router):
@@ -100,7 +100,7 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         self.pais = pais
         departamento.routers.add(self)
         
-    def conectar(self,dispo:Disitivo):
+    def conectar(self,dispo:Dispositivo):
         if self.conexiones.len < self.conexiones_max:
             conexion = Conexion(dispo,self.generar_ip(),self,datetime.now())
             self.pais.conexiones.agregarnodo(NodoArbol(conexion))
@@ -111,12 +111,12 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         #revisamos la lista de conexiones hasta encontrar una ip libre
         nro_esperado = 0
         for conexion in self.conexiones:
-            if conexion.ip != nro_esperado:
+            if int(conexion.ip[-2:]) != nro_esperado:
                 break
             nro_esperado += 1
-        return f'{base+str(nro_esperado)}'
+        return f'{base}{str(nro_esperado).rjust(2,"0")}'
 
-    def desconectar(self,dispo:Disitivo):
+    def desconectar(self,dispo:Dispositivo):
         conexion = self.conexiones.delete_node(dispo)
         conexion.baja = datetime.now()
         
@@ -124,12 +124,14 @@ class Router(): # Armar un dict que le asigne la ip a una mac
 if __name__ == '__main__':
     arg = Pais('Argentina',4)
     bsas = Provincia('Buenos Aires',arg)
+    Provincia('cu',arg)
+    Provincia('cuso',arg)
     lomas = Municipio(1,'Lomas de Zamora',bsas)
     temperley = Departamento(1,'Temperley',lomas)
     router = Router(1,None,1,1,arg,temperley)
-    celu = Disitivo(1)
+    celu = Dispositivo(1)
     
-    ac = Disitivo(12)
+    ac = Dispositivo(12)
     celu.conectar(router)
     
     input()
@@ -139,4 +141,7 @@ if __name__ == '__main__':
     print(arg.conexiones.root.derecho.dato)
     """ arg.load_data('Datos\municipios.csv','Municipio') """
     arg.save()
+
+    for provincia in arg.provincias:
+        print(provincia.nombre)
     pass
