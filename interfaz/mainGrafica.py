@@ -40,7 +40,8 @@ class MainWindow(QMainWindow):
             cargarArchivos = QPushButton()      
             nuevaConexion = QPushButton() 
             preferencias = QPushButton()
-            cargarArchivos.setText('Cargar archivos')
+            cargarArchivos.setText('Cargar archivos')  #abrir ventana nueva --> municipios o routers? arrastrael archivo
+            cargarArchivos.clicked.connect(self.abrirVentana_click)
             nuevaConexion.setText('Nueva conexion')
             preferencias.setText('Preferencias')
             preferencias.setStyleSheet('background-color: red')
@@ -106,6 +107,10 @@ class MainWindow(QMainWindow):
                   lbl.setText(muni.nombre)
                   lbl.setStyleSheet('border:1px solid black;')
                   self.municipios.addWidget(lbl)
+      
+      def abrirVentana_click(self):
+            ventana = ()
+            ventana.exec()
 
 class SegundaWindow(QMainWindow):
       def __init__(self):
@@ -159,9 +164,6 @@ class TercerWindow(QMainWindow):
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
 
-            
-
-
       def update(self):
         value = self.datetime_edit.dateTime()
 
@@ -190,11 +192,9 @@ class TercerWindow(QMainWindow):
 
 if __name__ == '__main__':
       app = QApplication(sys.argv)
-      TercerWindows = TercerWindow()
-      TercerWindows.show()
+      main = MainWindow()
+      main.show()
       app.exec()
-
-
 
 
 # #Grafico de torta para cantidad de usuarios en linea
