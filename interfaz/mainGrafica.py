@@ -94,9 +94,11 @@ class MainWindow(QMainWindow):
       
 
       def seleccionar_provincia(self,prov):
+            print('aaa',prov)
             i=max(range(self.municipios.count()))
-            while i >= 1 :
+            while i > 0 :
                   self.municipios.itemAt(i).widget().setParent(None)
+                  print(i)
                   i-=1
             for muni in prov.municipios:
                   print(muni)

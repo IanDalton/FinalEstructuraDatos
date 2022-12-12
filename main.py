@@ -1,6 +1,8 @@
-from PyQt5.QtWidgets import QApplication,QLabel
+from PyQt5.QtWidgets import QApplication,QLabel,QPushButton
 from interfaz.mainGrafica import MainWindow
 import sys,pickle
+from Modulos.clases import Provincia,Municipio
+
 
 with open('archivo.pickle','rb') as arch:
     arg = pickle.load(arch)
@@ -8,16 +10,20 @@ with open('archivo.pickle','rb') as arch:
 app = QApplication(sys.argv)
 mainWindow = MainWindow()
 
-for provincia in arg.provincias:
-    for muni in provincia.municipios:
-        lbl = QLabel()
-        lbl.setText(muni.nombre)
-        lbl.setStyleSheet('border:1px solid black;')
-        mainWindow.municipios.addWidget(lbl)
-    prov = QLabel()
-    prov.setText(provincia.nombre)
-    prov.setStyleSheet('border:1px solid black;')
+lista = list(arg.provincias)
+""" 
+rn = Provincia('Rio negro',arg)
+mn = Municipio(1,'asdasd',rn)
+mn2 = Municipio(2,'Municipio 2',rn) """
+for i in lista:
+
+    prov = QPushButton()
+    prov.setText(i.nombre)
+    print(i.nombre)
+    
+    prov.clicked.connect(lambda checked ,arg = i:mainWindow.seleccionar_provincia(arg))
     mainWindow.provincias.addWidget(prov)
+
 
 
 mainWindow.show()
