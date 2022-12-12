@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
             
             layoutPrincipal.addLayout(menu)
             
-            layoutPrincipal.addLayout(contenido,1)
+            layoutPrincipal.addLayout(contenido,2)
 
             self.provincias = QVBoxLayout()
             """  for provincia in arg.provincias:
@@ -66,14 +66,14 @@ class MainWindow(QMainWindow):
             self.agregarMunicipios = QPushButton()
             self.agregarMunicipios.setText('Municipio nuevo')
             self.municipios.addWidget(self.agregarMunicipios)
-            departamentos = QVBoxLayout()
-            contenido.addLayout(departamentos)
+            self.departamentos = QVBoxLayout()
+            contenido.addLayout(self.departamentos)
             agregarDepartamentos = QPushButton()
-            departamentos.addWidget(agregarDepartamentos)
+            self.departamentos.addWidget(agregarDepartamentos)
 
-            routers = QVBoxLayout()
-            contenido.addLayout(routers,1)
-            
+            self.routers = QVBoxLayout()
+            contenido.addLayout(self.routers,1)
+            """ 
             dispositivos = QVBoxLayout()
             routers.addLayout(dispositivos)
             activable = QHBoxLayout()
@@ -85,7 +85,7 @@ class MainWindow(QMainWindow):
             texto2 = QLabel() 
             texto2.setText('Desactivar')
             activable.addWidget(texto2)
-            routers.addLayout(activable)
+            routers.addLayout(activable) """
 
       #El widget que contiene al layout es el widget principal de la ventana, para mostrarlo
             widgetLayout = QWidget()
@@ -93,25 +93,46 @@ class MainWindow(QMainWindow):
             self.setCentralWidget(widgetLayout)
 
       
-
+      def limpiar(self,sector:QHBoxLayout):
+            print(sector.count())
+            try:
+                  i=max(range(sector.count()))
+                  while i > 0 :
+                        sector.itemAt(i).widget().setParent(None)
+                        i-=1
+            except ValueError:
+                  pass
       def seleccionar_provincia(self,prov):
-            print('aaa',prov)
-            i=max(range(self.municipios.count()))
-            while i > 0 :
-                  self.municipios.itemAt(i).widget().setParent(None)
-                  print(i)
-                  i-=1
+            self.limpiar(self.municipios)
+            self.limpiar(self.departamentos)
+            self.limpiar(self.routers)
             for muni in prov.municipios:
-                  print(muni)
-                  lbl = QLabel()
+                  lbl = QPushButton()
                   lbl.setText(muni.nombre)
                   lbl.setStyleSheet('border:1px solid black;')
+                  lbl.clicked.connect(lambda checked,mun = muni:self.seleccionar_municipio(mun))
                   self.municipios.addWidget(lbl)
-      
-      def abrirVentana_click(self):
-            ventana = ()
-            ventana.exec()
-
+      def seleccionar_municipio(self,muni):
+            self.limpiar(self.departamentos)
+            self.limpiar(self.routers)
+            for depto in muni.departamentos:
+                  lbl = QPushButton()
+                  lbl.setText(depto.nombre)
+                  lbl.setStyleSheet('border:1px solid black;')
+                  lbl.clicked.connect(lambda checked,dpto = depto:self.seleccionar_departamento(dpto))
+                  self.departamentos.addWidget(lbl)
+      def seleccionar_departamento(self,depto):
+            self.limpiar(self.routers)
+            for router in depto.routers:
+                  lbl = QPushButton()
+                  lbl.setText(str(router))
+                  lbl.setStyleSheet('border:1px solid black;')
+                  lbl.clicked.connect(lambda checked,rtr = router:self.seleccionar_router(rtr))
+                  self.routers.addWidget(lbl)
+            pass
+      def seleccionar_router(self,router):
+            print(router.id)
+            pass
 class SegundaWindow(QMainWindow):
       def __init__(self):
             super().__init__()
