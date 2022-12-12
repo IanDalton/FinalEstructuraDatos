@@ -12,6 +12,7 @@ class Dispositivo():
         router.conectar(self)
         pass
     def desconectar(self,router):
+        router.desconectar(self)
         pass
 
 
