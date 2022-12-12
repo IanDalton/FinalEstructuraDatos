@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt
 #from PyQt5.QtChart import QChart, QChartView, QPieSeries, QPieSlice
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit
+from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem
 from qtwidgets import AnimatedToggle
 import pickle
 
@@ -136,7 +136,7 @@ class SegundaWindow(QMainWindow):
       def __init__(self):
             super().__init__()
             self.setWindowTitle("")
-            self.setGeometry(500,500,500,500)
+            self.setGeometry(200,200,500,500)
             layoutPrincipal = QVBoxLayout()
             contenido = QHBoxLayout()
 
@@ -170,18 +170,48 @@ class TercerWindow(QMainWindow):
             
             conexiones = QHBoxLayout()
             dispositivos = QVBoxLayout()
+            boton = QPushButton()
+            boton.setText("Para eliminar")
+            dispositivos.addWidget(boton)
             informacion = QVBoxLayout()
+            self.createTable() #agregamos la tabla
+            informacion.addWidget(self.tableWidget)
             conexiones.addLayout(dispositivos)
-            conexiones.addLayout(informacion) #Nombre,mac,hora alta,hora baja,router...
+            conexiones.addLayout(informacion) 
             layoutPrincipal.addLayout(conexiones)
 
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
 
+            
+
 
       def update(self):
         value = self.datetime_edit.dateTime()
+
+      def createTable(self):
+            self.tableWidget = QTableWidget()
+      
+            #Fijas la cantidad de filas
+            self.tableWidget.setRowCount(5) 
+            #Fijas la cantidad de columnas
+            self.tableWidget.setColumnCount(2)  
+      
+            self.tableWidget.setItem(0,0, QTableWidgetItem("Nombre"))
+            self.tableWidget.setItem(0,1, QTableWidgetItem("-"))
+            self.tableWidget.setItem(1,0, QTableWidgetItem("MAC"))
+            self.tableWidget.setItem(1,1, QTableWidgetItem("-"))
+            self.tableWidget.setItem(2,0, QTableWidgetItem("Hora alta"))
+            self.tableWidget.setItem(2,1, QTableWidgetItem("-"))
+            self.tableWidget.setItem(3,0, QTableWidgetItem("Hora baja"))
+            self.tableWidget.setItem(3,1, QTableWidgetItem("-"))
+            self.tableWidget.setItem(4,0, QTableWidgetItem("Router"))
+            self.tableWidget.setItem(4,1, QTableWidgetItem("-"))
+      
+            #Se va a observar horizontalmente 
+            self.tableWidget.horizontalHeader().setStretchLastSection(True)
+            self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
 if __name__ == '__main__':
       app = QApplication(sys.argv)
