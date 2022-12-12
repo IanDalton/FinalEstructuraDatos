@@ -6,3 +6,4 @@ ids_municipios = {"Ciudad Autonoma de Buenos Aires":"CAB","Santa Fe":"SFE","Tucu
 
 def verificador_municipios(dict):
     return dict["municipio_id"][:3] == ids_municipios[dict["provincia"]]
+

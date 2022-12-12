@@ -3,6 +3,7 @@ from datetime import datetime
 from .claseArbol import Arbol,NodoArbol
 from .ListasEnlazadas import ListaEnlazada
 from .verificador import verificador_municipios
+import numpy as np
 import time
 import csv
 
@@ -24,8 +25,12 @@ class Conexion():
         self.ip = ip
         self.router = router
 
-    def __eq__(self, __o: object) -> bool:
-        return self.ip == __o.ip
+    def __eq__(self, __o) -> bool:
+        if type(__o) == object: 
+            return self.ip == __o.ip
+        elif type(__o) == Dispositivo:
+            return self.mac == __o
+            
 
     def __ge__(self, __o: object): # self >= __o
         return self.alta >= __o.alta
@@ -42,7 +47,7 @@ class Pais():
     def __init__(self,nombre:str,poblacion:int) -> None:
         self.nombre = nombre
         self.poblacion = poblacion 
-        self.provincias = set()
+        self.provincias = list() # Saque el set porque es necesario un orden y es mas rapido para ubicar el archivo
         self.conexiones = Arbol()
     def save(self):
         with open('archivo.pickle','wb') as arch:
@@ -55,12 +60,19 @@ class Pais():
                     print('Cargando los municipios...')
                     for muni in data:
                         if verificador_municipios(muni):
-                            self.create_municipio(muni)
+                            try:
+                                self.create_municipio(muni)
+                            except:
+                                pass
                         pass
                     pass
                 case 'Router':
                     print("Cargando los routers...")
     def create_municipio(self,municipio):
+        provincia = arg.provincias.pop(arg.provincias.index('Cordoba'))
+
+        Municipio()
+        
         
         pass
     
@@ -70,18 +82,25 @@ class Provincia():
     def __init__(self,nombre:str,pais:Pais) -> None:
         self.nombre = nombre
         self.municipios = set()
-        pais.provincias.add(self)
+        pais.provincias.append(self)
     def __hash__(self) -> int:
         return hash(self.nombre)
     def __eq__(self, __o: object) -> bool:
-        return self.nombre==__o.nombre
+        if type(__o) == object:
+            return self.nombre==__o.nombre
+        else:
+            return self.nombre==__o
     
 class Municipio():
     def __init__(self,id:int,nombre:str,provincia:Provincia) -> None:
         self.id = id
         self.nombre = nombre
         self.departamentos = set()
-        provincia.municipios.add(self)
+        if id not in provincia.municipios:
+            provincia.municipios.add(self)
+        else:
+            del self
+            
     def __hash__(self) -> int:
         return hash(self.id)
     def __eq__(self, __o: object) -> bool:

@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
             nuevaConexion = QPushButton() 
             preferencias = QPushButton()
             cargarArchivos.setText('Cargar archivos')  #abrir ventana nueva --> municipios o routers? arrastrael archivo
-            cargarArchivos.clicked.connect(self.abrirVentana_click)
+            #cargarArchivos.clicked.connect(self.abrirVentana_click)
             nuevaConexion.setText('Nueva conexion')
             preferencias.setText('Preferencias')
             preferencias.setStyleSheet('background-color: red')
@@ -64,11 +64,12 @@ class MainWindow(QMainWindow):
             self.municipios = QVBoxLayout()
             contenido.addLayout(self.municipios)
             self.agregarMunicipios = QPushButton()
-            self.agregarMunicipios.setText('Municipio nuevo')
+            self.agregarMunicipios.setText('Agregar municipio')
             self.municipios.addWidget(self.agregarMunicipios)
             self.departamentos = QVBoxLayout()
             contenido.addLayout(self.departamentos)
             agregarDepartamentos = QPushButton()
+            agregarDepartamentos.setText('Agregar departamento')
             self.departamentos.addWidget(agregarDepartamentos)
 
             self.routers = QVBoxLayout()
