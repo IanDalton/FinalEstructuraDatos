@@ -9,19 +9,9 @@ with open('archivo.pickle','rb') as arch:
     arg = pickle.load(arch)
 
 app = QApplication(sys.argv)
-mainWindow = MainWindow()
-
-lista = list(arg.provincias)
+mainWindow = MainWindow(arg)
 
 
-for i in lista:
-
-    prov = QPushButton()
-    prov.setText(i.nombre)
-
-    
-    prov.clicked.connect(lambda checked ,arg = i:mainWindow.seleccionar_provincia(arg))
-    mainWindow.provincias.addWidget(prov)
 
 
 mainWindow.show()

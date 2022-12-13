@@ -2,8 +2,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
 from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
-from Modulos.clases import *
-
+from Modulos.clases import Pais
 import pickle
 
 import sys
@@ -27,8 +26,9 @@ dark_theme.setColor(QPalette.HighlightedText, Qt.black)
 
 
 class MainWindow(QMainWindow): 
-      def __init__(self):
+      def __init__(self,pais:Pais):
             super().__init__()
+            
             self.setWindowTitle("Sistema de informacion - RED WIFI PAIS DIGITAL")
             self.setGeometry(200,200,1000,700)
             layoutPrincipal = QVBoxLayout()
@@ -54,11 +54,12 @@ class MainWindow(QMainWindow):
             layoutPrincipal.addLayout(contenido,2)
 
             self.provincias = QVBoxLayout()
-            """  for provincia in arg.provincias:
-                  prov = QLabel()
-                  prov.setText(provincia.nombre)
-                  provincias.addWidget(prov) """
-                  
+
+            for i in pais.provincias:
+                  prov = QPushButton()
+                  prov.setText(i.nombre)
+                  prov.clicked.connect(lambda checked ,arg = i:self.seleccionar_provincia(arg))
+                  self.provincias.addWidget(prov)
 
             contenido.addLayout(self.provincias)
             self.municipios = QVBoxLayout()
@@ -130,7 +131,7 @@ class MainWindow(QMainWindow):
                   lbl.setText(str(router))
                   lbl.setStyleSheet('border:1px solid black;')
                   lbl.clicked.connect(lambda checked,rtr = router:self.seleccionar_router(rtr))
-                  self.routers.addWidget(lbl)
+                  self.routers.addItem(lbl)
             pass
       def seleccionar_router(self,router):
             print(router.id)
@@ -216,8 +217,9 @@ class ConexionWindow(QMainWindow):
       #       conexion = Conexion(self.dispositivo_box,Router.generar_ip,self.alta) #FALTA EL ROUTER QUE LO ELIGE EL USUARIO 
 
 class FechaWindow(QMainWindow): 
-      def __init__(self):
+      def __init__(self,pais):
             super().__init__()
+            self.pais = pais
             self.setWindowTitle("CONEXIONES POR HORA - ARGENTINA")
             self.setGeometry(200,200,500,500)
 
