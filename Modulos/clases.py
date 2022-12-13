@@ -9,11 +9,30 @@ import csv,os
 class Dispositivo():
     def __init__(self,mac,pais) -> None:
         self.mac = mac
+        self.status_conexion = None
         pais.dispositivos.add(self)
+    def __hash__(self) -> int:
+        return hash(self.mac)
+    def __eq__(self, __o: object) -> bool:
+        if type(__o) == object:
+            return self.mac == __o.mac
+        else:
+            return self.mac == __o
     def conectar(self,router):
-        router.conectar(self)
-        pass
+        
+        try:
+            if not self.status_conexion:
+                router.conectar(self)
+                self.status_conexion=router
+            else:
+                self.desconectar(self.status_conexion)
+                self.conectar(router)
+        except ValueError:
+            pass
     def desconectar(self,router):
+        
+        router.desconectar(self)
+        self.status_conexion = None
         pass
 
 
@@ -29,7 +48,7 @@ class Conexion():
         if type(__o) == object: 
             return self.ip == __o.ip
         elif type(__o) == Dispositivo:
-            return self.mac == __o
+            return self.mac.mac == __o
             
 
     def __ge__(self, __o: object): # self >= __o
@@ -44,9 +63,8 @@ class Conexion():
         return f'Conexion del dispotivo {self.mac.mac} a las {self.alta}'
         
 class Pais():
-    def __init__(self,nombre:str,poblacion:int) -> None:
+    def __init__(self,nombre:str) -> None:
         self.nombre = nombre
-        self.poblacion = poblacion 
         self.provincias = list() # Saque el set porque es necesario un orden y es mas rapido para ubicar el archivo
         self.conexiones = Arbol()
         self.dispositivos = set()
@@ -205,6 +223,8 @@ class Router(): # Armar un dict que le asigne la ip a una mac
             conexion = Conexion(dispo,self.generar_ip(),self,datetime.now())
             self.pais.conexiones.agregarnodo(NodoArbol(conexion))
             self.conexiones.append(conexion)
+        else:
+            raise ValueError()
 
     def generar_ip(self)->str:
         base = '192.168.68.'
@@ -217,8 +237,8 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         return f'{base}{str(nro_esperado).rjust(2,"0")}'
 
     def desconectar(self,dispo:Dispositivo):
-        conexion = self.conexiones.delete_node(dispo)
-        conexion.baja = datetime.now()
+        dato = self.conexiones.delete_node(dispo)
+        dato.baja = datetime.now()
         
         
 if __name__ == '__main__':

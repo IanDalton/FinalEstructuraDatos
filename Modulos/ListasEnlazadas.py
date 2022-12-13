@@ -10,6 +10,9 @@ class ListaEnlazada():
     self.headvalue = None
     self.len = 0
 
+  def __len__(self):
+    return self.len
+
   def append(self,dato):
     nodo_dato = Nodo(dato)
     if self.len == 0:
@@ -123,7 +126,7 @@ class ListaEnlazada():
     elif actual:
         prev.prox = actual.prox
         actual.prox = None
-        return actual.dato
+    return actual.dato
 
     # Método para obtener el ultimo nodo
   def get_last_node(self):

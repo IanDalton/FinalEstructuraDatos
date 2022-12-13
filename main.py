@@ -3,9 +3,16 @@ from interfaz.mainGrafica import MainWindow
 import sys,pickle
 from Modulos.clases import Provincia,Municipio,Pais
 from Modulos.verificador import ids_municipios
+try:
+    with open('archivo.pickle','rb') as arch:
+        arg = pickle.load(arch)
+except FileNotFoundError:
+    print('Se esta generando los nuevos datos')
+    arg = Pais('Argentina')
+    for key,item in ids_municipios.items():
+        Provincia(key,arg,item[1])
 
-with open('archivo.pickle','rb') as arch:
-    arg = pickle.load(arch)
+arg.dispositivos = set()
 
 app = QApplication(sys.argv)
 mainWindow = MainWindow(arg)
