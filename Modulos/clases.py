@@ -180,8 +180,6 @@ class Departamento():
             return self.id == __o
 
 
-
-
 class Router(): # Armar un dict que le asigne la ip a una mac
     def __init__(self,id:int,identificador:str,ubicacion:str,latitud,longitud,pais:Pais,departamento:Departamento,conexiones_max=20,fecha_alta=datetime.now(),fecha_baja=None) -> None:
         self.id = id

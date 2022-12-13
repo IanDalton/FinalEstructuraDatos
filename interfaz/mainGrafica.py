@@ -1,8 +1,8 @@
 from PyQt5.QtCore import Qt
-#from PyQt5.QtChart import QChart, QChartView, QPieSeries, QPieSlice
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem
+from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
+from Modulos.clases import *
 
 import pickle
 
@@ -30,9 +30,8 @@ class MainWindow(QMainWindow):
       def __init__(self):
             super().__init__()
             self.setWindowTitle("Sistema de informacion - RED WIFI PAIS DIGITAL")
-            self.setGeometry(500,200,1000,700)
+            self.setGeometry(200,200,1000,700)
             layoutPrincipal = QVBoxLayout()
-            #self.setPalette(dark_theme
             
             menu = QHBoxLayout()
             contenido = QHBoxLayout()
@@ -45,7 +44,7 @@ class MainWindow(QMainWindow):
             nuevaConexion.setText('Nueva conexion')
             nuevaConexion.clicked.connect(self.abrirVentanaConexion_click)
             preferencias.setText('Preferencias')
-            preferencias.setStyleSheet('background-color: red')
+            preferencias.setStyleSheet('background-color: darkGrey')
             menu.addWidget(cargarArchivos)
             menu.addWidget(nuevaConexion)
             menu.addWidget(preferencias,2)
@@ -65,16 +64,15 @@ class MainWindow(QMainWindow):
             self.municipios = QVBoxLayout()
             contenido.addLayout(self.municipios)
             self.agregarMunicipios = QPushButton()
-            self.agregarMunicipios.setText('Agregar municipio')
+            self.agregarMunicipios.setText('Municipio nuevo')
             self.municipios.addWidget(self.agregarMunicipios)
             self.departamentos = QVBoxLayout()
             contenido.addLayout(self.departamentos)
             agregarDepartamentos = QPushButton()
-            agregarDepartamentos.setText('Agregar departamento')
             self.departamentos.addWidget(agregarDepartamentos)
+            self.routers = QComboBox()
+            self.routers.addItems(["Opción 1", "Opción 2", "Opción 3"])
 
-            self.routers = QVBoxLayout()
-            contenido.addLayout(self.routers,1)
             """ 
             dispositivos = QVBoxLayout()
             routers.addLayout(dispositivos)
@@ -103,6 +101,8 @@ class MainWindow(QMainWindow):
                         sector.itemAt(i).widget().setParent(None)
                         i-=1
             except ValueError:
+                  pass
+            except AttributeError:
                   pass
       def seleccionar_provincia(self,prov):
             self.limpiar(self.municipios)
@@ -143,13 +143,13 @@ class MainWindow(QMainWindow):
       def abrirVentanaConexion_click(self):
             self.estableciendo_conexion = ConexionWindow()
             self.estableciendo_conexion.show()
-
+            
 
 class CargaWindow(QMainWindow):
       def __init__(self):
             super().__init__()
             self.setWindowTitle("CARGA DE ARCHIVOS")
-            self.setGeometry(500,200,1000,700)
+            self.setGeometry(1300,200,300,100)
             layoutPrincipal = QVBoxLayout()
 
             eleccion = QLabel()
@@ -168,16 +168,24 @@ class CargaWindow(QMainWindow):
             ingresar_link = QTextEdit()
             link.addWidget(ingresar_link)
             layoutPrincipal.addLayout(link)
+
+            confirmacion = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmacion)
+            confirmacion.clicked.connect(self.cargarDatos_click)
             
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+      
+      def cargarDatos_click():
+            pass
+
 
 class ConexionWindow(QMainWindow):
       def __init__(self):
             super().__init__()
             self.setWindowTitle("NUEVA CONEXION")
-            self.setGeometry(500,200,1000,700)
+            self.setGeometry(1350,400,300,100)
             layoutPrincipal = QVBoxLayout()
 
             disclaimer = QLabel(text="Ingrese los datos para completar la conexion: ")
@@ -185,36 +193,27 @@ class ConexionWindow(QMainWindow):
 
             dispositivo = QHBoxLayout()
             dispositivo_text = QLabel(text="Dispositivo: ")
-            dispositivo_box = QTextEdit()
+            self.dispositivo_box = QTextEdit()
             dispositivo.addWidget(dispositivo_text)
-            dispositivo.addWidget(dispositivo_box)
+            dispositivo.addWidget(self.dispositivo_box)
             layoutPrincipal.addLayout(dispositivo)
-            ip = QHBoxLayout()
-            ip_text = QLabel(text="Ip: ")
-            ip_box = QTextEdit()
-            ip.addWidget(ip_text)
-            ip.addWidget(ip_box)
-            layoutPrincipal.addLayout(ip)
-            router = QHBoxLayout()
-            router_text = QLabel(text="Router: ")
-            router_box = QTextEdit()
-            router.addWidget(router_text)
-            router.addWidget(router_box)
-            layoutPrincipal.addLayout(router)
 
-            alta = QFormLayout()
+            self.alta = QFormLayout()
             self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
             self.datetime_edit.dateTimeChanged.connect(self.update)
-            alta.addRow('Alta:', self.datetime_edit)
-            layoutPrincipal.addLayout(alta)
+            self.alta.addRow('Alta:', self.datetime_edit)
+            layoutPrincipal.addLayout(self.alta)
 
             confirmacion = QPushButton(text="Confirmar datos")
             layoutPrincipal.addWidget(confirmacion)
-
+            #confirmacion.clicked.connect(self.generarConexion_click)
 
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+      
+      # def generarConexion_click(self):
+      #       conexion = Conexion(self.dispositivo_box,Router.generar_ip,self.alta) #FALTA EL ROUTER QUE LO ELIGE EL USUARIO 
 
 class FechaWindow(QMainWindow): 
       def __init__(self):
@@ -294,37 +293,3 @@ if __name__ == '__main__':
       main.show()
       app.exec()
 
-
-# #Grafico de torta para cantidad de usuarios en linea
-#    def create_piechart(self):  
- 
-#       series = QPieSeries()
-#       series.append("Python", 80)
-#       series.append("C++", 70)
-#       series.append("Java", 50)
-#       series.append("C#", 40)
-#       series.append("PHP", 30)
- 
-
-#       #adding slice
-#       slice = QPieSlice()
-#       slice = series.slices()[2]
-#       slice.setExploded(True)
-#       slice.setLabelVisible(True)
-#       slice.setPen(QPen(Qt.darkGreen, 2))
-#       slice.setBrush(Qt.green)
-
-#       chart = QChart()
-#       chart.legend().hide()
-#       chart.addSeries(series)
-#       chart.createDefaultAxes()
-#       chart.setAnimationOptions(QChart.SeriesAnimations)
-#       chart.setTitle("Pie Chart Example")
- 
-#       chart.legend().setVisible(True)
-#       chart.legend().setAlignment(Qt.AlignBottom)
- 
-#       chartview = QChartView(chart)
-#       chartview.setRenderHint(QPainter.Antialiasing)
-
-#       self.setCentralWidget(chartview)
