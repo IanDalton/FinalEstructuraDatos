@@ -121,8 +121,7 @@ class Pais():
             raise NameError
 
     def get_departamento(self,id:int,municipio)->object:
-        if id == 1270:
-            print('asd')
+
         return municipio.departamentos[municipio.departamentos.index(id)]
     def get_municipio(self,id,provincia)-> object:
         return provincia.municipios[provincia.municipios.index(id)]

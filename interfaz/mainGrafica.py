@@ -102,12 +102,13 @@ class MainWindow(QMainWindow):
             
             self.info = QLabel()
             settings.addWidget(self.info)
-            crear_conexion = QPushButton()
-            crear_conexion.setText('Registrar conexion')
-            crear_conexion.clicked.connect(self.agregar_conexion)
+            self.crear_conexion = QPushButton()
+            
+            self.crear_conexion.setText('Registrar conexion')
+            self.crear_conexion.clicked.connect(self.agregar_conexion)
             self.activable = QHBoxLayout()
             settings.addLayout(self.activable)
-            settings.addWidget(crear_conexion)
+            settings.addWidget(self.crear_conexion)
             texto1 = QLabel() 
             texto1.setText('Desactivado')
             self.activable.addWidget(texto1)
@@ -117,6 +118,7 @@ class MainWindow(QMainWindow):
             texto2 = QLabel() 
             texto2.setText('Activo')
             self.activable.addWidget(texto2)
+            
             
 
       #El widget que contiene al layout es el widget principal de la ventana, para mostrarlo
@@ -189,10 +191,12 @@ class MainWindow(QMainWindow):
                   self.toggle.toggle()
             
             self.toggle.toggled.connect(self.modificar_router)
+            self.crear_conexion.setEnabled(self.toggle.isChecked())
             print(self.provincia,self.municipio,self.departamento,self.router)
             pass
       
       def modificar_router(self):
+            self.crear_conexion.setEnabled(self.toggle.isChecked())
             if self.toggle.isChecked():
                   self.router.fecha_baja = None
             else:

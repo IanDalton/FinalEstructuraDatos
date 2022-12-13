@@ -126,6 +126,7 @@ class ListaEnlazada():
     elif actual:
         prev.prox = actual.prox
         actual.prox = None
+    self.len -= 1
     return actual.dato
 
     # Método para obtener el ultimo nodo
