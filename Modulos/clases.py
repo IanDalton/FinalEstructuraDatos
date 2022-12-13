@@ -128,6 +128,9 @@ class Pais():
     def get_provincia(self,id) -> object:
         return self.provincias[self.provincias.index(id)]
 
+    def actualizar_conexiones(self):
+        for prov in self.provincias:
+            prov.actualizar_conexiones()
 
 
     def create_municipio(self,municipio) -> object:
@@ -162,6 +165,15 @@ class Provincia():
         self.nombre = nombre
         self.municipios = list()
         pais.provincias.append(self)
+        self.total = 0
+        self.total_conectados = 0
+    def actualizar_conexiones(self):
+        self.total = 0
+        self.total_conectados = 0
+        for muni in self.municipios:
+            muni.actualizar_conexiones()
+            self.total += muni.total
+            self.total_conectados += muni.total_conectados
     def __hash__(self) -> int:
         return hash(self.id)
     def __eq__(self, __o: object) -> bool:
@@ -176,6 +188,15 @@ class Municipio():
         self.nombre = nombre
         self.departamentos = list()
         provincia.municipios.append(self)
+        self.total = 0
+        self.total_conectados = 0
+    def actualizar_conexiones(self):
+        self.total = 0
+        self.total_conectados = 0
+        for depto in self.departamentos:
+            depto.actualizar_conexiones()
+            self.total = depto.total
+            self.total_conectados = depto.total_conectados
             
     def __hash__(self) -> int:
         return hash(self.id)
@@ -190,7 +211,15 @@ class Departamento():
         self.id = id
         self.nombre = nombre
         self.routers = set()
+        self.total = 0
+        self.total_conectados = 0
         municipio.departamentos.append(self)
+    def actualizar_conexiones(self):
+        self.total = 0
+        self.total_conectados = 0
+        for router in self.routers:
+            self.total += router.conexiones_max
+            self.total_conectados += len(router.conexiones)
     def __eq__(self, __o: object) -> bool:
         if type(__o)==object:
             return self.id==__o.id

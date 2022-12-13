@@ -5,10 +5,11 @@ from qtwidgets import AnimatedToggle
 from Modulos.clases import *
 
 class CrearConexion(QMainWindow):
-      def __init__(self,pais:Pais,router:Router):
+      def __init__(self,pais:Pais,router:Router,refresh):
             super().__init__()
             self.pais = pais
             self.router = router
+            self.refresh = refresh
             self.setWindowTitle('Registrar Conexion')
             self.setGeometry(1350,400,300,100)
 
@@ -74,6 +75,7 @@ class CrearConexion(QMainWindow):
             else:
                   dispo = list(self.pais.dispositivos)[self.dispositivos.currentIndex()-1]
                   dispo.conectar(self.router)
+            self.refresh()
             self.close()
 
             pass

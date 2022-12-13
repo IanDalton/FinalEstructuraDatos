@@ -3,7 +3,6 @@ from PyQt5.QtGui import QPalette, QColor
 from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
 from PyQt5.QtWidgets import QMessageBox
-import pickle 
 from .erroresWindow import ErroresWindow
 from Modulos.clases import * 
 

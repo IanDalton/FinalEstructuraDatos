@@ -12,10 +12,10 @@ except FileNotFoundError:
     for key,item in ids_municipios.items():
         Provincia(key,arg,item[1])
 
-arg.dispositivos = set()
 
 app = QApplication(sys.argv)
 mainWindow = MainWindow(arg)
+
 
 mainWindow.show()
 app.exec()

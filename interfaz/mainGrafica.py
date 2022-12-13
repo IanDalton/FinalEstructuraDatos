@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
             self.preferencias = QComboBox()
             self.preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
             self.preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if self.preferencias.currentIndex()==2 else None)
-
+            self.preferencias.currentIndexChanged.connect(self.refrescar)
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             self.preferencias.setStyleSheet('background-color: darkGrey')
@@ -103,6 +103,11 @@ class MainWindow(QMainWindow):
             self.info = QLabel()
             settings.addWidget(self.info)
             self.crear_conexion = QPushButton()
+            self.conexiones = QFrame()
+            self.vbox = QVBoxLayout()
+            self.conexiones.setLayout(self.vbox)
+            settings.addWidget(self.conexiones)
+
             
             self.crear_conexion.setText('Registrar conexion')
             self.crear_conexion.clicked.connect(self.agregar_conexion)
@@ -120,75 +125,134 @@ class MainWindow(QMainWindow):
             self.activable.addWidget(texto2)
             
             
+            
+            
 
       #El widget que contiene al layout es el widget principal de la ventana, para mostrarlo
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
       
+
+      def refrescar(self):
+            if self.preferencias.currentIndex()==1:
+                  self.pais.actualizar_conexiones()
+            self.limpiar(self.provincias)
+            for i in self.pais.provincias:
+                  prov = QPushButton()
+                  if self.preferencias.currentIndex()==1:
+                        prov.setText(f'{i.total_conectados}\{i.total}  {i.nombre}')
+                  else:
+                        prov.setText(f'{i.nombre}')
+                  prov.clicked.connect(lambda checked ,arg = i:self.seleccionar_provincia(arg))
+                  self.provincias.addWidget(prov)
+            if not self.provincia:
+                  return
+            self.seleccionar_provincia(self.provincia,0)
+            if not self.municipio:
+                  return
+            self.seleccionar_municipio(self.municipio,0)
+            if not self.departamento:
+                  return
+            self.seleccionar_departamento(self.departamento,0)
+            
+
       def agregar_conexion(self):
-            self.abrir_ventanaConexion = CrearConexion(self.pais,self.router)
+            self.abrir_ventanaConexion = CrearConexion(self.pais,self.router,self.refrescar)
             self.abrir_ventanaConexion.show()
+            
 
 
-      def limpiar(self,sector:QHBoxLayout):
+      def limpiar(self,sector:QHBoxLayout,limit = 0):
             try:
                   i=max(range(sector.count()))
-                  while i > 0 :
+                  while i > limit :
                         sector.itemAt(i).widget().setParent(None)
                         i-=1
             except ValueError:
                   pass
             except AttributeError:
                   pass
-      def seleccionar_provincia(self,prov):
+            
+      def seleccionar_provincia(self,prov,default = 1):
             self.limpiar(self.municipios)
             self.limpiar(self.departamentos)
             self.limpiar(self.routers)
-            self.municipio = None
-            self.departamento = None
-            self.router = None
+            if default:
+                  self.municipio = None
+                  self.departamento = None
+                  self.router = None
             self.provincia = prov
             for muni in prov.municipios:
                   lbl = QPushButton()
-                  lbl.setText(muni.nombre)
+                  if self.preferencias.currentIndex()==1:
+                        lbl.setText(f'{muni.total_conectados}\{muni.total}  {muni.nombre}')
+                  else:
+                        lbl.setText(f'{muni.nombre}')
                   lbl.setStyleSheet('border:1px solid black;')
                   lbl.clicked.connect(lambda checked,mun = muni:self.seleccionar_municipio(mun))
                   self.municipios.addWidget(lbl)
-      def seleccionar_municipio(self,muni):
+      def seleccionar_municipio(self,muni,default = 1):
             self.limpiar(self.departamentos)
             self.limpiar(self.routers)
-            self.router = None
-            self.departamento = None
+            if default:
+                  self.router = None
+                  self.departamento = None
             self.municipio = muni
             for depto in muni.departamentos:
+                  
                   lbl = QPushButton()
-                  lbl.setText(depto.nombre)
+                  if self.preferencias.currentIndex()==1:
+                        lbl.setText(f'{depto.total_conectados}\{depto.total}  {depto.nombre}')
+                  else:
+                        lbl.setText(f'{depto.nombre}')
                   lbl.setStyleSheet('border:1px solid black;')
                   lbl.clicked.connect(lambda checked,dpto = depto:self.seleccionar_departamento(dpto))
                   self.departamentos.addWidget(lbl)
-      def seleccionar_departamento(self,depto):
+                  
+      def seleccionar_departamento(self,depto,default=1):
             print(self)
             self.limpiar(self.routers)
-            self.router = None
+            if default:
+                  self.router = None
+            sel_router = None
             self.departamento = depto
             for i,router in enumerate(depto.routers):
-                  lbl = QPushButton()
-                  lbl.setText(str(router))
-                  lbl.setStyleSheet('border:1px solid black;')
-                  lbl.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
-                  self.routers.addWidget(lbl)
+                  content = QFrame()
+                  hbox = QHBoxLayout()
+                  content.setLayout(hbox)
+                  btn = QPushButton()
+                  btn.setText('EXPANDIR')
+                  hbox.addWidget(QLabel(text=f'{router}'),alignment=Qt.AlignLeft)
+                  if self.preferencias.currentIndex()==1:
+                        hbox.addWidget(QLabel(text=f'{len(router.conexiones)}/{router.conexiones_max}'),alignment=Qt.AlignRight)
+                  btn.setStyleSheet('border:1px solid black;')
+                  btn.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
+                  hbox.addWidget(btn,2,alignment=Qt.AlignRight)
+                  content.setStyleSheet('border:1px solid black;')
+                  if router == self.router and self.router:
+                        sel_router = (router,i)
+
+                  self.routers.addWidget(content)
+            if sel_router:
+                  self.seleccionar_router(sel_router[0],sel_router[1])
             pass
+
+
       def seleccionar_router(self,router:Router,index):
-            print(router.id)
-            print(index)
-            print(self.toggle.isChecked())
+
             
             self.routers.insertWidget(index+2,self.frame)
             self.router = router
+            
             self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
             if (self.router.fecha_baja is None and not self.toggle.isChecked() )or(self.router.fecha_baja and self.toggle.isChecked()):
                   self.toggle.toggle()
+            
+            
+            self.limpiar(self.vbox,-1)
+            for conexion in router.conexiones:
+                  self.vbox.addWidget(QLabel(text=f'MAC:{conexion.mac.mac}   IP:{conexion.ip}'))
             
             self.toggle.toggled.connect(self.modificar_router)
             self.crear_conexion.setEnabled(self.toggle.isChecked())
@@ -201,27 +265,35 @@ class MainWindow(QMainWindow):
                   self.router.fecha_baja = None
             else:
                   self.router.fecha_baja = datetime.now() if not self.router.fecha_baja else self.router.fecha_baja
+                  for conexion in self.router.conexiones:
+                        conexion.mac.desconectar(self.router)
             self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
+            self.refrescar()
 
       def abrirVentanaCarga_click(self):
             self.cargando_datos = CargaWindow(self.pais)
             self.cargando_datos.show()
+            self.cargando_datos.closeEvent.connect(self.refrescar)
 
       def abrirVentanaFechas_click(self):
             self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
+            self.abrir_ventanaFechas.closeEvent.connect(self.refrescar)
       
       def abrirVentanaMunicipio_click(self):
             self.ventana_agregarMunicipios = MunicipiosWindow(self.provincia)
             self.ventana_agregarMunicipios.show()
+            self.ventana_agregarMunicipios.closeEvent.connect(self.refrescar)
 
       def abrirVentanaDepartamento_click(self):
             self.ventana_agregarDepartamento = DepartamentosWindow(self.municipio)
             self.ventana_agregarDepartamento.show()
+            self.ventana_agregarDepartamento.closeEvent.connect(self.refrescar)
 
       def abrirVentanaRouter_click(self):
             self.ventana_agregarRouter = RouterWindow(self.departamento,self.pais)
             self.ventana_agregarRouter.show()
+            self.ventana_agregarRouter.destroyed.connect(self.refrescar)
             
 
 
