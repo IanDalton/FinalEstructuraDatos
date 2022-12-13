@@ -44,7 +44,7 @@ class MainWindow(QMainWindow):
             nuevaConexion.setText('Nueva conexion')
             nuevaConexion.clicked.connect(self.abrirVentanaConexion_click)
             preferencias.setText('Preferencias')
-            preferencias.setStyleSheet('background-color: red')
+            preferencias.setStyleSheet('background-color: darkGrey')
             menu.addWidget(cargarArchivos)
             menu.addWidget(nuevaConexion)
             menu.addWidget(preferencias,2)

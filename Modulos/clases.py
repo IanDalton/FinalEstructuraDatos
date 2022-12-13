@@ -114,8 +114,6 @@ class Departamento():
         municipio.departamentos.add(self)
 
 
-
-
 class Router(): # Armar un dict que le asigne la ip a una mac
     def __init__(self,id:int,ubicacion:str,latitud:int,longitud:int,pais:Pais,departamento:Departamento,conexiones_max=20,fecha_alta=datetime.now(),fecha_baja=None) -> None:
         self.id = id
