@@ -7,5 +7,5 @@ for key,value in ids_municipios.items():
 
 arg.save_error(arg.load_data('I:\Github\FinalEstructuraDatos\Datos\municipios.csv','Municipio'),'municipios')
 arg.save_error(arg.load_data('I:\\Github\\FinalEstructuraDatos\\Datos\\routers.csv','Router'),'routers')
-arg.save()
+
 

@@ -4,8 +4,7 @@ from .claseArbol import Arbol,NodoArbol
 from .ListasEnlazadas import ListaEnlazada
 from .verificador import verificador_municipios
 import numpy as np
-import time
-import csv
+import csv,os
 
 class Dispositivo():
     def __init__(self,mac) -> None:
@@ -129,8 +128,10 @@ class Pais():
             raise NameError('El ID del departamento no existe')
     
     def save_error(self,error:list,name:str):
+        if not os.path.exists('Errores'):
+            os.makedirs('Errores')
         if len(error) > 0:
-            with open(f'{name}-{datetime.now().date()}.csv','w',newline='') as arch:
+            with open(f'Errores/{name}-{datetime.now().date()}.csv','w',newline='') as arch:
                 data = csv.DictWriter(arch,error[0].keys())
                 data.writeheader()
                 for err in error:
