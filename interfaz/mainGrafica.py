@@ -1,8 +1,8 @@
 from PyQt5.QtCore import Qt
-#from PyQt5.QtChart import QChart, QChartView, QPieSeries, QPieSlice
 from PyQt5.QtGui import QPalette, QColor
 from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
+from Modulos.clases import *
 
 import pickle
 
@@ -143,7 +143,7 @@ class MainWindow(QMainWindow):
       def abrirVentanaConexion_click(self):
             self.estableciendo_conexion = ConexionWindow()
             self.estableciendo_conexion.show()
-
+            
 
 class CargaWindow(QMainWindow):
       def __init__(self):
@@ -171,10 +171,15 @@ class CargaWindow(QMainWindow):
 
             confirmacion = QPushButton(text="Confirmar datos")
             layoutPrincipal.addWidget(confirmacion)
+            confirmacion.clicked.connect(self.cargarDatos_click)
             
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+      
+      def cargarDatos_click():
+            pass
+
 
 class ConexionWindow(QMainWindow):
       def __init__(self):
@@ -188,23 +193,27 @@ class ConexionWindow(QMainWindow):
 
             dispositivo = QHBoxLayout()
             dispositivo_text = QLabel(text="Dispositivo: ")
-            dispositivo_box = QTextEdit()
+            self.dispositivo_box = QTextEdit()
             dispositivo.addWidget(dispositivo_text)
-            dispositivo.addWidget(dispositivo_box)
+            dispositivo.addWidget(self.dispositivo_box)
             layoutPrincipal.addLayout(dispositivo)
 
-            alta = QFormLayout()
+            self.alta = QFormLayout()
             self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
             self.datetime_edit.dateTimeChanged.connect(self.update)
-            alta.addRow('Alta:', self.datetime_edit)
-            layoutPrincipal.addLayout(alta)
+            self.alta.addRow('Alta:', self.datetime_edit)
+            layoutPrincipal.addLayout(self.alta)
 
             confirmacion = QPushButton(text="Confirmar datos")
             layoutPrincipal.addWidget(confirmacion)
+            #confirmacion.clicked.connect(self.generarConexion_click)
 
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+      
+      # def generarConexion_click(self):
+      #       conexion = Conexion(self.dispositivo_box,Router.generar_ip,self.alta) #FALTA EL ROUTER QUE LO ELIGE EL USUARIO 
 
 class FechaWindow(QMainWindow): 
       def __init__(self):
