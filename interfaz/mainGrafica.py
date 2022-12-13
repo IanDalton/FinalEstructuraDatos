@@ -168,6 +168,9 @@ class CargaWindow(QMainWindow):
             ingresar_link = QTextEdit()
             link.addWidget(ingresar_link)
             layoutPrincipal.addLayout(link)
+
+            confirmacion = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmacion)
             
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
