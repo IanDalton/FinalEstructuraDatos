@@ -29,6 +29,7 @@ dark_theme.setColor(QPalette.HighlightedText, Qt.black)
 class MainWindow(QMainWindow): 
       def __init__(self,pais:Pais):
             super().__init__()
+            self.pais = pais
             self.provincia = None
             self.municipio = None
             self.departamento = None
@@ -45,8 +46,9 @@ class MainWindow(QMainWindow):
             cargarArchivos = QPushButton()      
             nuevaConexion = QPushButton() 
             preferencias = QComboBox()
-            preferencias.addItems(['Default', 'Mostrar conexiones', 'No mostrar conexiones', 'Filtrar conexiones por hora'])
-            preferencias.currentIndex.connect(self.abrirVentanaFechas_click) #currentIndex?
+            preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
+            preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if preferencias.currentIndex()==2 else None)
+
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             nuevaConexion.setText('Nueva conexion')
@@ -194,7 +196,7 @@ class MainWindow(QMainWindow):
             self.estableciendo_conexion.show()
 
       def abrirVentanaFechas_click(self):
-            self.abrir_ventanaFechas = FechaWindow()
+            self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
             
 
@@ -313,9 +315,9 @@ class FechaWindow(QMainWindow):
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
 
-      def filtrarArbol(self,pais:Pais):
-            pais.conexiones.fechaLimiteInferior()
-            pais.conexiones.fechaLimiteSuperior()
+      def filtrarArbol(self):
+            self.pais.conexiones.fechaLimiteInferior()
+            self.pais.conexiones.fechaLimiteSuperior()
 
       def update(self):
         value = self.datetime_edit.dateTime()
