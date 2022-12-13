@@ -77,13 +77,16 @@ class MainWindow(QMainWindow):
             self.agregarMunicipios = QPushButton()
             self.agregarMunicipios.setText('Municipio nuevo')
             self.municipios.addWidget(self.agregarMunicipios)
+            self.agregarMunicipios.clicked.connect(self.abrirVentanaMunicipio_click)
             self.departamentos = QVBoxLayout()
             contenido.addLayout(self.departamentos)
             agregarDepartamentos = QPushButton()
             agregarDepartamentos.setText('Departamento nuevo')
             self.departamentos.addWidget(agregarDepartamentos)
+            agregarDepartamentos.clicked.connect(self.abrirVentanaDepartamento_click)
             agregar_router = QPushButton()
             agregar_router.setText('Agregar Router')
+            agregar_router.clicked.connect(self.abrirVentanaRouter_click)
             self.routers = QVBoxLayout()
             self.routers.addWidget(agregar_router)
             contenido.addLayout(self.routers,2)
@@ -198,8 +201,19 @@ class MainWindow(QMainWindow):
       def abrirVentanaFechas_click(self):
             self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
-            
+      
+      def abrirVentanaMunicipio_click(self):
+            self.ventana_agregarMunicipios = MunicipiosWindow()
+            self.ventana_agregarMunicipios.show()
 
+      def abrirVentanaDepartamento_click(self):
+            self.ventana_agregarDepartamento = DepartamentosWindow()
+            self.ventana_agregarDepartamento.show()
+
+      def abrirVentanaRouter_click(self):
+            self.ventana_agregarRouter = RouterWindow()
+            self.ventana_agregarRouter.show()
+            
 class CargaWindow(QMainWindow):
       def __init__(self):
             super().__init__()
@@ -234,7 +248,6 @@ class CargaWindow(QMainWindow):
       
       def cargarDatos_click():
             pass
-
 
 class ConexionWindow(QMainWindow):
       def __init__(self):
@@ -316,8 +329,8 @@ class FechaWindow(QMainWindow):
             self.setCentralWidget(widgetLayout)
 
       def filtrarArbol(self):
-            self.pais.conexiones.fechaLimiteInferior()
-            self.pais.conexiones.fechaLimiteSuperior()
+            self.pais.conexiones.fechaLimiteInferior(self.datetime_edit1)
+            self.pais.conexiones.fechaLimiteSuperior(self.datetime_edit2)
 
       def update(self):
         value = self.datetime_edit.dateTime()
@@ -345,7 +358,118 @@ class FechaWindow(QMainWindow):
             self.tableWidget.horizontalHeader().setStretchLastSection(True)
             self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
+class MunicipiosWindow(QMainWindow):
+      def __init__(self):
+            super().__init__()
+            self.setWindowTitle("INSERTAR MUNICIPIO")
+            self.setGeometry(1350,400,300,50)
 
+            layoutPrincipal = QVBoxLayout()
+
+            id = QHBoxLayout()
+            nombre = QHBoxLayout()
+            ids = QLabel(text="Id de municipio: ")
+            id_ingresado = QTextEdit()
+            nombres = QLabel(text="Nombre de municipio: ")
+            nombre_ingresado = QTextEdit()
+            id.addWidget(ids)
+            id.addWidget(id_ingresado)
+            nombre.addWidget(nombres)
+            nombre.addWidget(nombre_ingresado)
+            layoutPrincipal.addLayout(id)
+            layoutPrincipal.addLayout(nombre)
+
+            confirmar = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmar)
+
+
+            widgetLayout = QWidget()
+            widgetLayout.setLayout(layoutPrincipal)
+            self.setCentralWidget(widgetLayout)
+
+class DepartamentosWindow(QMainWindow):
+      def __init__(self):
+            super().__init__()
+            self.setWindowTitle("INSERTAR DEPARTAMENTO")
+            self.setGeometry(1300,200,300,100)
+
+            layoutPrincipal = QVBoxLayout()
+
+            id = QHBoxLayout()
+            nombre = QHBoxLayout()
+            ids = QLabel(text="Id de departamento: ")
+            id_ingresado = QTextEdit()
+            nombres = QLabel(text="Nombre de departamento: ")
+            nombre_ingresado = QTextEdit()
+            id.addWidget(ids)
+            id.addWidget(id_ingresado)
+            nombre.addWidget(nombres)
+            nombre.addWidget(nombre_ingresado)
+            layoutPrincipal.addLayout(id)
+            layoutPrincipal.addLayout(nombre)
+
+            confirmar = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmar)
+
+
+            widgetLayout = QWidget()
+            widgetLayout.setLayout(layoutPrincipal)
+            self.setCentralWidget(widgetLayout)
+
+class RouterWindow(QMainWindow): 
+      def __init__(self):
+            super().__init__()
+            self.setWindowTitle("INSERTAR ROUTER")
+            self.setGeometry(1400,300,300,100)
+
+            layoutPrincipal = QVBoxLayout()
+
+            id = QHBoxLayout()
+            identificador = QHBoxLayout()
+            ubicacion = QHBoxLayout()
+            latitud = QHBoxLayout()
+            longitud = QHBoxLayout()
+            pais = QHBoxLayout()
+
+            ids = QLabel(text="Id de router: ")
+            id_ingresado = QTextEdit()
+
+            identificadores = QLabel(text="Nombre de router: ")
+            identificador_ingresado = QTextEdit()
+
+            ubicaciones = QLabel(text="Ubicacion de router: ")
+            ubicacion_ingresada = QTextEdit()
+
+            latitudes = QLabel(text="Latitud de router: ")
+            latitud_ingresada = QTextEdit()
+
+            longitudes = QLabel(text="Longitud de router: ")
+            longitud_ingresada = QTextEdit()
+            
+            id.addWidget(ids)
+            id.addWidget(id_ingresado)
+            identificador.addWidget(identificadores)
+            identificador.addWidget(identificador_ingresado)
+            ubicacion.addWidget(ubicaciones)
+            ubicacion.addWidget(ubicacion_ingresada)
+            latitud.addWidget(latitudes)
+            latitud.addWidget(latitud_ingresada)
+            longitud.addWidget(longitudes)
+            longitud.addWidget(longitud_ingresada)
+
+            layoutPrincipal.addLayout(id)
+            layoutPrincipal.addLayout(identificador)
+            layoutPrincipal.addLayout(ubicacion)
+            layoutPrincipal.addLayout(latitud)
+            layoutPrincipal.addLayout(longitud)
+
+            confirmar = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmar)
+
+
+            widgetLayout = QWidget()
+            widgetLayout.setLayout(layoutPrincipal)
+            self.setCentralWidget(widgetLayout)
 
 if __name__ == '__main__':
       app = QApplication(sys.argv)
