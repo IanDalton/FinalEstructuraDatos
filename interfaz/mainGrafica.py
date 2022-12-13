@@ -28,7 +28,11 @@ dark_theme.setColor(QPalette.HighlightedText, Qt.black)
 class MainWindow(QMainWindow): 
       def __init__(self,pais:Pais):
             super().__init__()
-            
+            self.provincia = None
+            self.municipio = None
+            self.departamento = None
+            self.router = None
+
             self.setWindowTitle("Sistema de informacion - RED WIFI PAIS DIGITAL")
             self.setGeometry(200,200,1000,700)
             layoutPrincipal = QVBoxLayout()
@@ -36,6 +40,8 @@ class MainWindow(QMainWindow):
             menu = QHBoxLayout()
             contenido = QHBoxLayout()
             
+
+
             cargarArchivos = QPushButton()      
             nuevaConexion = QPushButton() 
             preferencias = QPushButton()
@@ -54,6 +60,7 @@ class MainWindow(QMainWindow):
             layoutPrincipal.addLayout(contenido,2)
 
             self.provincias = QVBoxLayout()
+            self.provincias.addWidget(QPushButton())
 
             for i in pais.provincias:
                   prov = QPushButton()
@@ -70,10 +77,18 @@ class MainWindow(QMainWindow):
             self.departamentos = QVBoxLayout()
             contenido.addLayout(self.departamentos)
             agregarDepartamentos = QPushButton()
+            agregarDepartamentos.setText('Departamento nuevo')
             self.departamentos.addWidget(agregarDepartamentos)
-            self.routers = QComboBox()
-            self.routers.addItems(["Opción 1", "Opción 2", "Opción 3"])
+            agregar_router = QPushButton()
+            agregar_router.setText('Agregar Router')
+            self.routers = QVBoxLayout()
+            self.routers.addWidget(agregar_router)
+            contenido.addLayout(self.routers)
 
+            self.municipios.setAlignment(Qt.AlignTop)
+            self.provincias.setAlignment(Qt.AlignTop)
+            self.departamentos.setAlignment(Qt.AlignTop)
+            self.routers.setAlignment(Qt.AlignTop)
             """ 
             dispositivos = QVBoxLayout()
             routers.addLayout(dispositivos)
@@ -92,10 +107,10 @@ class MainWindow(QMainWindow):
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
-
       
       def limpiar(self,sector:QHBoxLayout):
             print(sector.count())
+
             try:
                   i=max(range(sector.count()))
                   while i > 0 :
@@ -109,6 +124,10 @@ class MainWindow(QMainWindow):
             self.limpiar(self.municipios)
             self.limpiar(self.departamentos)
             self.limpiar(self.routers)
+            self.municipio = None
+            self.departamento = None
+            self.router = None
+            self.provincia = prov
             for muni in prov.municipios:
                   lbl = QPushButton()
                   lbl.setText(muni.nombre)
@@ -118,6 +137,9 @@ class MainWindow(QMainWindow):
       def seleccionar_municipio(self,muni):
             self.limpiar(self.departamentos)
             self.limpiar(self.routers)
+            self.router = None
+            self.departamento = None
+            self.municipio = muni
             for depto in muni.departamentos:
                   lbl = QPushButton()
                   lbl.setText(depto.nombre)
@@ -126,15 +148,19 @@ class MainWindow(QMainWindow):
                   self.departamentos.addWidget(lbl)
       def seleccionar_departamento(self,depto):
             self.limpiar(self.routers)
+            self.router = None
+            self.departamento = depto
             for router in depto.routers:
                   lbl = QPushButton()
                   lbl.setText(str(router))
                   lbl.setStyleSheet('border:1px solid black;')
                   lbl.clicked.connect(lambda checked,rtr = router:self.seleccionar_router(rtr))
-                  self.routers.addItem(lbl)
+                  self.routers.addWidget(lbl)
             pass
       def seleccionar_router(self,router):
             print(router.id)
+            self.router = router
+            print(self.provincia,self.municipio,self.departamento,self.router)
             pass
 
       def abrirVentanaCarga_click(self):
