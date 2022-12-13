@@ -86,10 +86,10 @@ class MainWindow(QMainWindow):
             agregarDepartamentos = QPushButton()
             agregarDepartamentos.setText('Departamento nuevo')
             self.departamentos.addWidget(agregarDepartamentos)
-            agregarDepartamentos.clicked.connect(self.abrirVentanaDepartamento_click)
+            agregarDepartamentos.clicked.connect(lambda clicked:self.abrirVentanaDepartamento_click() if self.municipio else None)
             agregar_router = QPushButton()
             agregar_router.setText('Agregar Router')
-            agregar_router.clicked.connect(self.abrirVentanaRouter_click)
+            agregar_router.clicked.connect(lambda clicked:self.abrirVentanaRouter_click() if self.departamento else None)
             self.routers = QVBoxLayout()
             self.routers.addWidget(agregar_router)
             contenido.addLayout(self.routers,2)
@@ -215,11 +215,11 @@ class MainWindow(QMainWindow):
             self.ventana_agregarMunicipios.show()
 
       def abrirVentanaDepartamento_click(self):
-            self.ventana_agregarDepartamento = DepartamentosWindow()
+            self.ventana_agregarDepartamento = DepartamentosWindow(self.municipio)
             self.ventana_agregarDepartamento.show()
 
       def abrirVentanaRouter_click(self):
-            self.ventana_agregarRouter = RouterWindow()
+            self.ventana_agregarRouter = RouterWindow(self.departamento)
             self.ventana_agregarRouter.show()
             
 
