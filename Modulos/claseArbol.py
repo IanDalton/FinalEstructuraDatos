@@ -67,27 +67,16 @@ class Arbol:
         else:
             self.root.agregarnodos(nodo) 
 
-    def fechaLimiteInferior(self, fecha: datetime, nodo: NodoArbol = None):  
+    def fechaLimites(self, fecha_inf: datetime,fecha_sup:datetime, nodo: NodoArbol = None) -> list:  
         nodo = self.root if nodo == None else nodo
-        if nodo.dato.datetime >= fecha:
+        lista=[]
+        if nodo.dato >= fecha_inf:
             if (
-                nodo.dato.datetime > fecha and nodo.izquierdo
+                nodo.dato > fecha_inf and nodo.izquierdo
             ):  # Es para evitar que recorra para la izquierda si el arbol tiene mas valores
-                self.venta_posterior(fecha, nodo.izquierdo)
-            print(nodo.dato)
+                lista.extend(self.fechaLimites(fecha_inf,fecha_sup, nodo.izquierdo))
+            lista.append(nodo.dato)
 
-        if nodo.right:
-            self.venta_posterior(fecha, nodo.derecho)
-
-    def fechaLimiteSuperior(self, fecha: datetime, nodo: NodoArbol = None):
-        nodo = self.root if nodo == None else nodo
-        if nodo.dato.datetime <= fecha:
-            if (
-                nodo.dato.datetime < fecha and nodo.derecho
-            ):  # Es para evitar que recorra para la izquierda si el arbol tiene mas valores
-                self.venta_anterior(fecha, nodo.derecho)
-            print(nodo.dato)
-
-        if nodo.left:
-            self.venta_anterior(fecha, nodo.izquierdo)
-
+            if nodo.dato < fecha_sup and nodo.derecho:
+                lista.extend(self.fechaLimites(fecha_inf,fecha_sup, nodo.derecho))
+        return lista
