@@ -2,7 +2,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
 from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
-from Modulos.clases import Pais,Router
+from Modulos.clases import *
 import pickle
 from datetime import datetime
 
@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
             self.agregarMunicipios = QPushButton()
             self.agregarMunicipios.setText('Municipio nuevo')
             self.municipios.addWidget(self.agregarMunicipios)
-            self.agregarMunicipios.clicked.connect(self.abrirVentanaMunicipio_click)
+            self.agregarMunicipios.clicked.connect(lambda clicked:self.abrirVentanaMunicipio_click() if self.provincia else None)
             self.departamentos = QVBoxLayout()
             contenido.addLayout(self.departamentos)
             agregarDepartamentos = QPushButton()
@@ -212,7 +212,7 @@ class MainWindow(QMainWindow):
             self.abrir_ventanaFechas.show()
       
       def abrirVentanaMunicipio_click(self):
-            self.ventana_agregarMunicipios = MunicipiosWindow()
+            self.ventana_agregarMunicipios = MunicipiosWindow(self.provincia)
             self.ventana_agregarMunicipios.show()
 
       def abrirVentanaDepartamento_click(self):
@@ -413,11 +413,11 @@ class FechaWindow(QMainWindow):
             self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
 class MunicipiosWindow(QMainWindow):
-      def __init__(self):
+      def __init__(self,provincia:Provincia):
             super().__init__()
             self.setWindowTitle("INSERTAR MUNICIPIO")
             self.setGeometry(1350,400,300,50)
-
+            
             layoutPrincipal = QVBoxLayout()
 
             id = QHBoxLayout()
