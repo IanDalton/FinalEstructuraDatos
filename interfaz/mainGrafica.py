@@ -45,7 +45,8 @@ class MainWindow(QMainWindow):
             nuevaConexion = QPushButton() 
             preferencias = QComboBox()
             preferencias.addItems(['Default', 'Mostrar conexiones', 'No mostrar conexiones', 'Filtrar conexiones por hora'])
-            cargarArchivos.setText('Cargar archivos')
+            preferencias.currentIndex.connect(self.abrirVentanaFechas_click) #currentIndex?
+            cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             nuevaConexion.setText('Nueva conexion')
             nuevaConexion.clicked.connect(self.abrirVentanaConexion_click)
@@ -169,6 +170,10 @@ class MainWindow(QMainWindow):
       def abrirVentanaConexion_click(self):
             self.estableciendo_conexion = ConexionWindow()
             self.estableciendo_conexion.show()
+
+      def abrirVentanaFechas_click(self):
+            self.abrir_ventanaFechas = FechaWindow()
+            self.abrir_ventanaFechas.show()
             
 
 class CargaWindow(QMainWindow):
@@ -266,9 +271,9 @@ class FechaWindow(QMainWindow):
             confirmar = QPushButton()
             confirmar.setText("Confirmar fecha y horario")
             fechas.addWidget(confirmar)
+            confirmar.clicked.connect(self.filtrarArbol)
 
             layoutPrincipal.addLayout(fechas)
-
             
             conexiones = QHBoxLayout()
             dispositivos = QVBoxLayout()
@@ -285,6 +290,10 @@ class FechaWindow(QMainWindow):
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+
+      def filtrarArbol(self,pais:Pais):
+            pais.conexiones.fechaLimiteInferior()
+            pais.conexiones.fechaLimiteSuperior()
 
       def update(self):
         value = self.datetime_edit.dateTime()

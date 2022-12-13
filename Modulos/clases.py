@@ -233,8 +233,7 @@ if __name__ == '__main__':
     
     ac = Dispositivo(12)
     celu.conectar(router)
-    
-    input()
+
 
     ac.conectar(router)
 

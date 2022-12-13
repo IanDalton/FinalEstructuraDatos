@@ -1,3 +1,27 @@
+import datetime
+
+class NodoArbol:
+    #constructor
+    def __init__(self,dato=None):
+        self.dato=dato
+        self.derecho=None
+        self.izquierdo=None
+
+    def agregarnodos(self,nodo):
+
+        if self.dato<nodo.dato:
+            if self.derecho==None:
+                self.derecho=nodo
+            else:
+                NodoArbol.agregarnodos(self.derecho,nodo)
+        elif self.dato>nodo.dato:
+            print('der2')
+            if self.izquierdo==None:
+                print('izq')
+                self.izquierdo=nodo
+            else:
+                NodoArbol.agregarnodos(self.izquierdo,nodo)
+
 
 class Arbol:
     def __init__(self,nodo=None):
@@ -41,27 +65,29 @@ class Arbol:
         if self.root==None:
             self.root=nodo
         else:
-            self.root.agregarnodos(nodo) #la funcion esta en la claseNodoArbol
+            self.root.agregarnodos(nodo) 
 
+    def fechaLimiteInferior(self, fecha: datetime, nodo: NodoArbol = None):  
+        nodo = self.root if nodo == None else nodo
+        if nodo.dato.datetime >= fecha:
+            if (
+                nodo.dato.datetime > fecha and nodo.izquierdo
+            ):  # Es para evitar que recorra para la izquierda si el arbol tiene mas valores
+                self.venta_posterior(fecha, nodo.izquierdo)
+            print(nodo.dato)
 
-class NodoArbol:
-    #constructor
-    def __init__(self,dato=None):
-        self.dato=dato
-        self.derecho=None
-        self.izquierdo=None
+        if nodo.right:
+            self.venta_posterior(fecha, nodo.derecho)
 
-    def agregarnodos(self,nodo):
+    def fechaLimiteSuperior(self, fecha: datetime, nodo: NodoArbol = None):
+        nodo = self.root if nodo == None else nodo
+        if nodo.dato.datetime <= fecha:
+            if (
+                nodo.dato.datetime < fecha and nodo.derecho
+            ):  # Es para evitar que recorra para la izquierda si el arbol tiene mas valores
+                self.venta_anterior(fecha, nodo.derecho)
+            print(nodo.dato)
 
-        if self.dato<nodo.dato:
-            if self.derecho==None:
-                self.derecho=nodo
-            else:
-                NodoArbol.agregarnodos(self.derecho,nodo)
-        elif self.dato>nodo.dato:
-            print('der2')
-            if self.izquierdo==None:
-                print('izq')
-                self.izquierdo=nodo
-            else:
-                NodoArbol.agregarnodos(self.izquierdo,nodo)
+        if nodo.left:
+            self.venta_anterior(fecha, nodo.izquierdo)
+
