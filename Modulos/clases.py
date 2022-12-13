@@ -7,8 +7,9 @@ import numpy as np
 import csv,os
 
 class Dispositivo():
-    def __init__(self,mac) -> None:
+    def __init__(self,mac,pais) -> None:
         self.mac = mac
+        pais.dispositivos.add(self)
     def conectar(self,router):
         router.conectar(self)
         pass
@@ -48,6 +49,7 @@ class Pais():
         self.poblacion = poblacion 
         self.provincias = list() # Saque el set porque es necesario un orden y es mas rapido para ubicar el archivo
         self.conexiones = Arbol()
+        self.dispositivos = set()
     def save(self):
         with open('archivo.pickle','wb') as arch:
             pickle.dump(self,arch,protocol=pickle.HIGHEST_PROTOCOL)
@@ -137,8 +139,6 @@ class Pais():
                 for err in error:
                     data.writerow(err)
     
-
-
 class Provincia():
     def __init__(self,nombre:str,pais:Pais,provincia_id) -> None:
         self.id = provincia_id
@@ -179,7 +179,6 @@ class Departamento():
             return self.id==__o.id
         else:
             return self.id == __o
-
 
 class Router(): # Armar un dict que le asigne la ip a una mac
     def __init__(self,id:int,identificador:str,ubicacion:str,latitud,longitud,pais:Pais,departamento:Departamento,conexiones_max=20,fecha_alta=datetime.now(),fecha_baja=None) -> None:

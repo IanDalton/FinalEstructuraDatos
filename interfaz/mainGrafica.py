@@ -99,8 +99,12 @@ class MainWindow(QMainWindow):
             
             self.info = QLabel()
             settings.addWidget(self.info)
+            crear_conexion = QPushButton()
+            crear_conexion.setText('Registar conexion')
+            crear_conexion.clicked.connect(self.agregar_conexion)
             self.activable = QHBoxLayout()
             settings.addLayout(self.activable)
+            settings.addWidget(crear_conexion)
             texto1 = QLabel() 
             texto1.setText('Desactivado')
             self.activable.addWidget(texto1)
@@ -117,6 +121,11 @@ class MainWindow(QMainWindow):
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
       
+      def agregar_conexion(self):
+            self.abrir_ventanaConexion = CrearConexion(self.pais,self.router)
+            self.abrir_ventanaConexion.show()
+
+
       def limpiar(self,sector:QHBoxLayout):
             try:
                   i=max(range(sector.count()))
@@ -198,7 +207,50 @@ class MainWindow(QMainWindow):
       def abrirVentanaFechas_click(self):
             self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
+
+class CrearConexion(QMainWindow):
+      def __init__(self,pais:Pais,router:Router):
+            super().__init__()
+            self.setWindowTitle('Registrar Conexion')
+            self.setGeometry(1350,400,300,100)
+            layoutPrincipal = QVBoxLayout()
+
+            opciones = QComboBox()
+            opciones.addItems(['Seleccionar un dispositivo existente','Crear un nuevo dispositivo'])
+            disclaimer = QLabel(text="Ingrese los datos para completar la conexion: ")
+            layoutPrincipal.addWidget(disclaimer)
+            dispositivos = QVBoxLayout()
+            for dispo in pais.dispositivos:
+                  btn = QPushButton()
+                  btn.setText(dispo.mac)
+
+                  dispositivos.addWidget(btn)
+
             
+            
+            
+            layoutPrincipal.addLayout(dispositivos)
+
+            self.alta = QFormLayout()
+            self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
+            self.datetime_edit.dateTimeChanged.connect(self.update)
+            self.alta.addRow('Alta:', self.datetime_edit)
+            layoutPrincipal.addLayout(self.alta)
+
+            confirmacion = QPushButton(text="Confirmar datos")
+            layoutPrincipal.addWidget(confirmacion)
+            confirmacion.clicked.connect(self.generarConexion_click)
+
+            widgetLayout = QWidget()
+            widgetLayout.setLayout(layoutPrincipal)
+            self.setCentralWidget(widgetLayout)
+      pass
+      def seleccionar_dispo(self):
+            pass
+      def cargarDatos(self):
+            pass
+      def generarConexion_click(self):
+            pass
 
 class CargaWindow(QMainWindow):
       def __init__(self):
