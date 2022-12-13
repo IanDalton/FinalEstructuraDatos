@@ -13,7 +13,6 @@
  - ACTUALIZAR AUTOMATICAMENTE LAS COSAS CUANDO AGREGAMOS ALGO
  - mostrar conexiones de todo --> lista desplegable
  - cargar archivos --> todo
- - agregar boton para añadir nuevas conexiones
  - funciona el boton registrar conexion?
  - que cuando desactivamos un router este se elimine
  - CONEXIONES POR HORA
