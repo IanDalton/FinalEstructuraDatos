@@ -8,7 +8,7 @@ from Modulos.clases import *
 
 
 class CargaWindow(QMainWindow):
-      def __init__(self,pais):
+      def __init__(self,pais:Pais):
             super().__init__()
             self.setWindowTitle("CARGA DE ARCHIVOS")
             self.setGeometry(1300,200,300,100)
@@ -56,6 +56,8 @@ class CargaWindow(QMainWindow):
 
       def cargarDatos_click(self):
             if self.es_municipio:
-                  self.pais.load_data(self.ingresar_link.toPlainText(),"Municipio")
+                  errores = self.pais.load_data(self.ingresar_link.toPlainText(),"Municipio")
             else:
-                  self.pais.load_data(self.ingresar_link.toPlainText(),"Router")
+                  errores =self.pais.load_data(self.ingresar_link.toPlainText(),"Router")
+            if len(errores) > 0:
+                  print('hay errores') #Falta hacer el resto
