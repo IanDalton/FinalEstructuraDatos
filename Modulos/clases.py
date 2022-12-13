@@ -52,73 +52,140 @@ class Pais():
     def save(self):
         with open('archivo.pickle','wb') as arch:
             pickle.dump(self,arch,protocol=pickle.HIGHEST_PROTOCOL)
-    def load_data(self,archivo,type):
+    def load_data(self,archivo,type) -> list:
+        
+        errores = []
         with open(archivo, 'r') as arch:
             data = csv.DictReader(arch)
             match type: # Nos permite agregar mas funciones al archivo si es necesario 
                 case 'Municipio':
                     print('Cargando los municipios...')
                     for muni in data:
-                        if verificador_municipios(muni):
+                        if verificador_municipios(muni): #Verifica el formato y crea el departamento
                             try:
-                                self.create_municipio(muni)
-                            except:
-                                pass
-                        pass
-                    pass
+                                self.create_departamento(muni,self.create_municipio(muni))
+                            except NameError as error:
+                                muni['error'] = error
+                                errores.append(muni)
+                        else:
+                            muni['error']='El formato del id de municipio no coincide con la provincia'
+                            errores.append(muni)
+                        
+                    
                 case 'Router':
                     print("Cargando los routers...")
-    def create_municipio(self,municipio):
-        provincia = arg.provincias.pop(arg.provincias.index('Cordoba'))
+                    for router in data:
+                        try:
+                            self.cargar_router(router)
+                        except NameError as error:
+                            router['error'] = error
+                            errores.append(router)
+                        except ValueError as error:
+                            router['error'] = error
+                            errores.append(router)
+                        
+        return errores
 
-        Municipio()
-        
-        
-        pass
+    def cargar_router(self,dict):
+        depto = self.get_departamento(int(dict['id_departamento']),self.get_municipio(dict['municipio_id'],self.get_provincia(dict['provincia_id'])))
+        if int(dict['id']) not in depto.routers:
+            Router(
+                int(dict['id']),
+                dict['identificador'],
+                dict['ubicacion'],
+                dict['latitud'],
+                dict['longitud'],
+                self,
+                depto,
+                )
+        else:
+            raise NameError
+
+    def get_departamento(self,id:int,municipio)->object:
+        if id == 1270:
+            print('asd')
+        return municipio.departamentos[municipio.departamentos.index(id)]
+    def get_municipio(self,id,provincia)-> object:
+        return provincia.municipios[provincia.municipios.index(id)]
+    def get_provincia(self,id) -> object:
+        return self.provincias[self.provincias.index(id)]
+
+
+
+    def create_municipio(self,municipio) -> object:
+        provincia = self.get_provincia(municipio['provincia_id'])
+        try:  # Estoy bastante contento de esto! Basicamente intenta conseguir el municipio y si no lo encuentra lo genera
+            muni = self.get_municipio(municipio['municipio_id'],provincia)
+        except ValueError:
+            muni = Municipio(provincia=provincia,id=municipio['municipio_id'],nombre=municipio['municipio'])
+            
+        return muni
+            
+
+    def create_departamento(self,departamento,municipio):
+        if departamento['id_departamento'] not in municipio.departamentos:
+            Departamento(id=int(departamento['id_departamento']),nombre=departamento['departamento '],municipio=municipio)
+        else:
+            raise NameError('El ID del departamento no existe')
+    
+    def save_error(self,error:list,name:str):
+        if len(error) > 0:
+            with open(f'{name}-{datetime.now().date()}.csv','w',newline='') as arch:
+                data = csv.DictWriter(arch,error[0].keys())
+                data.writeheader()
+                for err in error:
+                    data.writerow(err)
     
 
 
 class Provincia():
-    def __init__(self,nombre:str,pais:Pais) -> None:
+    def __init__(self,nombre:str,pais:Pais,provincia_id) -> None:
+        self.id = provincia_id
         self.nombre = nombre
-        self.municipios = set()
+        self.municipios = list()
         pais.provincias.append(self)
     def __hash__(self) -> int:
-        return hash(self.nombre)
+        return hash(self.id)
     def __eq__(self, __o: object) -> bool:
         if type(__o) == object:
-            return self.nombre==__o.nombre
+            return self.id==__o.id
         else:
-            return self.nombre==__o
+            return self.id==__o
     
 class Municipio():
     def __init__(self,id:int,nombre:str,provincia:Provincia) -> None:
         self.id = id
         self.nombre = nombre
-        self.departamentos = set()
-        if id not in provincia.municipios:
-            provincia.municipios.add(self)
-        else:
-            del self
+        self.departamentos = list()
+        provincia.municipios.append(self)
             
     def __hash__(self) -> int:
         return hash(self.id)
     def __eq__(self, __o: object) -> bool:
-        return self.id==__o.id
+        if type(__o) == object:
+            return self.id==__o.id
+        else:
+            return self.id==__o
 
 class Departamento():
     def __init__(self,id:int,nombre:str,municipio:Municipio) -> None:
         self.id = id
         self.nombre = nombre
         self.routers = set()
-        municipio.departamentos.add(self)
+        municipio.departamentos.append(self)
+    def __eq__(self, __o: object) -> bool:
+        if type(__o)==object:
+            return self.id==__o.id
+        else:
+            return self.id == __o
 
 
 
 
 class Router(): # Armar un dict que le asigne la ip a una mac
-    def __init__(self,id:int,ubicacion:str,latitud:int,longitud:int,pais:Pais,departamento:Departamento,conexiones_max=20,fecha_alta=datetime.now(),fecha_baja=None) -> None:
+    def __init__(self,id:int,identificador:str,ubicacion:str,latitud,longitud,pais:Pais,departamento:Departamento,conexiones_max=20,fecha_alta=datetime.now(),fecha_baja=None) -> None:
         self.id = id
+        self.identificador = identificador
         self.ubicacion = ubicacion
         self.latitud = latitud
         self.longitud = longitud
@@ -129,6 +196,9 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         self.pais = pais
         departamento.routers.add(self)
     
+    def __len__(self):
+        return len(self.conexiones)
+
     def __str__(self) -> str:
         return str(self.id)
 

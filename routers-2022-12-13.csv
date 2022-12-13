@@ -1,0 +1,887 @@
+id,identificador,ubicacion,latitud,longitud,municipio_id,provincia_id,id_departamento,error
+913,SCR016-01,,-47.025.900,-67.247.908,SCR016,AR-Z,1607,'SCR016' is not in list
+798,SCR016-02,,-47.184.491,-67.142.626,SCR016,AR-Z,1607,'SCR016' is not in list
+334,COR019-01,,-28.172.889,-55.651.056,COR019,AR-W,1425,'COR019' is not in list
+1026,CBA380-01,,0,0,CBA380,AR-X,1382,'CBA380' is not in list
+929,MZA003-01,Punto Digital,-32.914.748,-68.754.544,MZA003,AR-M,1517,'MZA003' is not in list
+153,MZA003-02,Mdza - Guaymallen,-32.899.573,-68.788.042,MZA003,AR-M,1517,'MZA003' is not in list
+1285,SFE182-01,,0,0,SFE182,AR-S,1685,'SFE182' is not in list
+1091,BUE043-01,,-36.022.218,-60.014.617,BUE043,AR-B,1237,'BUE043' is not in list
+604,CBA277-01,Dependencia Municipal,-32.247.500,-63.652.556,CBA277,AR-X,1388,'CBA277' is not in list
+883,BUE089-01,,-35.553.842,-60.560.544,BUE089,AR-B,1284,'BUE089' is not in list
+417,BUE089-02,Parque GraSM.,-35.438.139,-60.878.167,BUE089,AR-B,1284,'BUE089' is not in list
+881,BUE089-03,,-35.607.681,-60.917.092,BUE089,AR-B,1284,'BUE089' is not in list
+357,BUE089-04,Plaza Municipio,-35.444.056,-60.884.778,BUE089,AR-B,1284,'BUE089' is not in list
+418,BUE089-05,Plaza,-35.449.028,-60.897.917,BUE089,AR-B,1284,'BUE089' is not in list
+882,BUE089-06,,-35.237.794,-60.824.925,BUE089,AR-B,1284,'BUE089' is not in list
+416,BUE089-07,Plaza Esc Comer,-35.450.667,-60.882.917,BUE089,AR-B,1284,'BUE089' is not in list
+419,BUE089-08,Plaza Espana,-35.437.917,-60.881.611,BUE089,AR-B,1284,'BUE089' is not in list
+1193,ERI037-01,,0,0,ERI037,AR-E,1435,'ERI037' is not in list
+395,ERI037-02,Nogoya - Pza Francisco Ramirez,-32.396.826,-59.795.364,ERI037,AR-E,1435,'ERI037' is not in list
+938,ERI037-03,Punto Digital,-32.391.618,-59.799.701,ERI037,AR-E,1435,'ERI037' is not in list
+394,ERI037-04,Paseo de Los Puentes,-32.395.555,-59.759.957,ERI037,AR-E,1435,'ERI037' is not in list
+323,MIS028-01,C.I.C,-27.000.000,-55.000.000,MIS028,AR-N,1536,'MIS028' is not in list
+660,CHU008-01,Comuna,-43.000.000,-70.000.000,CHU008,AR-U,1368,'CHU008' is not in list
+306,CHA024-01,,-27.330.083,-61.277.694,CHA024,AR-H,1359,'CHA024' is not in list
+1268,CHA024-02,Plaza Meson de Fierro,-27.430.083,-61.017.066,CHA024,AR-H,1359,'CHA024' is not in list
+558,LAP075-01,Colonia Chica,-37.958.194,-67.825.556,LAP075,AR-L,1494,'LAP075' is not in list
+559,LAP075-02,,0,0,LAP075,AR-L,1494,'LAP075' is not in list
+369,LAP075-03,Colonia El Sauzal,-37.709.467,-67.742.389,LAP075,AR-L,1494,'LAP075' is not in list
+759,RNO028-01,,-41.851.986,-70.901.294,RNO028,AR-R,1576,'RNO028' is not in list
+1140,LAP029-01,,0,0,LAP029,AR-L,1477,'LAP029' is not in list
+856,SJU017-01,,0,0,SJU017,AR-J,1595,'SJU017' is not in list
+783,SJU017-02,,-30.634.528,-67.467.056,SJU017,AR-J,1595,'SJU017' is not in list
+927,MIS069-01,Punto Digital,-26.992.889,-54.485.026,MIS069,AR-N,1546,'MIS069' is not in list
+765,MIS069-02,C.I.C,-26.983.750,-54.471.167,MIS069,AR-N,1546,'MIS069' is not in list
+1181,CHA059-01,,0,0,CHA059,AR-H,1721,'CHA059' is not in list
+311,CHA059-02,,-26.870.918,-60.216.161,CHA059,AR-H,1721,'CHA059' is not in list
+1132,CHA059-03,,0,0,CHA059,AR-H,1721,'CHA059' is not in list
+1159,BUE007-01,,0,0,BUE007,AR-B,1202,1202 is not in list
+483,BUE007-02,Punto Digital,-36.780.431,-59.860.255,BUE007,AR-B,1202,1202 is not in list
+1183,CBA171-01,,0,0,CBA171,AR-X,1396,'CBA171' is not in list
+1124,CBA171-02,,0,0,CBA171,AR-X,1396,'CBA171' is not in list
+1182,CBA171-03,,0,0,CBA171,AR-X,1396,'CBA171' is not in list
+1174,SFE033-01,,0,0,SFE033,AR-S,1691,'SFE033' is not in list
+1172,SFE033-02,,0,0,SFE033,AR-S,1691,'SFE033' is not in list
+1173,SFE033-03,,0,0,SFE033,AR-S,1691,'SFE033' is not in list
+645,TUC082-01,,0,0,TUC082,AR-T,1654,'TUC082' is not in list
+458,BUE056-01,Zavalia VSAT,-34.894.291,-61.006.454,BUE056,AR-B,1250,'BUE056' is not in list
+1147,BUE056-02,,0,0,BUE056,AR-B,1250,'BUE056' is not in list
+240,BUE056-03,PD Gral Viamonte,-35.005.763,-61.051.801,BUE056,AR-B,1250,'BUE056' is not in list
+1066,BUE056-04,,-34.747.431,-60.988.806,BUE056,AR-B,1250,'BUE056' is not in list
+457,BUE056-05,San Emilio VSAT,-35.030.115,-60.864.322,BUE056,AR-B,1250,'BUE056' is not in list
+1067,BUE056-06,,-34.742.506,-60.991.765,BUE056,AR-B,1250,'BUE056' is not in list
+612,CBA415-01,,-32.234.324,-64.516.742,CBA415,AR-X,1391,'CBA415' is not in list
+941,CBA100-01,Punto Digital(Parque educativo Zona Noroeste),-31.315.716,-64.282.980,CBA100,AR-X,1406,'CBA100' is not in list
+942,CBA100-02,Punto Digital(Parque educativo Zona Sur),-31.467.620,-64.234.233,CBA100,AR-X,1406,'CBA100' is not in list
+103,CBA100-03,Plaza San Martin,-31.416.775,-64.183.668,CBA100,AR-X,1406,'CBA100' is not in list
+104,CBA100-04,Plaza de los Presidentes Argentinos Cordobeses  La Industria,-31.408.287,-64.183.825,CBA100,AR-X,1406,'CBA100' is not in list
+825,ERI160-01,,-33.013.056,-58.465.528,ERI160,AR-E,1433,'ERI160' is not in list
+226,ERI160-02,Pueblo General Belgrano,-31.859.397,-59.030.923,ERI160,AR-E,1433,'ERI160' is not in list
+1211,MIS052-01,,0,0,MIS052,AR-N,1541,'MIS052' is not in list
+160,MIS052-02,Punto Digital,-26.566.037,-54.769.589,MIS052,AR-N,1541,'MIS052' is not in list
+666,CHU028-01,Sede Comunal,-42.620.514,-68.904.394,CHU028,AR-U,1376,'CHU028' is not in list
+715,JUJ001-01,Municipalidad,-23.342.417,-66.090.194,JUJ001,AR-Y,1459,'JUJ001' is not in list
+769,MZA010-01,¨Polideportivo municipal,-35.000.000,-70.000.000,MZA010,AR-M,1524,'MZA010' is not in list
+557,MZA010-02,Malargue - El Chacay / escuela rural,-35.000.000,-70.000.000,MZA010,AR-M,1524,'MZA010' is not in list
+316,MIS002-01,,0,0,MIS002,AR-N,1534,'MIS002' is not in list
+1020,SAL014-01,Punto Digital,-25.077.398,-65.488.602,SAL014,AR-A,1667,'SAL014' is not in list
+725,LRJ017-01,Municipalidad,-29.167.194,-67.080.611,LRJ017,AR-F,1513,'LRJ017' is not in list
+1060,BUE031-01,,0,0,BUE031,AR-B,1225,'BUE031' is not in list
+235,BUE031-02,Cnel Pringles PD,-37.984.453,-61.357.208,BUE031,AR-B,1225,'BUE031' is not in list
+620,BUE031-03,Municipalidad,-37.983.137,-61.338.150,BUE031,AR-B,1225,'BUE031' is not in list
+484,BUE031-04,Hospital Municipal,-37.976.331,-61.360.979,BUE031,AR-B,1225,'BUE031' is not in list
+621,BUE031-05,Esc No.7,-37.982.788,-61.339.934,BUE031,AR-B,1225,'BUE031' is not in list
+619,BUE031-06,Municipalidad,-37.985.397,-61.349.953,BUE031,AR-B,1225,'BUE031' is not in list
+1139,CAT003-01,,0,0,CAT003,AR-K,1330,'CAT003' is not in list
+880,CAT003-02,Aconquija-HTAL,-27.474.795,-66.015.511,CAT003,AR-K,1330,'CAT003' is not in list
+869,TUC013-01,Plaza Municipio,-27.032.468,-65.307.074,TUC013,AR-T,1644,'TUC013' is not in list
+1254,SAL052-01,,0,0,SAL052,AR-A,1680,'SAL052' is not in list
+662,CHU043-01,Puesto de Informacion Turistica,-43.000.000,-71.000.000,CHU043,AR-U,1371,'CHU043' is not in list
+969,BUE064-01,Plaza Santa Teresita,-36.532.252,-56.699.393,BUE064,AR-B,1258,'BUE064' is not in list
+985,BUE064-02,Las Toninas,-36.488.222,-56.705.167,BUE064,AR-B,1258,'BUE064' is not in list
+983,BUE064-03,Mar deTuyu,-36.577.611,-56.694.083,BUE064,AR-B,1258,'BUE064' is not in list
+984,BUE064-04,San Clemente deTuyu,-36.577.535,-56.693.884,BUE064,AR-B,1258,'BUE064' is not in list
+31,BUE064-05,Costanera y 3,-36.609.167,-56.685.722,BUE064,AR-B,1258,'BUE064' is not in list
+35,BUE064-06,Santa Teresita,-36.543.518,-56.688.797,BUE064,AR-B,1258,'BUE064' is not in list
+1122,CBA307-01,,0,0,CBA307,AR-X,1398,'CBA307' is not in list
+1142,BUE101-01,,0,0,BUE101,AR-B,1296,1296 is not in list
+1143,BUE101-02,,0,0,BUE101,AR-B,1296,1296 is not in list
+1144,BUE101-03,,0,0,BUE101,AR-B,1296,1296 is not in list
+85,BUE101-04,Plaza,-34.770.216,-58.321.618,BUE101,AR-B,1296,1296 is not in list
+86,BUE101-05,Punto Digital,-34.770.216,-58.321.618,BUE101,AR-B,1296,1296 is not in list
+84,BUE101-06,Punto Digital,-34.747.949,-58.329.872,BUE101,AR-B,1296,1296 is not in list
+83,BUE101-07,Estacion de Tren,-34.703.624,-58.295.849,BUE101,AR-B,1296,1296 is not in list
+82,BUE101-08,Parque,-34.744.316,-58.261.085,BUE101,AR-B,1296,1296 is not in list
+229,BUE014-01,Patio Civico,-34.868.310,-57.883.916,BUE014,AR-B,1208,'BUE014' is not in list
+1,BUE014-02,Plaza 17 de Octubre,-34.880.694,-57.869.028,BUE014,AR-B,1208,'BUE014' is not in list
+255,ERI005-01,PD Basavilbaso,-32.371.122,-58.878.242,ERI005,AR-E,1436,'ERI005' is not in list
+132,ERI005-02,Polideportivo,-32.371.343,-58.887.697,ERI005,AR-E,1436,'ERI005' is not in list
+131,ERI005-03,Museo Ferrocarril,-32.373.177,-58.876.369,ERI005,AR-E,1436,'ERI005' is not in list
+133,ERI005-04,Pza San Martin,-32.371.013,-58.877.841,ERI005,AR-E,1436,'ERI005' is not in list
+1232,CBA218-01,,0,0,CBA218,AR-X,1386,1386 is not in list
+110,CBA218-02,Plaza 25 de mayo,-32.659.241,-62.297.118,CBA218,AR-X,1386,1386 is not in list
+380,SJU015-01,Municipalidad  - Media Agua,-31.980.667,-68.427.222,SJU015,AR-J,1593,'SJU015' is not in list
+397,ERI022-01,,0,0,ERI022,AR-E,1434,'ERI022' is not in list
+521,BUE066-01,,-34.913.694,-57.951.194,BUE066,AR-B,1260,'BUE066' is not in list
+519,BUE066-02,Punto Digital,-34.889.997,-57.958.288,BUE066,AR-B,1260,'BUE066' is not in list
+522,BUE066-03,,-34.913.694,-57.951.194,BUE066,AR-B,1260,'BUE066' is not in list
+520,BUE066-04,Republica de los Ninos,-34.913.694,-57.951.194,BUE066,AR-B,1260,'BUE066' is not in list
+523,BUE066-05,,-34.913.694,-57.951.194,BUE066,AR-B,1260,'BUE066' is not in list
+50,BUE066-06,Punto Digital,-34.908.507,-58.000.000,BUE066,AR-B,1260,'BUE066' is not in list
+49,BUE066-07,48 y 7,-34.913.694,-57.951.194,BUE066,AR-B,1260,'BUE066' is not in list
+1131,CHA043-01,,0,0,CHA043,AR-H,1364,'CHA043' is not in list
+568,TDF003-01,Ushuaia - Puerto / Sector Catamaranes,-54.808.713,-68.304.144,TDF003,AR-V,1642,'TDF003' is not in list
+572,TDF003-02,Ushuaia - Puerto / muelle columna 2,-54.808.714,-68.304.145,TDF003,AR-V,1642,'TDF003' is not in list
+575,TDF003-03,Puerto Almanza VSAT Arsat,-54.869.533,-67.562.734,TDF003,AR-V,1642,'TDF003' is not in list
+570,TDF003-04,Ushuaia - Puerto / Sector Quiebre in,-54.808.712,-68.304.143,TDF003,AR-V,1642,'TDF003' is not in list
+573,TDF003-05,Ushuaia - Puerto / muelle columna 5,-54.808.714,-68.304.145,TDF003,AR-V,1642,'TDF003' is not in list
+914,TDF003-06,Punto Digital Ushuaia,-54.822.721,-68.350.744,TDF003,AR-V,1642,'TDF003' is not in list
+565,TDF003-07,Direccion Provincial puertos,-54.808.713,-68.304.144,TDF003,AR-V,1642,'TDF003' is not in list
+571,TDF003-08,Ushuaia - Puerto / Sector Quiebre out,-54.808.713,-68.304.144,TDF003,AR-V,1642,'TDF003' is not in list
+574,TDF003-09,Ushuaia - Puerto / muelle columna 4,-54.808.714,-68.304.145,TDF003,AR-V,1642,'TDF003' is not in list
+1014,JUJ030-01,Coyaguaima,-22.769.624,-66.440.835,JUJ030,AR-Y,1470,'JUJ030' is not in list
+714,JUJ030-02,Mina Pirquitas - Municipalidad,-22.683.556,-66.483.556,JUJ030,AR-Y,1470,'JUJ030' is not in list
+732,MZA013-01,San Carlos (Pza San Carlos),-33.772.160,-69.040.690,MZA013,AR-M,1527,'MZA013' is not in list
+1011,MZA013-02,Pasaje Rural 3 Esquinas,-33.837.221,-69.067.026,MZA013,AR-M,1527,'MZA013' is not in list
+674,MZA013-03,Pareditas,-34.000.000,-69.000.000,MZA013,AR-M,1527,'MZA013' is not in list
+792,MZA013-04,San Carlos(Rio Tunuyan),-33.717.179,-69.153.724,MZA013,AR-M,1527,'MZA013' is not in list
+731,MZA013-05,San Carlos (La Consulta),-33.733.960,-69.119.956,MZA013,AR-M,1527,'MZA013' is not in list
+931,MZA013-06,Punto Digital,-33.773.696,-69.048.596,MZA013,AR-M,1527,'MZA013' is not in list
+576,MZA013-07,San Carlos (Pza Salud),-33.776.855,-69.041.806,MZA013,AR-M,1527,'MZA013' is not in list
+676,JUJ020-01,Municipalidad,-23.550.138,-64.350.222,JUJ020,AR-Y,1468,'JUJ020' is not in list
+1070,RNO037-01,,-41.012.908,-64.163.546,RNO037,AR-R,1573,'RNO037' is not in list
+533,RNO037-02,Viedma - Parque de Juegos,-40.805.235,-62.988.920,RNO037,AR-R,1573,'RNO037' is not in list
+1133,RNO037-03,,0,0,RNO037,AR-R,1573,'RNO037' is not in list
+269,RNO037-04,PD Viedma,-40.816.924,-63.004.267,RNO037,AR-R,1573,'RNO037' is not in list
+907,RNO037-05,,-41.044.083,-62.824.194,RNO037,AR-R,1573,'RNO037' is not in list
+1134,RNO037-06,,0,0,RNO037,AR-R,1573,'RNO037' is not in list
+532,RNO037-07,Viedma - Centro Cultural,-40.815.312,-62.985.135,RNO037,AR-R,1573,'RNO037' is not in list
+1305,SAL057-01,,0,0,SAL057,AR-A,1675,'SAL057' is not in list
+1150,MIS059-01,,0,0,MIS059,AR-N,1544,'MIS059' is not in list
+1153,MIS059-02,,0,0,MIS059,AR-N,1544,'MIS059' is not in list
+956,MIS059-03,Punto Digital,-25.618.988,-54.585.441,MIS059,AR-N,1544,'MIS059' is not in list
+1151,MIS059-04,,0,0,MIS059,AR-N,1544,'MIS059' is not in list
+1154,MIS059-05,,0,0,MIS059,AR-N,1544,'MIS059' is not in list
+1149,MIS059-06,,0,0,MIS059,AR-N,1544,'MIS059' is not in list
+1152,MIS059-07,,0,0,MIS059,AR-N,1544,'MIS059' is not in list
+529,ERI056-01,Nido Viale,-31.866.556,-59.995.889,ERI056,AR-E,1439,'ERI056' is not in list
+758,ERI056-02,,0,0,ERI056,AR-E,1439,'ERI056' is not in list
+961,SFE271-01,Punto Digital,-31.683.477,-60.937.484,SFE271,AR-S,1700,'SFE271' is not in list
+1294,NEU043-01,,0,0,NEU043,AR-Q,1552,'NEU043' is not in list
+1235,SAL006-01,,0,0,SAL006,AR-A,1664,'SAL006' is not in list
+1236,SAL006-02,,0,0,SAL006,AR-A,1664,'SAL006' is not in list
+1234,SAL006-03,,0,0,SAL006,AR-A,1664,'SAL006' is not in list
+872,CAB000-01,Cuartino Puerto,-34.591.963,-58.370.257,CAB000,AR-C,,invalid literal for int() with base 10: ''
+875,CAB000-02,Cen.Ca.Por,-34.590.891,-58.370.417,CAB000,AR-C,,invalid literal for int() with base 10: ''
+251,CAB000-03,Floresta PD,-34.636.508,-58.486.977,CAB000,AR-C,,invalid literal for int() with base 10: ''
+878,CAB000-04,Terminal de Cruceros 3,-34.583.531,-58.369.242,CAB000,AR-C,,invalid literal for int() with base 10: ''
+873,CAB000-05,Empalme Norte,-34.583.945,-58.368.481,CAB000,AR-C,,invalid literal for int() with base 10: ''
+876,CAB000-06,Terminal de Cruceros,-34.583.531,-58.369.242,CAB000,AR-C,,invalid literal for int() with base 10: ''
+249,CAB000-07,Ex Esma,-34.538.301,-58.463.309,CAB000,AR-C,,invalid literal for int() with base 10: ''
+871,CAB000-08,Dir.Puertos,-34.597.774,-58.367.024,CAB000,AR-C,,invalid literal for int() with base 10: ''
+879,CAB000-09,Terminal de Cruceros 4,-34.583.531,-58.369.242,CAB000,AR-C,,invalid literal for int() with base 10: ''
+874,CAB000-10,Food Trucks Puerto BSAS,-34.593.885,-58.369.249,CAB000,AR-C,,invalid literal for int() with base 10: ''
+250,CAB000-11,Accion Catolica,-34.608.631,-58.375.373,CAB000,AR-C,,invalid literal for int() with base 10: ''
+877,CAB000-12,Terminal de Cruceros 2,-34.583.531,-58.369.242,CAB000,AR-C,,invalid literal for int() with base 10: ''
+79,CAB000-13,Devoto Casa del Futuro,-34.603.589,-58.508.086,CAB000,AR-C,,invalid literal for int() with base 10: ''
+80,CAB000-14,Casa de la Cultura,-34.651.566,-58.397.503,CAB000,AR-C,,invalid literal for int() with base 10: ''
+78,CAB000-15,Piletones II,-34.659.944,-58.452.694,CAB000,AR-C,,invalid literal for int() with base 10: ''
+77,CAB000-16,Piletones I,-34.659.972,-58.452.694,CAB000,AR-C,,invalid literal for int() with base 10: ''
+583,SFE362-01,,0,0,SFE362,AR-S,1690,'SFE362' is not in list
+1223,CBA107-01,,0,0,CBA107,AR-X,1386,'CBA107' is not in list
+609,CBA107-02,Municipalidad,-33.006.861,-61.812.167,CBA107,AR-X,1386,'CBA107' is not in list
+1222,CBA107-03,,0,0,CBA107,AR-X,1386,'CBA107' is not in list
+635,TUC009-01,Vsat Anca Juli,-26.583.710,-65.566.692,TUC009,AR-T,1649,'TUC009' is not in list
+1022,TUC009-02,San Jose de Chasquivil,-26.690.028,-65.605.361,TUC009,AR-T,1649,'TUC009' is not in list
+1227,COR012-01,,0,0,COR012,AR-W,1419,'COR012' is not in list
+1164,COR012-02,,0,0,COR012,AR-W,1419,'COR012' is not in list
+1165,COR012-03,,0,0,COR012,AR-W,1419,'COR012' is not in list
+1163,COR012-04,,0,0,COR012,AR-W,1419,'COR012' is not in list
+222,COR012-05,Centro Comunitario Irupe,-27.495.926,-58.806.732,COR012,AR-W,1419,'COR012' is not in list
+225,COR012-06,Guemes y Lamadrid,-27.485.643,-58.808.145,COR012,AR-W,1419,'COR012' is not in list
+221,COR012-07,Sueci y Frondizi,-27.503.645,-58.797.728,COR012,AR-W,1419,'COR012' is not in list
+224,COR012-08,Plaza Sgto Cabral,-27.468.591,-58.831.493,COR012,AR-W,1419,'COR012' is not in list
+223,COR012-09,Plaza Vera,-27.467.323,-58.837.375,COR012,AR-W,1419,'COR012' is not in list
+220,COR012-10,Plaza 3 de Abril,-27.466.630,-58.822.472,COR012,AR-W,1419,'COR012' is not in list
+287,BUE131-01,Vicente Lopez - Alsina,-34.523.379,-58.483.890,BUE131,AR-B,1326,'BUE131' is not in list
+279,BUE131-02,Vicente Lopez - Estacion Alvarez,-34.537.294,-58.476.604,BUE131,AR-B,1326,'BUE131' is not in list
+282,BUE131-03,Vicente Lopez - Italia II,-34.522.442,-58.484.410,BUE131,AR-B,1326,'BUE131' is not in list
+290,BUE131-04,Florida,-34.538.423,-58.513.497,BUE131,AR-B,1326,'BUE131' is not in list
+274,BUE131-05,Vicente Lopez- Estacion Haedo,-34.534.858,-58.477.816,BUE131,AR-B,1326,'BUE131' is not in list
+285,BUE131-06,Vicente Lopez - Vergara,-34.531.043,-58.479.725,BUE131,AR-B,1326,'BUE131' is not in list
+410,BUE131-07,Estacion Gral las Heras,-34.535.823,-58.477.345,BUE131,AR-B,1326,'BUE131' is not in list
+277,BUE131-08,Vicente Lopez - San Martin,-34.530.125,-58.480.228,BUE131,AR-B,1326,'BUE131' is not in list
+288,BUE131-09,Vicente Lopez - Libertad,-34.528.077,-58.481.248,BUE131,AR-B,1326,'BUE131' is not in list
+232,BUE131-10,Estacion MalaVer- Vicente Lopez,-34.525.288,-58.482.847,BUE131,AR-B,1326,'BUE131' is not in list
+280,BUE131-11,Vicente Lopez - Las Heras,-34.520.089,-58.485.620,BUE131,AR-B,1326,'BUE131' is not in list
+283,BUE131-12,Vicente Lopez - Las Heras II,-34.520.089,-58.485.620,BUE131,AR-B,1326,'BUE131' is not in list
+408,BUE131-13,Estacion Gral lavalle,-34.519.205,-58.486.151,BUE131,AR-B,1326,'BUE131' is not in list
+275,BUE131-14,Vicente Lopez - Santa Rosa,-34.534.026,-58.478.260,BUE131,AR-B,1326,'BUE131' is not in list
+286,BUE131-15,Vicente Lopez - Roca,-34.533.054,-58.478.693,BUE131,AR-B,1326,'BUE131' is not in list
+278,BUE131-16,Vicente Lopez - Laprida,-34.537.992,-58.476.266,BUE131,AR-B,1326,'BUE131' is not in list
+281,BUE131-17,Vicente Lopez - Italia,-34.526.132,-58.482.418,BUE131,AR-B,1326,'BUE131' is not in list
+289,BUE131-18,Vicente Lopez - Urquiza,-34.532.058,-58.479.170,BUE131,AR-B,1326,'BUE131' is not in list
+233,BUE131-19,Estacion Yrigoyen- Vicente Lopez,-34.527.202,-58.481.790,BUE131,AR-B,1326,'BUE131' is not in list
+284,BUE131-20,Vicente Lopez - Maipu 455 II,-34.524.307,-58.483.402,BUE131,AR-B,1326,'BUE131' is not in list
+409,BUE131-21,Estacion A. del Valle,-34.521.502,-58.484.888,BUE131,AR-B,1326,'BUE131' is not in list
+276,BUE131-22,Vicente Lopez - Arenales,-34.529.142,-58.480.733,BUE131,AR-B,1326,'BUE131' is not in list
+1199,SFE054-01,,0,0,SFE054,AR-S,1684,'SFE054' is not in list
+824,ERI068-01,,-32.346.291,-58.443.552,ERI068,AR-E,1436,'ERI068' is not in list
+1257,BUE069-01,,0,0,BUE069,AR-B,1263,'BUE069' is not in list
+754,BUE069-02,,0,0,BUE069,AR-B,1263,'BUE069' is not in list
+1109,BUE069-03,,0,0,BUE069,AR-B,1263,'BUE069' is not in list
+402,SGO057-01,Punto Digital,-26.196.998,-64.242.959,SGO057,AR-G,1631,'SGO057' is not in list
+1190,RNO035-01,,0,0,RNO035,AR-R,1578,'RNO035' is not in list
+295,RNO035-02,,-41.632.620,-65.026.649,RNO035,AR-R,1578,'RNO035' is not in list
+865,NEU025-01,ETON,-38.978.936,-68.053.433,NEU025,AR-Q,1556,'NEU025' is not in list
+866,NEU025-02,Observatorio,-38.955.628,-68.062.727,NEU025,AR-Q,1556,'NEU025' is not in list
+987,NEU025-03,Plazoleta Estados Arabes,-38.949.086,-68.059.103,NEU025,AR-Q,1556,'NEU025' is not in list
+177,NEU025-04,Plaza de las Banderas,-38.937.717,-68.059.074,NEU025,AR-Q,1556,'NEU025' is not in list
+170,NEU025-05,Paseo de la Costa - Edificio Celebrar,-38.951.811,-68.059.456,NEU025,AR-Q,1556,'NEU025' is not in list
+169,NEU025-06,ECOESTACION (Sarmiento 80),-38.951.811,-68.059.456,NEU025,AR-Q,1556,'NEU025' is not in list
+167,NEU025-07,Parque Central - MNBA,-38.955.323,-68.062.438,NEU025,AR-Q,1556,'NEU025' is not in list
+165,NEU025-08,NIDO TOMA NORTE,-38.925.722,-68.115.111,NEU025,AR-Q,1556,'NEU025' is not in list
+172,NEU025-09,MAUSOLEO M. OLASCOAGA,-38.937.587,-68.059.188,NEU025,AR-Q,1556,'NEU025' is not in list
+173,NEU025-10,Parque Central - Sala Emilio Sarco,-38.956.392,-68.061.383,NEU025,AR-Q,1556,'NEU025' is not in list
+174,NEU025-11,Centro - Monumento San Martin 1,-38.956.392,-68.061.383,NEU025,AR-Q,1556,'NEU025' is not in list
+175,NEU025-12,Centro - Monumento San Martin 2,-38.978.936,-68.053.433,NEU025,AR-Q,1556,'NEU025' is not in list
+166,NEU025-13,Parque Central,-38.956.392,-68.061.383,NEU025,AR-Q,1556,'NEU025' is not in list
+171,NEU025-14,Alto Godoy,-38.935.305,-68.237.751,NEU025,AR-Q,1556,'NEU025' is not in list
+652,BUE067-01,FPII,-34.715.680,-58.417.461,BUE067,AR-B,1261,1261 is not in list
+950,BUE067-02,NIDO Lanus,-34.729.264,-58.350.367,BUE067,AR-B,1261,1261 is not in list
+653,BUE067-03,FPIII,-34.715.680,-58.417.440,BUE067,AR-B,1261,1261 is not in list
+951,BUE067-04,Punto Digital Remedios de Escalada,-34.715.637,-58.417.224,BUE067,AR-B,1261,1261 is not in list
+246,BUE067-05,Fundacion Pupi,-34.715.680,-58.417.448,BUE067,AR-B,1261,1261 is not in list
+949,BUE067-06,Punto digital,-34.715.458,-58.370.417,BUE067,AR-B,1261,1261 is not in list
+54,BUE067-07,Plaza Tacuari,-34.696.416,-58.370.417,BUE067,AR-B,1261,1261 is not in list
+52,BUE067-08,Cancha de Futbol Barrial,-34.722.333,-58.387.694,BUE067,AR-B,1261,1261 is not in list
+55,BUE067-09,Plaza Las Colinas,-34.723.590,-58.368.520,BUE067,AR-B,1261,1261 is not in list
+51,BUE067-10,Punto Digital,-34.715.192,-58.387.366,BUE067,AR-B,1261,1261 is not in list
+53,BUE067-11,Pza.Sarmiento,-34.713.139,-58.382.444,BUE067,AR-B,1261,1261 is not in list
+56,BUE067-12,Plaza San Martin,-34.689.929,-58.370.417,BUE067,AR-B,1261,1261 is not in list
+57,BUE067-13,Pza.La Torre,-34.722.250,-58.387.771,BUE067,AR-B,1261,1261 is not in list
+737,SFE242-01,Municipio de Pozo Borrado,-28.937.222,-61.704.167,SFE242,AR-S,1701,'SFE242' is not in list
+546,CAT004-01,,-26.067.757,-67.410.656,CAT004,AR-K,1332,'CAT004' is not in list
+547,CAT004-02,,0,0,CAT004,AR-K,1332,'CAT004' is not in list
+925,RNO017-01,Punto Digital,-38.957.324,-67.921.502,RNO017,AR-R,1569,'RNO017' is not in list
+227,RNO017-02,Polideportivo,-38.954.059,-67.920.646,RNO017,AR-R,1569,'RNO017' is not in list
+508,SGO105-01,,-27.686.083,-64.750.583,SGO105,AR-G,1627,'SGO105' is not in list
+1098,BUE016-01,,0,0,BUE016,AR-B,1210,'BUE016' is not in list
+1064,BUE016-02,,-34.800.840,-60.661.514,BUE016,AR-B,1210,'BUE016' is not in list
+27,BUE016-03,Pza Eva Peron,-35.119.639,-60.479.278,BUE016,AR-B,1210,'BUE016' is not in list
+28,BUE016-04,Pza San Martin,-35.112.694,-60.489.306,BUE016,AR-B,1210,'BUE016' is not in list
+600,COR062-01,,-29.506.222,-56.974.639,COR062,AR-W,1411,'COR062' is not in list
+634,BUE088-01,Costa Bonita,-38.561.178,-58.628.331,BUE088,AR-B,1283,'BUE088' is not in list
+698,BUE088-02,,-38.459.861,-58.761.311,BUE088,AR-B,1283,'BUE088' is not in list
+745,SFE188-01,,0,0,SFE188,AR-S,1692,'SFE188' is not in list
+812,NEU020-01,,-36.988.392,-70.749.863,NEU020,AR-Q,1552,'NEU020' is not in list
+716,JUJ029-01,Municipalidad,-23.625.472,-65.409.638,JUJ029,AR-Y,1469,'JUJ029' is not in list
+821,SGO108-01,,-27.914.901,-62.175.558,SGO108,AR-G,1630,'SGO108' is not in list
+911,RNO064-01,,-38.831.893,-64.934.104,RNO064,AR-R,1577,'RNO064' is not in list
+1166,CHA002-01,,0,0,CHA002,AR-H,1347,'CHA002' is not in list
+1167,CHA002-02,,0,0,CHA002,AR-H,1347,'CHA002' is not in list
+681,CHA002-03,,0,0,CHA002,AR-H,1347,'CHA002' is not in list
+1201,SFE301-01,,0,0,SFE301,AR-S,1683,'SFE301' is not in list
+1244,CAT032-01,,0,0,CAT032,AR-K,1337,'CAT032' is not in list
+1048,CAT032-02,,0,0,CAT032,AR-K,1337,'CAT032' is not in list
+1107,CAT032-03,,0,0,CAT032,AR-K,1337,'CAT032' is not in list
+244,BUE133-01,PD Villarino,-39.034.971,-62.638.403,BUE133,AR-B,1328,'BUE133' is not in list
+504,BUE133-02,Villarino,-38.829.338,-62.693.699,BUE133,AR-B,1328,'BUE133' is not in list
+935,JUJ047-01,Punto Digital,-24.190.683,-65.312.052,JUJ047,AR-Y,1474,'JUJ047' is not in list
+217,JUJ047-02,Punto Digital,-24.190.824,-65.311.990,JUJ047,AR-Y,1474,'JUJ047' is not in list
+1311,SLU005-01,,0,0,SLU005,AR-D,1599,'SLU005' is not in list
+359,LAP060-01,Municipalidad,-35.038.389,-64.247.250,LAP060,AR-L,1476,'LAP060' is not in list
+719,JUJ038-01,Municipalidad,-24.483.389,-64.950.250,JUJ038,AR-Y,1460,'JUJ038' is not in list
+384,SJU008-01,Punto Digital,-31.669.235,-68.390.480,SJU008,AR-J,1586,'SJU008' is not in list
+855,SJU008-02,Las Chacritas(Escuela Procesa Sarmiento de Lenoir),-32.000.000,-68.000.000,SJU008,AR-J,1586,'SJU008' is not in list
+1161,CHA007-01,,0,0,CHA007,AR-H,1350,'CHA007' is not in list
+1318,JUJ051-01,,0,0,JUJ051,AR-Y,1465,'JUJ051' is not in list
+1017,CBA106-01,Punto Digital,-31.648.112,-63.761.954,CBA106,AR-X,1398,'CBA106' is not in list
+1087,TUC107-01,,-27.333.221,-65.750.038,TUC107,AR-T,1650,'TUC107' is not in list
+265,SCR019-01,PD Canadon Seco,-46.532.364,-67.551.778,SCR019,AR-Z,1607,'SCR019' is not in list
+303,COR033-01,Municipalidad de Loreto VSAT,-27.768.559,-57.274.793,COR033,AR-W,1428,'COR033' is not in list
+948,BUE063-01,Punto Digital Junin,-34.569.749,-60.931.151,BUE063,AR-B,1257,'BUE063' is not in list
+47,BUE063-02,Laguna,-34.661.861,-61.019.583,BUE063,AR-B,1257,'BUE063' is not in list
+48,BUE063-03,Pza 25 de Mayo,-34.593.694,-60.946.306,BUE063,AR-B,1257,'BUE063' is not in list
+1250,SFE224-01,,0,0,SFE224,AR-S,1692,'SFE224' is not in list
+839,BUE046-01,,-36.651.008,-57.792.496,BUE046,AR-B,1240,'BUE046' is not in list
+753,BUE046-02,PD General Guido,-36.641.810,-57.793.289,BUE046,AR-B,1240,'BUE046' is not in list
+236,BUE125-01,PD Tornquist,-38.101.422,-62.224.908,BUE125,AR-B,1320,'BUE125' is not in list
+690,BUE093-01,Municipalidad,-36.267.817,-63.164.539,BUE093,AR-B,1288,'BUE093' is not in list
+319,MIS032-01,Oficina de Turismo,-26.019.639,-54.585.611,MIS032,AR-N,1544,'MIS032' is not in list
+926,MIS032-02,Punto Digital,-26.026.474,-54.612.565,MIS032,AR-N,1544,'MIS032' is not in list
+663,CHU021-01,salon de usos multiples,-43.000.000,-68.000.000,CHU021,AR-U,1375,'CHU021' is not in list
+721,LRJ006-01,Municipalidad,-28.925.778,-67.519.667,LRJ006,AR-F,1502,'LRJ006' is not in list
+932,LRJ006-02,Punto Digital,-28.925.523,-67.520.324,LRJ006,AR-F,1502,'LRJ006' is not in list
+366,LAP067-01,Municipalidad,-35.000.000,-64.000.000,LAP067,AR-L,1483,'LAP067' is not in list
+695,BUE102-01,Punto Digital,-33.487.032,-59.989.087,BUE102,AR-B,1297,1297 is not in list
+364,SLU057-01,Punto Digital,-35.150.680,-65.941.011,SLU057,AR-D,1599,'SLU057' is not in list
+771,NEU007-01,Caviahue,-37.867.550,-71.050.469,NEU007,AR-Q,1555,'NEU007' is not in list
+904,NEU007-02,Copahue,-37.817.653,-71.098.492,NEU007,AR-Q,1555,'NEU007' is not in list
+1308,SAL034-01,,0,0,SAL034,AR-A,1669,'SAL034' is not in list
+898,CHU010-01,Municipalidad,-43.535.113,-71.466.488,CHU010,AR-U,1371,'CHU010' is not in list
+1000,SFE049-01,Punto Digital,-32.802.169,-60.726.648,SFE049,AR-S,1687,'SFE049' is not in list
+337,COR069-01,,0,0,COR069,AR-W,1431,'COR069' is not in list
+1129,BUE113-01,,0,0,BUE113,AR-B,1308,'BUE113' is not in list
+1299,TUC109-01,,0,0,TUC109,AR-T,1643,'TUC109' is not in list
+342,CHA017-01,Polideportivo,-27.529.667,-59.572.583,CHA017,AR-H,1349,'CHA017' is not in list
+1319,JUJ002-01,,0,0,JUJ002,AR-Y,1459,'JUJ002' is not in list
+543,JUJ002-02,Rachaite-Escuela,-22.829.737,-66.061.072,JUJ002,AR-Y,1459,'JUJ002' is not in list
+1320,JUJ002-03,,0,0,JUJ002,AR-Y,1459,'JUJ002' is not in list
+1015,JUJ002-04,Alfarcito,-23.319.888,-65.971.871,JUJ002,AR-Y,1459,'JUJ002' is not in list
+864,MIS068-01,San Pedro - Anfiteatro Municipal,-26.624.889,-54.111.917,MIS068,AR-N,1549,'MIS068' is not in list
+717,JUJ011-01,Municipalidad,-23.866.722,-67.000.083,JUJ011,AR-Y,1465,'JUJ011' is not in list
+579,LAP065-01,SENASA Santa Rosa,-37.000.000,-64.000.000,LAP065,AR-L,1480,'LAP065' is not in list
+360,LAP065-02,Santa Rosa - Plaza San Martin,-36.620.590,-64.290.393,LAP065,AR-L,1480,'LAP065' is not in list
+1302,SAL046-01,,0,0,SAL046,AR-A,1672,'SAL046' is not in list
+560,MIS016-01,Municipalidad,-27.633.306,-55.496.972,MIS016,AR-N,1534,'MIS016' is not in list
+1076,CAT016-01,,-27.715.778,-67.115.472,CAT016,AR-K,1333,'CAT016' is not in list
+982,TUC034-01,Puestito PD,-26.420.287,-64.784.684,TUC034,AR-T,1651,'TUC034' is not in list
+965,TUC034-02,Comuna,-26.420.030,-64.775.878,TUC034,AR-T,1651,'TUC034' is not in list
+1309,SAL059-01,,0,0,SAL059,AR-A,1682,'SAL059' is not in list
+1216,SAL059-02,,0,0,SAL059,AR-A,1682,'SAL059' is not in list
+585,COR007-01,Municipalidad,-28.536.325,-57.172.278,COR007,AR-W,1415,'COR007' is not in list
+586,COR007-02,,0,0,COR007,AR-W,1415,'COR007' is not in list
+298,COR007-03,Punto Digital,-28.536.325,-57.172.278,COR007,AR-W,1415,'COR007' is not in list
+770,SFE126-01,,0,0,SFE126,AR-S,1687,'SFE126' is not in list
+946,BUE032-01,PD Huanguelen,-37.062.466,-61.938.720,BUE032,AR-B,1226,'BUE032' is not in list
+986,CBA222-01,Plazoleta Municipal,-30.926.684,-64.500.396,CBA222,AR-X,1396,'CBA222' is not in list
+272,CBA222-02,PD Los Cocos,-30.925.047,-64.506.365,CBA222,AR-X,1396,'CBA222' is not in list
+699,ERI032-01,Municipalidad,-33.000.000,-58.998.083,ERI032,AR-E,1433,'ERI032' is not in list
+243,BUE073-01,PD Lobos,-35.151.806,-59.099.222,BUE073,AR-B,1268,'BUE073' is not in list
+59,BUE073-02,Museo,-35.182.111,-59.091.611,BUE073,AR-B,1268,'BUE073' is not in list
+60,BUE073-03,,-35.171.833,-59.099.889,BUE073,AR-B,1268,'BUE073' is not in list
+61,BUE073-04,,-35.151.806,-59.099.222,BUE073,AR-B,1268,'BUE073' is not in list
+552,CHA068-01,,-25.636.944,-60.265.194,CHA068,AR-H,1358,'CHA068' is not in list
+1256,SLU019-01,,0,0,SLU019,AR-D,1599,'SLU019' is not in list
+1314,SLU019-02,,0,0,SLU019,AR-D,1599,'SLU019' is not in list
+257,SCR010-01,PD Puerto San Julian,-49.309.832,-67.741.390,SCR010,AR-Z,1612,'SCR010' is not in list
+191,SCR010-02,,-49.304.007,-67.736.349,SCR010,AR-Z,1612,'SCR010' is not in list
+885,ERI035-01,Macia - Galpon principal (lado sur del predio),-32.173.904,-59.396.261,ERI035,AR-E,1446,'ERI035' is not in list
+884,ERI035-02,Macia - En Escenario (Lado norte del predio),-32.174.311,-59.396.249,ERI035,AR-E,1446,'ERI035' is not in list
+142,ERI035-03,Macia - En luminaria (centro-sur del predio),-32.175.201,-59.396.222,ERI035,AR-E,1446,'ERI035' is not in list
+143,ERI035-04,Macia - En luminaria (Centro-norte del Predio),-32.174.728,-59.396.272,ERI035,AR-E,1446,'ERI035' is not in list
+387,MZA018-01,Municipalidad,-33.000.000,-69.000.000,MZA018,AR-M,1532,'MZA018' is not in list
+1202,SFE360-01,,0,0,SFE360,AR-S,1684,'SFE360' is not in list
+902,NEU057-01,,-38.864.285,-69.744.006,NEU057,AR-Q,1558,'NEU057' is not in list
+727,SAL015-01,El Galpon - Municipalidad,-25.380.111,-64.654.389,SAL015,AR-A,1670,1670 is not in list
+694,SGO066-01,,-28.815.028,-62.843.222,SGO066,AR-G,1625,'SGO066' is not in list
+1121,CBA157-01,,0,0,CBA157,AR-X,1388,'CBA157' is not in list
+1002,COR027-01,,0,0,COR027,AR-W,1417,'COR027' is not in list
+1090,SFE108-01,,-31.059.175,-60.744.975,SFE108,AR-S,1694,'SFE108' is not in list
+1243,FOR031-01,,0,0,FOR031,AR-P,1453,'FOR031' is not in list
+1180,RNO043-01,,0,0,RNO043,AR-R,1566,'RNO043' is not in list
+1200,SFE257-01,,0,0,SFE257,AR-S,1689,'SFE257' is not in list
+1080,CAT018-01,,-28.153.194,-65.659.139,CAT018,AR-K,1342,'CAT018' is not in list
+1065,BUE045-01,,-35.770.085,-58.496.426,BUE045,AR-B,1239,'BUE045' is not in list
+534,BUE045-02,Plaza Manuel Belgrano,-35.765.778,-58.497.333,BUE045,AR-B,1239,'BUE045' is not in list
+947,BUE045-03,PD General Belgrano,-35.768.484,-58.495.901,BUE045,AR-B,1239,'BUE045' is not in list
+794,SJU014-01,Santa Lucia - Pza Sta Lucia,-31.540.527,-68.498.478,SJU014,AR-J,1592,'SJU014' is not in list
+795,SJU014-02,,-31.539.722,-68.498.028,SJU014,AR-J,1592,'SJU014' is not in list
+796,SJU014-03,,0,0,SJU014,AR-J,1592,'SJU014' is not in list
+1291,CHU031-01,,0,0,CHU031,AR-U,1379,'CHU031' is not in list
+1168,COR068-01,,0,0,COR068,AR-W,1414,'COR068' is not in list
+916,SFE203-01,Punto Digital,-32.781.098,-60.906.851,SFE203,AR-S,1687,'SFE203' is not in list
+198,SFE203-02,Plaza Ferrocarril,-32.782.851,-60.905.379,SFE203,AR-S,1687,'SFE203' is not in list
+1293,NEU026-01,,0,0,NEU026,AR-Q,1554,'NEU026' is not in list
+238,BUE111-01,PD San Andres de Giles,-34.442.227,-59.438.710,BUE111,AR-B,1306,'BUE111' is not in list
+655,SJU003-01,Villa Nueva- Escuela Alvarez Condarco,-31.000.000,-70.000.000,SJU003,AR-J,1581,'SJU003' is not in list
+268,SJU003-02,PD Calingasta,-31.339.258,-69.426.629,SJU003,AR-J,1581,'SJU003' is not in list
+774,RNO069-01,,-41.709.999,-70.477.101,RNO069,AR-R,1576,'RNO069' is not in list
+230,NEU031-01,Patinodromo,-38.955.486,-68.237.063,NEU031,AR-Q,1556,'NEU031' is not in list
+778,SFE335-01,,0,0,SFE335,AR-S,1692,'SFE335' is not in list
+606,CBA052-01,Delegacion Municipal,-32.366.056,-64.642.083,CBA052,AR-X,1391,'CBA052' is not in list
+691,CBA357-01,,0,0,CBA357,AR-X,1393,'CBA357' is not in list
+1279,SFE175-01,,0,0,SFE175,AR-S,1695,'SFE175' is not in list
+1184,BUE036-01,,-34.410.389,-58.770.417,BUE036,AR-B,1230,'BUE036' is not in list
+515,BUE036-02,Plaza San Martin,-34.346.056,-58.795.111,BUE036,AR-B,1230,'BUE036' is not in list
+516,BUE036-03,Ing. Maschwitz,-34.372.778,-58.750.028,BUE036,AR-B,1230,'BUE036' is not in list
+1313,CBA233-01,,0,0,CBA233,AR-X,1402,'CBA233' is not in list
+611,CBA233-02,,-31.407.300,-65.046.167,CBA233,AR-X,1402,'CBA233' is not in list
+952,BUE076-01,PD Magdalena,-35.080.095,-57.517.227,BUE076,AR-B,1271,'BUE076' is not in list
+411,BUE076-02,Magdalena - Plaza Villa Garibaldi (Brenan 1450),-35.080.558,-57.517.227,BUE076,AR-B,1271,'BUE076' is not in list
+412,BUE076-03,Magdalena - Plaza San Martin (esq. Rivadavia e Irigoyen),-35.080.558,-57.517.227,BUE076,AR-B,1271,'BUE076' is not in list
+590,MIS013-01,,-27.460.861,-55.745.056,MIS013,AR-N,1538,'MIS013' is not in list
+1141,CHU004-01,,0,0,CHU004,AR-U,1369,'CHU004' is not in list
+659,CHU004-02,salon de usos multiples,-45.077.583,-69.460.972,CHU004,AR-U,1369,'CHU004' is not in list
+706,MZA016-01,Santa Rosa-Las Catitas - Delegacion Municipal,-33.000.000,-68.000.000,MZA016,AR-M,1530,'MZA016' is not in list
+386,MZA016-02,ESCUELA EL MARCADO   vsat Arsat,-33.109.987,-68.189.632,MZA016,AR-M,1530,'MZA016' is not in list
+688,MZA016-03,C.I.C,-33.000.000,-68.000.000,MZA016,AR-M,1530,'MZA016' is not in list
+720,JUJ042-01,Municipalidad,-24.271.806,-64.765.639,JUJ042,AR-Y,1461,'JUJ042' is not in list
+936,JUJ042-02,Punto Digital,-24.245.788,-64.862.889,JUJ042,AR-Y,1461,'JUJ042' is not in list
+237,BUE126-01,PD Trenque Lauquen,-35.964.382,-62.733.924,BUE126,AR-B,1321,'BUE126' is not in list
+922,SJU016-01,Punto Digital Ullum,-31.471.888,-68.748.500,SJU016,AR-J,1594,'SJU016' is not in list
+267,SJU016-02,Plaza Municipio,-31.000.000,-69.000.000,SJU016,AR-J,1594,'SJU016' is not in list
+592,MIS063-01,Ruiz de Montoya - Municipalidad,-26.985.472,-55.048.972,MIS063,AR-N,1540,'MIS063' is not in list
+1039,TUC112-01,Simoca,-27.200.000,-65.283.400,TUC112,AR-T,1652,'TUC112' is not in list
+210,TUC112-02,Edificio Municipal,-26.812.394,-65.298.398,TUC112,AR-T,1652,'TUC112' is not in list
+209,TUC112-03,Punto Digital,-26.795.523,-65.259.022,TUC112,AR-T,1652,'TUC112' is not in list
+780,COR048-01,,-27.572.306,-58.695.278,COR048,AR-W,1419,'COR048' is not in list
+336,COR048-02,Municipalidad,-27.581.917,-58.745.250,COR048,AR-W,1419,'COR048' is not in list
+900,BUE083-01,Escuela No.7,-35.397.660,-58.811.580,BUE083,AR-B,1278,'BUE083' is not in list
+901,BUE083-02,Escuela No.2,-35.694.910,-58.704.080,BUE083,AR-B,1278,'BUE083' is not in list
+899,BUE083-03,Escuela No.12,-35.543.490,-58.667.660,BUE083,AR-B,1278,'BUE083' is not in list
+1170,SFE227-01,,0,0,SFE227,AR-S,1694,'SFE227' is not in list
+1171,SFE227-02,,0,0,SFE227,AR-S,1694,'SFE227' is not in list
+1169,SFE227-03,,0,0,SFE227,AR-S,1694,'SFE227' is not in list
+671,TUC036-01,,0,0,TUC036,AR-T,1651,'TUC036' is not in list
+374,CBA404-01,,0,0,CBA404,AR-X,1391,'CBA404' is not in list
+392,ERI064-01,Villa Paranacito - Plaza de los Ninos,-34.000.000,-59.000.000,ERI064,AR-E,1438,'ERI064' is not in list
+317,MIS047-01,,0,0,MIS047,AR-N,1544,'MIS047' is not in list
+1263,CHU022-01,,0,0,CHU022,AR-U,1376,'CHU022' is not in list
+665,CHU022-02,Municipalidad,-42.262.611,-69.221.972,CHU022,AR-U,1376,'CHU022' is not in list
+1264,CHU022-03,,0,0,CHU022,AR-U,1376,'CHU022' is not in list
+1260,CHU022-04,,0,0,CHU022,AR-U,1376,'CHU022' is not in list
+633,MIS057-01,Punto Digital,-27.374.308,-55.898.582,MIS057,AR-N,1547,'MIS057' is not in list
+164,MIS057-02,Posadas - Centro de integracion territorial(Barrio Miguel Lanus),-27.396.097,-55.963.227,MIS057,AR-N,1547,'MIS057' is not in list
+163,MIS057-03,Posadas - Paseo la terminal,-27.419.933,-55.930.880,MIS057,AR-N,1547,'MIS057' is not in list
+162,MIS057-04,Posadas - Costanera,-27.369.909,-55.885.460,MIS057,AR-N,1547,'MIS057' is not in list
+161,MIS057-05,Posadas - Barrio San Lucas,-27.434.457,-55.886.777,MIS057,AR-N,1547,'MIS057' is not in list
+1086,LRJ013-01,,-29.894.789,-67.149.717,LRJ013,AR-F,1509,'LRJ013' is not in list
+981,LRJ012-01,Corral de Isaac ( Escuela Rural),-31.933.300,-66.366.700,LRJ012,AR-F,1508,'LRJ012' is not in list
+507,BUE130-01,Corsodromo,-35.435.500,-60.156.528,BUE130,AR-B,1325,'BUE130' is not in list
+1138,TUC012-01,,0,0,TUC012,AR-T,1646,'TUC012' is not in list
+1186,TUC012-02,,0,0,TUC012,AR-T,1646,'TUC012' is not in list
+743,SAL044-01,Rivadavia Banda Norte,-23.470.861,-62.888.611,SAL044,AR-A,1680,'SAL044' is not in list
+1307,SAL044-02,,0,0,SAL044,AR-A,1680,'SAL044' is not in list
+658,CHU025-01,Gimnasio Municipal,-44.048.639,-70.467.889,CHU025,AR-U,1377,'CHU025' is not in list
+1123,CBA296-01,,0,0,CBA296,AR-X,1395,'CBA296' is not in list
+1175,SFE094-01,,0,0,SFE094,AR-S,1696,'SFE094' is not in list
+945,BUE010-01,PD Baradero,-33.822.219,-59.521.090,BUE010,AR-B,1205,1205 is not in list
+231,BUE010-02,Baradero Plaza Colon,-33.812.020,-59.504.506,BUE010,AR-B,1205,1205 is not in list
+819,CBA207-01,,-30.563.597,-63.999.579,CBA207,AR-X,1400,'CBA207' is not in list
+650,BUE099-01,,-37.549.549,-62.774.955,BUE099,AR-B,1294,1294 is not in list
+649,BUE099-02,Punto Digital,-37.543.239,-62.767.778,BUE099,AR-B,1294,1294 is not in list
+549,BUE072-01,,0,0,BUE072,AR-B,1267,1267 is not in list
+550,BUE072-02,,0,0,BUE072,AR-B,1267,1267 is not in list
+242,BUE072-03,PD Loberia,-38.156.621,-58.787.664,BUE072,AR-B,1267,1267 is not in list
+594,CHA028-01,Municipalidad,-27.290.889,-58.615.167,CHA028,AR-H,1360,'CHA028' is not in list
+934,JUJ024-01,Humahuaca Punto Digital,-23.204.077,-65.348.388,JUJ024,AR-Y,1467,'JUJ024' is not in list
+933,JUJ024-02,Tres Cruces (Municipio),-23.000.000,-66.000.000,JUJ024,AR-Y,1467,'JUJ024' is not in list
+1013,JUJ013-01,Punto Digital,-23.033.535,-66.400.008,JUJ013,AR-Y,1465,'JUJ013' is not in list
+535,JUJ013-02,Central Telefonica 1,-23.033.535,-66.400.008,JUJ013,AR-Y,1465,'JUJ013' is not in list
+1012,JUJ013-03,Central Telefonica 2,-23.033.535,-66.400.008,JUJ013,AR-Y,1465,'JUJ013' is not in list
+254,CBA381-01,PD Villa allende,-31.291.627,-64.292.242,CBA381,AR-X,1383,'CBA381' is not in list
+811,CBA381-02,,0,0,CBA381,AR-X,1383,'CBA381' is not in list
+127,CBA381-03,Polideportivo,-31.290.480,-64.293.068,CBA381,AR-X,1383,'CBA381' is not in list
+126,CBA381-04,Villa Allende - Plaza M. Belgrano,-31.293.929,-64.297.434,CBA381,AR-X,1383,'CBA381' is not in list
+128,CBA381-05,Casa de la cultura,-31.291.804,-64.292.897,CBA381,AR-X,1383,'CBA381' is not in list
+125,CBA381-06,Villa Allende - Municipalidad,-31.296.782,-64.293.247,CBA381,AR-X,1383,'CBA381' is not in list
+1229,COR026-01,,0,0,COR026,AR-W,1427,'COR026' is not in list
+1219,CBA014-01,,0,0,CBA014,AR-X,1387,'CBA014' is not in list
+1189,TUC055-01,,0,0,TUC055,AR-T,1649,'TUC055' is not in list
+964,SCR014-01,,0,0,SCR014,AR-Z,1613,'SCR014' is not in list
+299,COR011-01,Plaza Tambor de Tacuari,-28.393.174,-57.886.431,COR011,AR-W,1418,'COR011' is not in list
+1033,BUE068-01,Plaza Bicentenario,-37.540.829,-60.806.200,BUE068,AR-B,1262,1262 is not in list
+641,BUE068-02,Plaza Pedro Pereyra,-37.544.361,-60.800.944,BUE068,AR-B,1262,1262 is not in list
+1237,SAL005-01,,0,0,SAL005,AR-A,1663,'SAL005' is not in list
+1206,SFE348-01,,0,0,SFE348,AR-S,1696,'SFE348' is not in list
+480,BUE118-01,PD San PeDro,-33.680.524,-59.684.253,BUE118,AR-B,1313,1313 is not in list
+479,BUE118-02,Pza San Martin,-33.675.597,-59.662.142,BUE118,AR-B,1313,1313 is not in list
+1238,TUC007-01,,0,0,TUC007,AR-T,1648,'TUC007' is not in list
+1239,TUC007-02,,0,0,TUC007,AR-T,1648,'TUC007' is not in list
+555,ERI058-01,,-31.829.255,-58.820.673,ERI058,AR-E,1449,'ERI058' is not in list
+404,SGO035-01,,0,0,SGO035,AR-G,1625,'SGO035' is not in list
+1071,RNO032-01,,-40.815.934,-64.757.752,RNO032,AR-R,1578,'RNO032' is not in list
+1075,SAL031-01,,-26.126.871,-65.051.892,SAL031,AR-A,1671,'SAL031' is not in list
+646,TUC004-01,,0,0,TUC004,AR-T,1646,'TUC004' is not in list
+826,SGO081-01,,-27.961.667,-62.610.444,SGO081,AR-G,1630,1630 is not in list
+943,CBA158-01,Punto Digital,-30.994.274,-64.086.879,CBA158,AR-X,1383,'CBA158' is not in list
+108,CBA158-02,Jesus Maria - Predio festival de Doma y Folklore,-30.973.848,-64.093.978,CBA158,AR-X,1383,'CBA158' is not in list
+107,CBA158-03,Jesus Maria - Plaza Pio Leon,-30.976.469,-64.096.402,CBA158,AR-X,1383,'CBA158' is not in list
+324,COR049-01,,0,0,COR049,AR-W,1431,'COR049' is not in list
+615,SFE143-01,,0,0,SFE143,AR-S,1684,'SFE143' is not in list
+1178,SFE143-02,,0,0,SFE143,AR-S,1684,'SFE143' is not in list
+344,SFE143-03,,0,0,SFE143,AR-S,1684,'SFE143' is not in list
+775,NEU015-01,,-37.268.806,-70.765.694,NEU015,AR-Q,1552,1552 is not in list
+979,LRJ014-01,Punto Digital,-29.435.861,-66.859.408,LRJ014,AR-F,1510,'LRJ014' is not in list
+1179,RNO057-01,,0,0,RNO057,AR-R,1576,'RNO057' is not in list
+1287,SFE290-01,,0,0,SFE290,AR-S,1700,'SFE290' is not in list
+787,SLU003-01,,-35.675.890,-65.426.780,SLU003,AR-D,1599,'SLU003' is not in list
+788,SLU003-02,,0,0,SLU003,AR-D,1599,'SLU003' is not in list
+693,CHU047-01,,-44.190.278,-71.663.861,CHU047,AR-U,1377,'CHU047' is not in list
+1092,ERI020-01,,-32.719.944,-59.396.500,ERI020,AR-E,1445,'ERI020' is not in list
+389,MZA017-01,Tunuyan - Delegacion Municipal,-33.602.579,-69.005.322,MZA017,AR-M,1531,'MZA017' is not in list
+692,MZA017-02,"Delegacion Municipal, Colonia Las Rosas",-34.000.000,-69.000.000,MZA017,AR-M,1531,'MZA017' is not in list
+352,SFE245-01,,-30.984.776,-61.022.562,SFE245,AR-S,1700,'SFE245' is not in list
+1253,NEU032-01,,0,0,NEU032,AR-Q,1553,1553 is not in list
+1265,SCR006-01,,0,0,SCR006,AR-Z,1611,'SCR006' is not in list
+687,SJU007-01,San Jose de Jachal (Punto Digital),-30.157.709,-68.482.508,SJU007,AR-J,1585,'SJU007' is not in list
+1214,SJU007-02,,0,0,SJU007,AR-J,1585,'SJU007' is not in list
+680,SJU007-03,C.i.C (Mogna),-30.694.928,-68.361.619,SJU007,AR-J,1585,'SJU007' is not in list
+456,CBA397-01,,0,0,CBA397,AR-X,1398,'CBA397' is not in list
+1301,SGO900-01,,0,0,SGO900,AR-G,1634,'SGO900' is not in list
+1220,CBA091-01,,0,0,CBA091,AR-X,1387,'CBA091' is not in list
+962,SCR018-01,Centro de Informacion Turistica,-49.333.638,-72.882.993,SCR018,AR-Z,1609,'SCR018' is not in list
+1295,SCR018-02,,0,0,SCR018,AR-Z,1609,'SCR018' is not in list
+325,COR025-01,,0,0,COR025,AR-W,1412,'COR025' is not in list
+1043,SFE199-01,,0,0,SFE199,AR-S,1695,'SFE199' is not in list
+697,BUE044-01,Municipalidad,-34.304.198,-61.306.113,BUE044,AR-B,1238,1238 is not in list
+561,CBA301-01,,0,0,CBA301,AR-X,1398,'CBA301' is not in list
+647,COR002-01,"Colonia 3 de Abril, Municipalidad",-28.412.444,-58.913.889,COR002,AR-W,1409,'COR002' is not in list
+247,BUE090-01,Olavarria PD,-36.889.373,-60.325.267,BUE090,AR-B,1285,1285 is not in list
+1156,BUE090-02,,0,0,BUE090,AR-B,1285,1285 is not in list
+69,BUE090-03,NIDO,-36.869.722,-60.333.583,BUE090,AR-B,1285,1285 is not in list
+70,BUE090-04,Parque Mitre,-36.890.861,-60.325.639,BUE090,AR-B,1285,1285 is not in list
+338,MIS030-01,Oficina de Turismo,-27.000.000,-54.000.000,MIS030,AR-N,1546,'MIS030' is not in list
+928,MIS030-02,Punto Digital,-27.295.944,-54.199.077,MIS030,AR-N,1546,'MIS030' is not in list
+703,CHU011-01,Comuna,-42.000.000,-71.000.000,CHU011,AR-U,1372,'CHU011' is not in list
+803,LAP034-01,,-35.234.511,-63.591.283,LAP034,AR-L,1483,'LAP034' is not in list
+804,LAP034-02,,0,0,LAP034,AR-L,1483,'LAP034' is not in list
+643,BUE001-01,Barrio Arturo illia,-37.171.310,-62.724.830,BUE001,AR-B,1195,1195 is not in list
+644,BUE001-02,Plaza Levalle,-37.179.520,-62.760.090,BUE001,AR-B,1195,1195 is not in list
+383,SJU019-01,Plaza Municipio,-31.551.626,-68.730.293,SJU019,AR-J,1597,'SJU019' is not in list
+708,MZA015-01,Rama Caida,-34.666.056,-68.388.778,MZA015,AR-M,1529,'MZA015' is not in list
+307,CHA063-01,Municipalidad,-27.830.750,-61.135.556,CHA063,AR-H,1351,'CHA063' is not in list
+252,CAT005-01,PD Belen Catamarca,-27.672.338,-67.026.196,CAT005,AR-K,1333,'CAT005' is not in list
+1110,CAT005-02,,0,0,CAT005,AR-K,1333,'CAT005' is not in list
+1276,SFE038-01,,0,0,SFE038,AR-S,1688,'SFE038' is not in list
+297,COR064-01,Municipalidad de Villa Olivari VSAT,-27.632.751,-56.905.982,COR064,AR-W,1417,'COR064' is not in list
+738,TUC088-01,Tacanas,-26.000.000,-65.000.000,TUC088,AR-T,1653,'TUC088' is not in list
+613,CBA419-01,,-31.820.939,-64.390.857,CBA419,AR-X,1389,'CBA419' is not in list
+593,MIS064-01,San Ignacio - Plaza Municipal,-27.257.833,-55.539.250,MIS064,AR-N,1543,'MIS064' is not in list
+1158,MIS064-02,,0,0,MIS064,AR-N,1543,'MIS064' is not in list
+675,JUJ004-01,Municipalidad,-24.583.361,-64.916.778,JUJ004,AR-Y,1460,'JUJ004' is not in list
+1275,CBA317-01,,0,0,CBA317,AR-X,1383,'CBA317' is not in list
+1255,SAL022-01,,0,0,SAL022,AR-A,1666,'SAL022' is not in list
+591,MIS012-01,Centro Cultural  La Morocha,-27.000.000,-55.000.000,MIS012,AR-N,1539,'MIS012' is not in list
+1083,CAT009-01,,-27.692.359,-67.619.842,CAT009,AR-K,1337,'CAT009' is not in list
+347,TUC030-01,,0,0,TUC030,AR-T,1648,'TUC030' is not in list
+1077,SAL054-01,,-25.305.546,-66.256.975,SAL054,AR-A,1679,'SAL054' is not in list
+301,COR006-01,Municipalidad de Chavarria VSAT,-28.393.260,-57.886.420,COR006,AR-W,1414,'COR006' is not in list
+1290,SFE115-01,,0,0,SFE115,AR-S,1701,'SFE115' is not in list
+818,CBA221-01,,-33.399.748,-63.472.012,CBA221,AR-X,1385,'CBA221' is not in list
+228,ERI024-01,Gualeguay - Costanera,-33.159.518,-59.293.823,ERI024,AR-E,1445,'ERI024' is not in list
+781,CHA046-01,,-25.649.611,-60.927.278,CHA046,AR-H,1358,1358 is not in list
+718,JUJ037-01,Municipalidad,-22.536.714,-65.696.847,JUJ037,AR-Y,1459,'JUJ037' is not in list
+677,JUJ023-01,Punto Digital,-23.438.505,-65.350.651,JUJ023,AR-Y,1469,'JUJ023' is not in list
+1249,SFE284-01,,0,0,SFE284,AR-S,1693,'SFE284' is not in list
+903,NEU045-01,,-39.261.370,-68.787.508,NEU045,AR-Q,1556,'NEU045' is not in list
+1069,SGO034-01,,-28.989.077,-62.126.750,SGO034,AR-G,1616,'SGO034' is not in list
+603,CBA140-01,Municipalidad,-32.757.722,-63.789.722,CBA140,AR-X,1385,'CBA140' is not in list
+1185,COR016-01,,0,0,COR016,AR-W,1423,'COR016' is not in list
+1198,SFE073-01,,0,0,SFE073,AR-S,1689,'SFE073' is not in list
+553,FOR004-01,,0,0,FOR004,AR-P,1453,'FOR004' is not in list
+401,SGO064-01,Punto Digital,-27.636.381,-62.406.001,SGO064,AR-G,1634,'SGO064' is not in list
+908,RNO041-01,,-39.982.101,-68.873.688,RNO041,AR-R,1568,'RNO041' is not in list
+1093,SFE243-01,,-31.211.944,-61.613.889,SFE243,AR-S,1689,'SFE243' is not in list
+820,SGO116-01,,-27.465.667,-62.917.944,SGO116,AR-G,1634,'SGO116' is not in list
+333,CBA193-01,,0,0,CBA193,AR-X,1407,'CBA193' is not in list
+760,CHU029-01,Las Plumas,-43.721.630,-67.284.477,CHU029,AR-U,1378,'CHU029' is not in list
+589,COR067-01,,-29.137.028,-59.178.306,COR067,AR-W,1413,'COR067' is not in list
+642,COR067-02,,0,0,COR067,AR-W,1413,'COR067' is not in list
+1195,SFE202-01,,0,0,SFE202,AR-S,1696,'SFE202' is not in list
+813,NEU022-01,,-37.205.639,-70.819.306,NEU022,AR-Q,1552,'NEU022' is not in list
+822,SGO119-01,,-26.936.056,-62.949.667,SGO119,AR-G,1634,'SGO119' is not in list
+1191,RNO065-01,,0,0,RNO065,AR-R,1572,'RNO065' is not in list
+1205,SFE318-01,,0,0,SFE318,AR-S,1694,'SFE318' is not in list
+728,SAL018-01,El Quebrachal - Municipalidad,-25.335.056,-64.020.222,SAL018,AR-A,1662,'SAL018' is not in list
+1217,SLU007-01,,0,0,SLU007,AR-D,1599,'SLU007' is not in list
+396,ERI036-01,,0,0,ERI036,AR-E,1439,'ERI036' is not in list
+657,CHU002-01,Biblioteca,-43.321.444,-69.692.889,CHU002,AR-U,1368,'CHU002' is not in list
+1286,JUJ040-01,el moreno,0,0,JUJ040,AR-Y,1472,'JUJ040' is not in list
+1125,BUE030-01,,0,0,BUE030,AR-B,1224,1224 is not in list
+1126,BUE030-02,,0,0,BUE030,AR-B,1224,1224 is not in list
+308,CHA041-01,,-27.048.917,-58.682.639,CHA041,AR-H,1360,'CHA041' is not in list
+556,CBA154-01,Punto Digital,-32.942.139,-62.235.600,CBA154,AR-X,1386,'CBA154' is not in list
+799,SCR020-01,,-46.716.450,-68.226.328,SCR020,AR-Z,1607,'SCR020' is not in list
+420,COR035-01,Plaza Municipio VSAT,-28.047.605,-58.230.379,COR035,AR-W,1429,'COR035' is not in list
+735,SFE225-01,Plaza San Martin,-33.643.556,-61.858.056,SFE225,AR-S,1683,'SFE225' is not in list
+756,BUE048-01,,0,0,BUE048,AR-B,1242,'BUE048' is not in list
+391,CBA366-01,,0,0,CBA366,AR-X,1393,'CBA366' is not in list
+271,ERI051-01,PD Sauce de Luna,-31.239.685,-59.216.290,ERI051,AR-E,1443,'ERI051' is not in list
+724,LRJ002-01,Anillaco - Plaza San Antonio de Padua,-28.811.306,-66.938.167,LRJ002,AR-F,1498,'LRJ002' is not in list
+1128,BUE104-01,,0,0,BUE104,AR-B,1299,'BUE104' is not in list
+566,TDF002-01,Tolhuin VSAT,-54.509.792,-67.192.775,TDF002,AR-V,1723,'TDF002' is not in list
+1233,SAL038-01,,0,0,SAL038,AR-A,1679,'SAL038' is not in list
+253,CHU018-01,PD Esquel,-42.907.988,-71.326.257,CHU018,AR-U,1371,'CHU018' is not in list
+607,CBA264-01,,-30.710.611,-62.007.833,CBA264,AR-X,1387,'CBA264' is not in list
+304,SFE056-01,,0,0,SFE056,AR-S,1696,'SFE056' is not in list
+335,COR071-01,Colonia 3 de Abril - Munic. de Vella Vista,-28.412.444,-58.913.889,COR071,AR-W,1409,'COR071' is not in list
+492,BUE114-01,,-34.446.231,-58.559.798,BUE114,AR-B,1309,'BUE114' is not in list
+870,BUE119-01,Plaza Mariano Moreno,-35.024.793,-58.423.481,BUE119,AR-B,1314,'BUE119' is not in list
+17,BUE119-02,Plaza Yrigoyen ( A.Korn),-34.982.417,-58.375.528,BUE119,AR-B,1314,'BUE119' is not in list
+1160,BUE071-01,,0,0,BUE071,AR-B,1266,'BUE071' is not in list
+332,CHA018-01,,-24.427.222,-61.682.250,CHA018,AR-H,1358,'CHA018' is not in list
+320,MIS070-01,Santa Ana - Municipalidad,-27.369.472,-55.581.139,MIS070,AR-N,1538,'MIS070' is not in list
+1081,CAT019-01,,-28.374.893,-66.296.502,CAT019,AR-K,1341,'CAT019' is not in list
+739,TUC037-01,Campamento,-27.683.556,-65.783.528,TUC037,AR-T,1656,'TUC037' is not in list
+1240,SCR007-01,,0,0,SCR007,AR-Z,1611,'SCR007' is not in list
+1241,SCR007-02,,0,0,SCR007,AR-Z,1611,'SCR007' is not in list
+1247,BUE065-01,,0,0,BUE065,AR-B,1259,'BUE065' is not in list
+786,MZA008-01,Punto Digital,-32.986.189,-68.861.568,MZA008,AR-M,1522,'MZA008' is not in list
+156,MZA008-02,Plaza Principal,-33.039.364,-68.879.326,MZA008,AR-M,1522,'MZA008' is not in list
+1196,SFE144-01,,0,0,SFE144,AR-S,1701,'SFE144' is not in list
+1278,CBA231-01,,0,0,CBA231,AR-X,1391,'CBA231' is not in list
+1197,SFE336-01,,0,0,SFE336,AR-S,1701,'SFE336' is not in list
+1284,CBA066-01,,0,0,CBA066,AR-X,1401,'CBA066' is not in list
+1029,SFE005-01,,0,0,SFE005,AR-S,1686,'SFE005' is not in list
+700,ERI046-01,Biblioteca Popular,-32.212.611,-58.218.028,ERI046,AR-E,1441,'ERI046' is not in list
+262,SGO004-01,PD Bandera,-28.887.955,-62.268.458,SGO004,AR-G,1616,'SGO004' is not in list
+531,RNO009-01,Cipoletti After wire4,-38.939.164,-67.995.215,RNO009,AR-R,1569,'RNO009' is not in list
+924,RNO009-02,Punto Digital Cipolleti,-38.920.682,-67.968.413,RNO009,AR-R,1569,'RNO009' is not in list
+1306,SAL020-01,,0,0,SAL020,AR-A,1660,'SAL020' is not in list
+234,BUE008-01,Punto Digital BB,-38.730.328,-62.248.484,BUE008,AR-B,1203,'BUE008' is not in list
+944,BUE008-02,PD Cerri,-38.720.731,-62.394.442,BUE008,AR-B,1203,'BUE008' is not in list
+23,BUE008-03,Plaza Andres Morel (Cerri),-38.719.447,-62.395.058,BUE008,AR-B,1203,'BUE008' is not in list
+21,BUE008-04,Manuel Molina y Pacifico,-38.723.306,-62.309.000,BUE008,AR-B,1203,'BUE008' is not in list
+19,BUE008-05,Plaza del Algarrobo,-38.724.500,-62.253.694,BUE008,AR-B,1203,'BUE008' is not in list
+24,BUE008-06,Plaza Adrian Morado,-38.717.556,-62.312.984,BUE008,AR-B,1203,'BUE008' is not in list
+20,BUE008-07,Skate Park,-38.699.056,-62.271.750,BUE008,AR-B,1203,'BUE008' is not in list
+18,BUE008-08,Plaza Roberto Achaval (Ingeniero White),-38.784.995,-62.265.721,BUE008,AR-B,1203,'BUE008' is not in list
+398,SGO069-01,,0,0,SGO069,AR-G,1638,'SGO069' is not in list
+701,SJU011-01,,-31.530.750,-68.594.750,SJU011,AR-J,1589,'SJU011' is not in list
+599,COR037-01,,-30.620.881,-57.966.163,COR037,AR-W,1416,'COR037' is not in list
+264,SFE129-01,PD Funes,-32.915.138,-60.814.345,SFE129,AR-S,1684,'SFE129' is not in list
+1084,FOR033-01,,-25.536.879,-60.019.268,FOR033,AR-P,1453,'FOR033' is not in list
+1349,RNO045-01,,0,0,RNO045,AR-R,1572,'RNO045' is not in list
+1187,TUC086-01,,0,0,TUC086,AR-T,1659,'TUC086' is not in list
+1188,TUC086-02,,0,0,TUC086,AR-T,1659,'TUC086' is not in list
+219,TUC086-03,Punto Digital,-26.826.278,-65.200.541,TUC086,AR-T,1659,'TUC086' is not in list
+1282,SFE275-01,,0,0,SFE275,AR-S,1690,'SFE275' is not in list
+940,CAT025-01,Punto Digital,-28.475.950,-65.772.131,CAT025,AR-K,1333,'CAT025' is not in list
+293,SCR011-01,,0,0,SCR011,AR-Z,1608,'SCR011' is not in list
+538,ERI004-01,Complejo Deportivo Municipal,-32.245.973,-60.160.861,ERI004,AR-E,1435,'ERI004' is not in list
+1252,NEU027-01,,0,0,NEU027,AR-Q,1559,'NEU027' is not in list
+1204,SFE264-01,,0,0,SFE264,AR-S,1684,'SFE264' is not in list
+382,SJU004-01,Caucete,-32.000.000,-68.000.000,SJU004,AR-J,1582,'SJU004' is not in list
+906,RNO070-01,,-40.749.944,-63.266.500,RNO070,AR-R,1573,'RNO070' is not in list
+266,SJU010-01,PD Rawson,-31.667.282,-68.451.730,SJU010,AR-J,1588,'SJU010' is not in list
+300,COR018-01,Municipalidad de Felipe Yofre VSAT,-29.106.159,-58.339.307,COR018,AR-W,1424,'COR018' is not in list
+239,BUE080-01,PD Marcos PAz,-34.758.009,-58.816.773,BUE080,AR-B,1275,'BUE080' is not in list
+528,CBA364-01,,-32.243.320,-63.981.710,CBA364,AR-X,1388,'CBA364' is not in list
+1248,SFE178-01,,0,0,SFE178,AR-S,1694,'SFE178' is not in list
+762,BUE041-01,Comisaria,-34.827.401,-62.476.547,BUE041,AR-B,1235,'BUE041' is not in list
+375,CBA234-01,,0,0,CBA234,AR-X,1388,'CBA234' is not in list
+322,MIS023-01,Colonia Wanda - Polideportivo Municipal,-25.972.583,-54.562.444,MIS023,AR-N,1544,'MIS023' is not in list
+661,CHU006-01,centro de capacitacion,-43.585.722,-71.701.861,CHU006,AR-U,1368,'CHU006' is not in list
+294,RNO021-01,,0,0,RNO021,AR-R,1569,'RNO021' is not in list
+327,COR056-01,Plaza Principal,-28.955.571,-58.570.717,COR056,AR-W,1414,'COR056' is not in list
+953,BUE096-01,Punto Digital,-34.443.590,-58.808.226,BUE096,AR-B,1291,'BUE096' is not in list
+76,BUE096-02,Plaza 12 de Octubre,-34.458.908,-58.913.870,BUE096,AR-B,1291,'BUE096' is not in list
+261,TUC071-01,PD Monteros,-28.887.955,-62.268.458,TUC071,AR-T,1643,'TUC071' is not in list
+614,CBA405-01,Municipalidad,-31.050.361,-64.496.306,CBA405,AR-X,1396,'CBA405' is not in list
+723,LRJ015-01,Delegacion Municipal,-31.210.106,-66.312.253,LRJ015,AR-F,1511,'LRJ015' is not in list
+861,LRJ016-01,,-28.424.750,-67.110.444,LRJ016,AR-F,1512,'LRJ016' is not in list
+897,CHU032-01,Municipalidad,-42.735.999,-69.608.091,CHU032,AR-U,1368,'CHU032' is not in list
+1136,CBA306-01,,0,0,CBA306,AR-X,1394,'CBA306' is not in list
+734,SFE100-01,Plaza Municipio,-34.000.000,-62.000.000,SFE100,AR-S,1683,'SFE100' is not in list
+1079,SAL041-01,,-23.309.714,-64.219.738,SAL041,AR-A,1668,'SAL041' is not in list
+689,ERI021-01,Plaza Luis Maria Campos,-31.523.469,-58.405.954,ERI021,AR-E,1444,'ERI021' is not in list
+1130,CHA039-01,,0,0,CHA039,AR-H,1284,'CHA039' is not in list
+921,JUJ017-01,,0,0,JUJ017,AR-Y,1462,'JUJ017' is not in list
+1021,SAL049-01,Punto Digital,-24.218.464,-66.319.489,SAL049,AR-A,1682,'SAL049' is not in list
+959,CBA260-01,Punto Digital,-32.611.782,-62.589.783,CBA260,AR-X,1384,'CBA260' is not in list
+608,CBA051-01,Delegacion Municipal,-30.775.139,-64.217.667,CBA051,AR-X,1395,'CBA051' is not in list
+1209,SFE266-01,,0,0,SFE266,AR-S,1683,'SFE266' is not in list
+202,SFE266-02,Rufino - Plaza Sarmiento,-34.262.077,-62.711.183,SFE266,AR-S,1683,'SFE266' is not in list
+201,SFE266-03,Rufino - Municipalidad,-34.264.887,-62.699.207,SFE266,AR-S,1683,'SFE266' is not in list
+578,SFE351-01,Plaza Municipio,-28.623.536,-61.627.028,SFE351,AR-S,1701,'SFE351' is not in list
+525,SFE028-01,,0,0,SFE028,AR-S,1689,'SFE028' is not in list
+1120,ERI061-01,,0,0,ERI061,AR-E,1441,'ERI061' is not in list
+403,SGO040-01,,-27.709.840,-63.770.921,SGO040,AR-G,1617,'SGO040' is not in list
+733,SAL033-01,La Poma-Salta,-24.722.556,-66.200.583,SAL033,AR-A,1677,'SAL033' is not in list
+823,SGO102-01,,-27.415.361,-64.945.750,SGO102,AR-G,1626,'SGO102' is not in list
+536,CBA168-01,,0,0,CBA168,AR-X,1391,'CBA168' is not in list
+1162,COR059-01,,0,0,COR059,AR-W,1425,'COR059' is not in list
+664,NEU017-01,Municipalidad,-40.000.000,-71.000.000,NEU017,AR-Q,1560,'NEU017' is not in list
+346,SFE180-01,,-28.839.333,-59.635.250,SFE180,AR-S,1695,'SFE180' is not in list
+1094,SGO085-01,,-29.502.735,-63.693.676,SGO085,AR-G,1639,'SGO085' is not in list
+912,RNO058-01,,-40.423.384,-69.613.994,RNO058,AR-R,1568,'RNO058' is not in list
+349,SFE295-01,,0,0,SFE295,AR-S,1690,'SFE295' is not in list
+937,ERI013-01,Punto Digital,-31.372.899,-58.049.278,ERI013,AR-E,1442,'ERI013' is not in list
+134,ERI013-02,Terminal de Omnibus,-31.385.196,-58.878.744,ERI013,AR-E,1442,'ERI013' is not in list
+1203,SFE260-01,,0,0,SFE260,AR-S,1687,'SFE260' is not in list
+678,JUJ032-01,Vsat Punto Digital Palma Sola,-23.978.121,-64.305.518,JUJ032,AR-Y,1468,'JUJ032' is not in list
+310,CHA001-01,,0,0,CHA001,AR-H,1346,'CHA001' is not in list
+656,CHU038-01,oficina de informacion turistica,-44.179.556,-71.367.583,CHU038,AR-U,1377,1377 is not in list
+1283,CBA095-01,,0,0,CBA095,AR-X,1387,'CBA095' is not in list
+741,TUC106-01,Delegacion Municipal,-27.000.000,-65.000.000,TUC106,AR-T,1651,'TUC106' is not in list
+330,COR030-01,,-29.176.248,-56.641.592,COR030,AR-W,1415,'COR030' is not in list
+1274,SFE217-01,,0,0,SFE217,AR-S,1683,'SFE217' is not in list
+378,CBA329-01,,0,0,CBA329,AR-X,1391,'CBA329' is not in list
+1009,MZA012-01,Centro Polideportivo,-33.202.010,-68.475.049,MZA012,AR-M,1526,'MZA012' is not in list
+393,ERI041-01,,-33.740.027,-59.160.802,ERI041,AR-E,1438,'ERI041' is not in list
+705,CHU015-01,Municipalidad,-42.064.500,-71.521.639,CHU015,AR-U,1372,'CHU015' is not in list
+862,LRJ001-01,,-28.368.085,-66.600.785,LRJ001,AR-F,1497,'LRJ001' is not in list
+954,BUE097-01,PD Valeria del Mar,-37.136.644,-56.909.730,BUE097,AR-B,1292,'BUE097' is not in list
+214,BUE097-02,Punto Digital,-37.136.682,-56.909.202,BUE097,AR-B,1292,'BUE097' is not in list
+1046,SLU044-01,,0,0,SLU044,AR-D,1603,'SLU044' is not in list
+772,NEU005-01,,-36.822.023,-69.915.140,NEU005,AR-Q,1554,'NEU005' is not in list
+567,CHU005-01,Camarones VSAT,-44.795.297,-65.710.900,CHU005,AR-U,1370,'CHU005' is not in list
+1059,BUE042-01,,0,0,BUE042,AR-B,1236,'BUE042' is not in list
+345,SFE040-01,,-29.887.750,-60.282.417,SFE040,AR-S,1697,'SFE040' is not in list
+602,COR065-01,,-29.471.753,-56.814.896,COR065,AR-W,1415,'COR065' is not in list
+930,MZA011-01,Punto Digital,-32.874.529,-68.876.071,MZA011,AR-M,1525,'MZA011' is not in list
+157,MZA011-02,Plaza Chile,-32.886.642,-68.847.010,MZA011,AR-M,1525,'MZA011' is not in list
+1106,TUC097-01,,0,0,TUC097,AR-T,1650,'TUC097' is not in list
+596,CHA015-01,,-27.682.250,-60.903.167,CHA015,AR-H,1357,'CHA015' is not in list
+1242,CBA246-01,,0,0,CBA246,AR-X,1386,'CBA246' is not in list
+1113,JUJ010-01,,0,0,JUJ010,AR-Y,1464,'JUJ010' is not in list
+730,SAL040-01,Payogasta,-24.934.694,-66.164.500,SAL040,AR-A,1663,'SAL040' is not in list
+637,MIS015-01,,-26.657.639,-54.738.500,MIS015,AR-N,1541,'MIS015' is not in list
+1353,CAT012-01,PD Los i?ngeles,0,0,CAT012,AR-K,1334,'CAT012' is not in list
+1061,SFE116-01,,0,0,SFE116,AR-S,1690,'SFE116' is not in list
+245,BUE025-01,PD Chascomus,-37.655.250,-57.669.357,BUE025,AR-B,1220,'BUE025' is not in list
+554,CHA054-01,,-26.790.389,-60.440.944,CHA054,AR-H,1719,'CHA054' is not in list
+356,LAP007-01,Municipalidad,-37.000.000,-64.000.000,LAP007,AR-L,1480,'LAP007' is not in list
+707,MZA001-01,,-35.168.533,-66.497.917,MZA001,AR-M,1515,'MZA001' is not in list
+1289,SFE325-01,,0,0,SFE325,AR-S,1689,'SFE325' is not in list
+1292,NEU053-01,,0,0,NEU053,AR-Q,1550,'NEU053' is not in list
+1073,SAL010-01,,-25.103.333,-65.535.611,SAL010,AR-A,1667,'SAL010' is not in list
+1231,CBA155-01,,0,0,CBA155,AR-X,1386,'CBA155' is not in list
+1062,CBA308-01,Hospital provincial,-32.169.164,-64.122.659,CBA308,AR-X,1388,'CBA308' is not in list
+115,CBA308-02,Paseo del Riel,-32.170.806,-64.110.583,CBA308,AR-X,1388,'CBA308' is not in list
+117,CBA308-03,Pza San Martin,-32.176.977,-64.113.110,CBA308,AR-X,1388,'CBA308' is not in list
+116,CBA308-04,Terminal de Omnibus,-32.167.303,-64.119.278,CBA308,AR-X,1388,'CBA308' is not in list
+1218,TUC015-01,,0,0,TUC015,AR-T,1651,'TUC015' is not in list
+1023,COR020-01,,0,0,COR020,AR-W,1425,'COR020' is not in list
+582,SFE101-01,,-31.095.213,-61.629.236,SFE101,AR-S,1689,'SFE101' is not in list
+1245,FOR019-01,,0,0,FOR019,AR-P,1458,'FOR019' is not in list
+640,SGO068-01,Plaza San Martin,-27.954.426,-65.166.173,SGO068,AR-G,1627,'SGO068' is not in list
+909,RNO042-01,,-41.466.509,-65.966.701,RNO042,AR-R,1566,'RNO042' is not in list
+263,SFE255-01,PD Rafaela,-32.820.434,-61.393.788,SFE255,AR-S,1689,'SFE255' is not in list
+1074,CAT017-01,,-27.949.306,-65.867.028,CAT017,AR-K,1336,'CAT017' is not in list
+782,SJU006-01,,-30.209.702,-69.131.726,SJU006,AR-J,1584,'SJU006' is not in list
+1135,CHU030-01,,0,0,CHU030,AR-U,1379,'CHU030' is not in list
+1001,CHU009-01,Punto Digital,-45.861.105,-67.525.316,CHU009,AR-U,1373,'CHU009' is not in list
+814,NEU023-01,,-36.753.784,-70.762.877,NEU023,AR-Q,1552,'NEU023' is not in list
+1072,CAT015-01,,-28.078.528,-65.902.694,CAT015,AR-K,1336,'CAT015' is not in list
+1157,RNO068-01,,0,0,RNO068,AR-R,1572,'RNO068' is not in list
+1208,SFE326-01,,0,0,SFE326,AR-S,1689,'SFE326' is not in list
+977,TDF001-01,Punto Digital,-53.768.913,-67.717.428,TDF001,AR-V,1641,'TDF001' is not in list
+793,SLU011-01,,0,0,SLU011,AR-D,1601,'SLU011' is not in list
+502,LAP070-01,Punto Digital,-36.673.976,-64.371.699,LAP070,AR-L,1496,'LAP070' is not in list
+218,LAP070-02,Municipalidad,-36.673.389,-64.378.778,LAP070,AR-L,1496,'LAP070' is not in list
+1117,JUJ041-01,,0,0,JUJ041,AR-Y,1470,1470 is not in list
+340,MIS060-01,,0,0,MIS060,AR-N,1540,'MIS060' is not in list
+595,CHA049-01,Municipalidad,0,0,CHA049,AR-H,1352,'CHA049' is not in list
+958,CBA160-01,Punto Digital,-32.883.074,-62.678.586,CBA160,AR-X,1384,'CBA160' is not in list
+485,SFE015-01,Plaza Municipio,-33.000.000,-62.000.000,SFE015,AR-S,1692,'SFE015' is not in list
+955,BUE115-01,PD San Isidro,-34.498.644,-58.614.639,BUE115,AR-B,1310,'BUE115' is not in list
+26,BUE115-02,Estacion Boulogne,-34.509.028,-58.564.639,BUE115,AR-B,1310,'BUE115' is not in list
+776,CBA398-01,,0,0,CBA398,AR-X,1400,1400 is not in list
+1068,ERI054-01,,-31.795.491,-58.312.371,ERI054,AR-E,1441,'ERI054' is not in list
+315,MIS042-01,,0,0,MIS042,AR-N,1539,'MIS042' is not in list
+980,LRJ009-01,Malanzan,-30.804.585,-66.604.292,LRJ009,AR-F,1505,'LRJ009' is not in list
+726,LRJ011-01,Municipalidad,-31.000.000,-66.000.000,LRJ011,AR-F,1507,'LRJ011' is not in list
+742,TUC006-01,comuna rural,-33.000.000,-68.000.000,TUC006,AR-T,1647,'TUC006' is not in list
+729,SAL043-01,Rio Piedra Municipalidad,-25.314.333,-64.910.361,SAL043,AR-A,1670,'SAL043' is not in list
+704,CHU024-01,Municipalidad,-42.724.121,-70.535.344,CHU024,AR-U,1372,'CHU024' is not in list
+241,BUE049-01,PD Gral Las Heras,-34.931.305,-58.943.948,BUE049,AR-B,1243,'BUE049' is not in list
+40,BUE049-02,Estacion De Tren (Villars),-34.828.756,-58.938.572,BUE049,AR-B,1243,'BUE049' is not in list
+39,BUE049-03,Plaza Principal Las heras (Municipalidad),-34.927.194,-58.947.028,BUE049,AR-B,1243,'BUE049' is not in list
+605,CBA290-01,salon de usos multiples,-32.019.000,-62.922.250,CBA290,AR-X,1398,'CBA290' is not in list
+1176,SFE067-01,,-32.248.278,-61.360.333,SFE067,AR-S,1691,'SFE067' is not in list
+493,BUE124-01,General Conesa Pza San Martin,-36.519.639,-57.324.361,BUE124,AR-B,1319,1319 is not in list
+1281,CBA206-01,,0,0,CBA206,AR-X,1402,'CBA206' is not in list
+1354,CHA026-01,Punto Digital Vedia - Fundacion,-26.903.870,-58.631.207,CHA026,AR-H,1360,'CHA026' is not in list
+923,SAL047-01,Punto Digital,-24.986.053,-65.587.102,SAL047,AR-A,1665,'SAL047' is not in list
+189,SAL047-02,Plaza Jorge Torino de Viana,-24.986.017,-65.578.157,SAL047,AR-A,1665,'SAL047' is not in list
+957,MIS053-01,Punto Digital,-26.386.112,-54.465.909,MIS053,AR-N,1542,'MIS053' is not in list
+1085,FOR001-01,,-25.071.109,-58.385.365,FOR001,AR-P,1450,'FOR001' is not in list
+1210,CAT028-01,,0,0,CAT028,AR-K,1344,'CAT028' is not in list
+740,TUC041-01,Comuna,-27.000.000,-66.000.000,TUC041,AR-T,1647,'TUC041' is not in list
+597,COR010-01,Municipalidad,-28.267.778,-58.122.583,COR010,AR-W,1418,'COR010' is not in list
+1221,CBA318-01,,0,0,CBA318,AR-X,1382,'CBA318' is not in list
+1053,SFE160-01,,0,0,SFE160,AR-S,1689,'SFE160' is not in list
+639,COR055-01,San Miguel VSAT,-27.998.831,-57.587.794,COR055,AR-W,1428,'COR055' is not in list
+348,SFE337-01,,0,0,SFE337,AR-S,1696,'SFE337' is not in list
+610,CBA087-01,,-31.245.556,-62.925.583,CBA087,AR-X,1387,1387 is not in list
+1007,SLU064-01,,0,0,SLU064,AR-D,1598,'SLU064' is not in list
+1207,SFE011-01,,0,0,SFE011,AR-S,1689,'SFE011' is not in list
+270,MIS061-01,PD Puerto Piray,-26.467.529,-54.718.663,MIS061,AR-N,1541,'MIS061' is not in list
+405,SGO013-01,,0,0,SGO013,AR-G,1624,'SGO013' is not in list
+1303,SAL028-01,,0,0,SAL028,AR-A,1674,'SAL028' is not in list
+736,SGO071-01,Selva,-29.770.394,-62.047.842,SGO071,AR-G,1624,'SGO071' is not in list
+601,COR045-01,Perrugorria - Curuzu Cuatia Municipalidad,-29.340.613,-58.607.324,COR045,AR-W,1421,'COR045' is not in list
+905,NEU012-01,,-37.440.534,-70.644.644,NEU012,AR-Q,1555,'NEU012' is not in list
+258,SFE305-01,PD Santa FE,-31.592.908,-60.699.124,SFE305,AR-S,1694,'SFE305' is not in list
+193,SFE305-02,Santa FE - Jardin Botanico,-31.586.957,-60.707.035,SFE305,AR-S,1694,'SFE305' is not in list
+194,SFE305-03,Santa Fe Capital - Jardin Barranquitas,-31.626.676,-60.720.780,SFE305,AR-S,1694,'SFE305' is not in list
+192,SFE305-04,Santa Fe Capital Plaza Alberdi,-31.648.340,-60.704.655,SFE305,AR-S,1694,'SFE305' is not in list
+195,SFE305-05,La Tablada,-31.593.536,-60.720.004,SFE305,AR-S,1694,'SFE305' is not in list
+915,SGO078-01,Punto Digital Rio Hondo,-27.498.382,-64.863.337,SGO078,AR-G,1626,'SGO078' is not in list
+205,SGO078-02,Municipalidad,-27.496.989,-64.858.392,SGO078,AR-G,1626,'SGO078' is not in list
+206,SGO078-03,Direccion de Turismo,-27.497.778,-64.860.324,SGO078,AR-G,1626,'SGO078' is not in list
+1213,RNO053-01,,0,0,RNO053,AR-R,1567,'RNO053' is not in list
+1258,SFE288-01,,0,0,SFE288,AR-S,1688,'SFE288' is not in list
+1078,CAT031-01,,-28.402.178,-65.101.814,CAT031,AR-K,1335,'CAT031' is not in list
+679,CHU046-01,salon de usos multiples,-44.687.556,-70.853.694,CHU046,AR-U,1367,'CHU046' is not in list
+1297,SFE206-01,,0,0,SFE206,AR-S,1695,'SFE206' is not in list
+199,SFE206-02,Parque de la Juventud,-29.359.158,-59.969.849,SFE206,AR-S,1695,'SFE206' is not in list
+1212,NEU028-01,,0,0,NEU028,AR-Q,1559,'NEU028' is not in list
+1177,RNO071-01,,0,0,RNO071,AR-R,1566,'RNO071' is not in list
+91,BUE117-01,,-33.344.073,-60.225.504,BUE117,AR-B,1312,'BUE117' is not in list
+158,MZA014-01,Palmira,-33.052.532,-68.558.932,MZA014,AR-M,1528,'MZA014' is not in list
+121,CBA315-01,,-31.316.875,-64.308.859,CBA315,AR-X,1383,'CBA315' is not in list
+120,CBA315-02,Plaza Malvinas Argentinas,-31.313.356,-64.299.915,CBA315,AR-X,1383,'CBA315' is not in list
+62,BUE132-01,Av.3 Y 104,-37.255.799,-56.967.854,BUE132,AR-B,1327,'BUE132' is not in list
+63,BUE132-02,Av. ELucero y Mercedes Sosa,-37.327.111,-57.022.806,BUE132,AR-B,1327,'BUE132' is not in list
+14,BUE082-01,,-38.005.944,-57.543.639,BUE082,AR-B,1277,'BUE082' is not in list
+13,BUE082-02,Estacion de Tren,-34.705.944,-58.779.167,BUE082,AR-B,1277,'BUE082' is not in list
+16,BUE082-03,Plaza Nestor Kirchner,-34.664.943,-58.727.649,BUE082,AR-B,1277,'BUE082' is not in list
+12,BUE082-04,Plaza Agustin Ferrari,-34.704.222,-58.783.167,BUE082,AR-B,1277,'BUE082' is not in list
+15,BUE082-05,El Tejadito,-34.676.824,-58.729.207,BUE082,AR-B,1277,'BUE082' is not in list
+178,NEU038-01,Biblioteca Alfonsina Storni,-39.009.341,-68.425.793,NEU038,AR-Q,1556,'NEU038' is not in list
+181,RNO033-01,Catedral Nuestra Senora Nahual Huapi,-41.132.902,-71.303.030,RNO033,AR-R,1574,'RNO033' is not in list
+180,RNO033-02,Centro Civico,-41.133.481,-71.310.406,RNO033,AR-R,1574,'RNO033' is not in list
+182,RNO033-03,Cerro Catedral,-41.165.558,-71.437.100,RNO033,AR-R,1574,'RNO033' is not in list
+183,RNO033-04,Punto Digital,-41.156.554,-71.301.076,RNO033,AR-R,1574,'RNO033' is not in list
+212,BUE009-01,,-37.832.376,-58.273.551,BUE009,AR-B,1204,'BUE009' is not in list
+138,ERI016-01,Punto Digital,-32.072.312,-60.644.503,ERI016,AR-E,1434,'ERI016' is not in list
+136,ERI016-02,Plaza 9 de Julio,-32.070.752,-60.638.279,ERI016,AR-E,1434,'ERI016' is not in list
+137,ERI016-03,Plaza Municipal,-32.067.128,-60.642.558,ERI016,AR-E,1434,'ERI016' is not in list
+159,MIS031-01,Punto Digital,-26.399.477,-54.626.377,MIS031,AR-N,1542,'MIS031' is not in list
+141,ERI027-01,Camping Villa Hernandarias,-31.228.446,-59.991.586,ERI027,AR-E,1439,'ERI027' is not in list
+114,CBA263-01,Plaza Centenario,-32.592.763,-62.833.391,CBA263,AR-X,1384,'CBA263' is not in list
+113,CBA263-02,Morrison - Plaza (Calle Libertad),-32.597.694,-62.835.278,CBA263,AR-X,1384,'CBA263' is not in list
+184,RNO052-01,Plaza Consejo Deliberante,-41.075.729,-71.172.204,RNO052,AR-R,1574,'RNO052' is not in list
+216,FOR002-01,Punto Digital,-25.287.408,-57.707.119,FOR002,AR-P,1451,'FOR002' is not in list
+109,CBA185-01,,-30.569.128,-63.515.158,CBA185,AR-X,1394,'CBA185' is not in list
+123,CBA376-01,Municipalidad Unquillo,-31.234.057,-64.316.442,CBA376,AR-X,1383,'CBA376' is not in list
+124,CBA376-02,Plaza Alem,-31.237.170,-64.311.997,CBA376,AR-X,1383,'CBA376' is not in list
+43,BUE054-01,,-34.606.619,-58.952.943,BUE054,AR-B,1248,1248 is not in list
+42,BUE054-02,Museo,-34.605.222,-58.955.833,BUE054,AR-B,1248,1248 is not in list
+44,BUE054-03,,-34.604.694,-58.955.806,BUE054,AR-B,1248,1248 is not in list
+41,BUE054-04,,-34.606.528,-58.952.472,BUE054,AR-B,1248,1248 is not in list
+96,CHU037-01,Plaza Municipalidad,-45.686.289,-70.256.363,CHU037,AR-U,1367,'CHU037' is not in list
+66,BUE085-01,Centro Comercial,-34.638.361,-58.826.444,BUE085,AR-B,1280,1280 is not in list
+196,SFE020-01,Plaza 9 de Julio,-33.158.237,-60.511.559,SFE020,AR-S,1684,'SFE020' is not in list
+98,CBA011-01,Parque Publico Sierras,-31.652.620,-64.438.237,CBA011,AR-X,1389,'CBA011' is not in list
+97,CBA011-02,Plaza Solares,-31.657.083,-64.434.944,CBA011,AR-X,1389,'CBA011' is not in list
+29,BUE017-01,,-34.170.500,-58.959.194,BUE017,AR-B,1212,'BUE017' is not in list
+112,CBA258-01,Plaza Pcpal,-31.344.806,-63.943.083,CBA258,AR-X,1394,'CBA258' is not in list
+37,BUE002-01,Pza. Calles Mitre y GraPaz,-38.032.444,-60.099.583,BUE002,AR-B,1196,'BUE002' is not in list
+73,BUE094-01,Plaza 25 de Mayo,-33.897.580,-60.575.261,BUE094,AR-B,1289,1289 is not in list
+72,BUE094-02,Parque Davila,-33.895.389,-60.566.750,BUE094,AR-B,1289,1289 is not in list
+74,BUE094-03,Plaza Merced,-33.891.333,-60.574.639,BUE094,AR-B,1289,1289 is not in list
+75,BUE094-04,Punto Digital,-33.893.956,-60.582.972,BUE094,AR-B,1289,1289 is not in list
+65,BUE053-01,Punto Digital (Polideporitvo),-37.961.164,-57.597.663,BUE053,AR-B,1247,1247 is not in list
+64,BUE053-02,Plaza Colon,-38.005.944,-57.543.639,BUE053,AR-B,1247,1247 is not in list
+111,CBA223-01,Pza San Martin,-32.317.486,-64.273.892,CBA223,AR-X,1391,'CBA223' is not in list
+25,BUE015-01,Plaza Alsina,-36.229.917,-61.113.889,BUE015,AR-B,1209,'BUE015' is not in list
+81,BUE098-01,Plaza Belisario Roldan,-34.918.025,-58.379.339,BUE098,AR-B,1293,'BUE098' is not in list
+36,BUE035-01,Plaza BMX,-34.862.722,-57.915.194,BUE035,AR-B,1229,'BUE035' is not in list
+129,CBA411-01,Pza Centenario,-32.410.241,-63.243.375,CBA411,AR-X,1393,'CBA411' is not in list
+46,BUE050-01,Municipalidad,-36.406.472,-56.943.000,BUE050,AR-B,1244,'BUE050' is not in list
+151,JUJ033-01,Palpala,-24.257.758,-65.207.836,JUJ033,AR-Y,1471,'JUJ033' is not in list
+148,ERI040-01,plaza municipal,-31.184.906,-59.950.082,ERI040,AR-E,1437,'ERI040' is not in list
+197,SFE105-01,Plaza de Los Suenos,-32.189.060,-61.707.563,SFE105,AR-S,1698,'SFE105' is not in list
+30,BUE024-01,Pza. Gral. Paz,-34.642.861,-60.460.722,BUE024,AR-B,1219,'BUE024' is not in list
+140,ERI025-01,Plaza Habib Habad,-33.031.706,-58.539.035,ERI025,AR-E,1433,'ERI025' is not in list
+139,ERI048-01,,-31.523.641,-58.405.732,ERI048,AR-E,1444,'ERI048' is not in list
+88,BUE105-01,Plaza Rivadavia,-34.194.218,-60.730.717,BUE105,AR-B,1300,'BUE105' is not in list
+90,BUE105-02,Plaza Espana,-34.194.242,-60.730.678,BUE105,AR-B,1300,'BUE105' is not in list
+89,BUE105-03,PLaza San Martin,-34.197.791,-60.733.605,BUE105,AR-B,1300,'BUE105' is not in list
+187,SAL009-01,Plaza Municipio,-24.895.593,-65.487.464,SAL009,AR-A,1676,1676 is not in list
+152,LAP072-01,Trenel - Pza Principal,-35.698.332,-64.133.237,LAP072,AR-L,1481,'LAP072' is not in list
+8,BUE004-01,Adrogue,-34.798.250,-58.384.778,BUE004,AR-B,1198,'BUE004' is not in list
+9,BUE004-02,Burzaco,-34.821.889,-58.392.361,BUE004,AR-B,1198,'BUE004' is not in list
+100,CBA083-01,Plaza Nicolas Avellaneda,-31.022.111,-64.061.778,CBA083,AR-X,1383,'CBA083' is not in list
+122,CBA359-01,Plaza (calle 25 de Mayo y Alberdi),-30.942.927,-64.093.981,CBA359,AR-X,1400,'CBA359' is not in list
+179,NEU046-01,Plaza Pcpal,-40.762.093,-71.647.336,NEU046,AR-Q,1565,'NEU046' is not in list
+150,FOR008-01,Plaza San Martin,-26.185.363,-58.174.473,FOR008,AR-P,1452,'FOR008' is not in list
+95,BUE121-01,Plaza Independencia,-37.328.182,-59.136.998,BUE121,AR-B,1316,'BUE121' is not in list
+203,SGO082-01,Plaza Lugones,-28.496.213,-63.817.967,SGO082,AR-G,1632,'SGO082' is not in list
+204,SGO050-01,Los Telares,-28.985.515,-63.450.353,SGO050,AR-G,1622,'SGO050' is not in list
+130,COR057-01,Municipalidad,-27.455.383,-58.654.525,COR057,AR-W,1430,'COR057' is not in list
+185,CBA042-01,Municipalidad,-31.667.846,-63.198.546,CBA042,AR-X,1398,'CBA042' is not in list
+186,CBA042-02,Plaza San Martin,-31.669.089,-63.199.165,CBA042,AR-X,1398,'CBA042' is not in list
+67,BUE086-01,Plaza San Martin,-34.651.222,-58.621.917,BUE086,AR-B,1281,'BUE086' is not in list
+68,BUE086-02,Punto Digital,-34.689.605,-58.636.401,BUE086,AR-B,1281,'BUE086' is not in list
+106,CBA148-01,Plaza San Martin,-32.423.839,-63.726.404,CBA148,AR-X,1388,'CBA148' is not in list
+105,CBA148-02,Polideportivo,-32.427.952,-63.733.637,CBA148,AR-X,1388,'CBA148' is not in list
+99,CBA038-01,Brinkmann - Plaza San Martin,-30.866.639,-62.042.999,CBA038,AR-X,1387,'CBA038' is not in list
+135,ERI015-01,Crespo - Plaza Sarmiento,-32.030.977,-60.306.335,ERI015,AR-E,1439,'ERI015' is not in list
+149,ERI044-01,Club AtleticoySocial San Benito,-31.784.101,-60.440.182,ERI044,AR-E,1439,'ERI044' is not in list
+155,MZA006-01,Las Heras - Estadio Polimeni,-32.851.417,-68.839.641,MZA006,AR-M,1520,'MZA006' is not in list
+118,CBA311-01,Pza del Centenario,-31.663.932,-63.047.886,CBA311,AR-X,1387,'CBA311' is not in list
+119,CBA311-02,Pza San Martin,-31.663.932,-64.093.978,CBA311,AR-X,1387,'CBA311' is not in list
+154,MZA004-01,,-33.144.168,-68.485.222,MZA004,AR-M,1518,'MZA004' is not in list
+188,SAL013-01,El Bordo - Plaza Pcpal,-24.660.334,-65.106.564,SAL013,AR-A,1666,'SAL013' is not in list
+190,SAL048-01,Salta - Municipalidad,-24.805.356,-65.421.924,SAL048,AR-A,1681,'SAL048' is not in list
+94,BUE120-01,Plaza Balcarce,-34.769.098,-59.686.758,BUE120,AR-B,1315,'BUE120' is not in list
+211,BUE091-01,Punto Digital,-40.785.915,-63.000.000,BUE091,AR-B,1286,'BUE091' is not in list
+215,CBA012-01,SUM Municipal,-32.234.565,-62.884.633,CBA012,AR-X,1384,'CBA012' is not in list

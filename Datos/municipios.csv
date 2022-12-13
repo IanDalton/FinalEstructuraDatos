@@ -555,7 +555,7 @@ SAL048,AR-S,1689,Presidente Roca,Santa Fe,Castellanos
 BUE120,AR-G,1634,Las Tinajas,Santiago del Estero,Moreno
 BUE091,AR-X,1407,Laboulaye,Cordoba,Presidente Roque Saenz Pena
 CBA012,AR-U,1378,Las Plumas,Chubut,Martires
-BUE075,AR-W,1413,Carolina,Corrientes,Goya
+,AR-W,1413,Carolina,Corrientes,Goya
 ,AR-W,1413,Carolina,Corrientes,Goya
 ,AR-S,1696,Lucio V. Lopez,Santa Fe,Iriondo
 ,AR-Q,1552,Los Miches,Neuquen,Minas
@@ -567,7 +567,7 @@ BUE075,AR-W,1413,Carolina,Corrientes,Goya
 ,AR-E,1439,Maria Grande,Entre Rios,Parana
 ,AR-U,1368,Aldea Epulef,Chubut,Languineo
 ,AR-Y,1472,Purmamarca,Jujuy,Tumbaya
-,AR-B,1224,Coronel Dorrego,Buenos Aires,Coronel Dorrego
+BUE075,AR-B,1270,Coronel Dorrego,Buenos Aires,Coronel Dorrego
 ,AR-B,1224,Coronel Dorrego,Buenos Aires,Coronel Dorrego
 ,AR-H,1360,Las Palmas,Chaco,Bermejo
 ,AR-X,1386,Inriville,Cordoba,Marcos Juarez
