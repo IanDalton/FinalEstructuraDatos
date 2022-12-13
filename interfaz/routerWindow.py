@@ -22,6 +22,11 @@ class RouterWindow(QMainWindow):
             pais = QHBoxLayout()
 
             ids = QLabel(text="Id de router: ")
+            font = ids.font()
+            font.setBold(True)
+            ids.setFont(font)
+
+            self.setFont(font)
             self.id_ingresado = QTextEdit()
 
             identificadores = QLabel(text="Identificador del router: ")

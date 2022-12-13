@@ -17,6 +17,12 @@ class DepartamentosWindow(QMainWindow):
             id = QHBoxLayout()
             nombre = QHBoxLayout()
             ids = QLabel(text="Id de departamento: ")
+            font = ids.font()
+            font.setBold(True)
+            ids.setFont(font)
+
+            self.setFont(font)
+
             self.id_ingresado = QTextEdit()
             nombres = QLabel(text="Nombre de departamento: ")
             self.nombre_ingresado = QTextEdit()

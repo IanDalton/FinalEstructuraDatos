@@ -18,12 +18,19 @@ class CargaWindow(QMainWindow):
             self.es_municipio=True
             eleccion = QLabel()
             eleccion.setText("Que tipo de datos va a ingresar?")
+            font = eleccion.font()
+            font.setBold(True)
+            eleccion.setFont(font)
             layoutPrincipal.addWidget(eleccion)
             contenido = QHBoxLayout()
             self.router = QPushButton(text="Routers")
+            self.router.setStyleSheet('QPushButton {background-color: #843511; color: white}')
+            self.router.setFont(font)
             self.router.clicked.connect(self.cambiar_seleccion)
             contenido.addWidget(self.router)
             self.municipio = QPushButton(text= "Municipios")
+            self.municipio.setStyleSheet('QPushButton {background-color: #843511; color: white}')
+            self.municipio.setFont(font)
             self.municipio.setEnabled(False)
             self.municipio.clicked.connect(self.cambiar_seleccion)
             contenido.addWidget(self.municipio)
@@ -31,6 +38,7 @@ class CargaWindow(QMainWindow):
 
             link = QHBoxLayout()
             text_link = QLabel(text="Link a archivo: ")
+            text_link.setFont(font)
             link.addWidget(text_link)
             self.ingresar_link = QTextEdit()
             link.addWidget(self.ingresar_link)
@@ -38,6 +46,8 @@ class CargaWindow(QMainWindow):
 
 
             confirmacion = QPushButton(text="Confirmar datos")
+            confirmacion.setStyleSheet('QPushButton {background-color: #FFFFFF; color: black}')
+            confirmacion.setFont(font)
             layoutPrincipal.addWidget(confirmacion)
             confirmacion.clicked.connect(self.cargarDatos_click)
             

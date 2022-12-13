@@ -10,17 +10,27 @@ class CrearConexion(QMainWindow):
             self.pais = pais
             self.router = router
             self.setWindowTitle('Registrar Conexion')
+            
             self.setGeometry(1350,400,300,100)
 
 
             layoutPrincipal = QVBoxLayout()
             modo = QHBoxLayout()
-            modo.addWidget(QLabel(text='Seleccionar un dispositivo existente'))
+            texto = QLabel(text='Seleccionar un dispositivo existente')
+            modo.addWidget(texto)
+
+            font = texto.font()
+            font.setBold(True)
+            texto.setFont(font)
+            self.setFont(font)
+
             modo.setAlignment(Qt.AlignTop)
             self.opciones = AnimatedToggle()
             self.opciones.toggled.connect(lambda selected:self.seleccionar_dispo() if not self.opciones.isChecked() else self.crear_dispo())
             modo.addWidget(self.opciones)
-            modo.addWidget(QLabel(text='Crear un nuevo dispositivo'))
+            creacion = QLabel(text='Crear un nuevo dispositivo')
+            modo.addWidget(creacion)
+            creacion.setFont(font)
 
             layoutPrincipal.addLayout(modo)
             

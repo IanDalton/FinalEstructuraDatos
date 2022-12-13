@@ -28,6 +28,12 @@ class FechaWindow(QMainWindow):
 
             confirmar = QPushButton()
             confirmar.setText("Confirmar fecha y horario")
+            font = confirmar.font()
+            font.setBold(True)
+            confirmar.setFont(font)
+
+            self.setFont(font)
+            
             fechas.addWidget(confirmar)
             confirmar.clicked.connect(self.filtrarArbol)
 
