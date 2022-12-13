@@ -60,7 +60,6 @@ class CargaWindow(QMainWindow):
             else:
                   errores =self.pais.load_data(self.ingresar_link.toPlainText(),"Router")
             if len(errores) > 0:
-                  print('hay errores') 
                   self.ventanaErrores = ErroresWindow(self.es_municipio,errores,self.pais)
                   self.ventanaErrores.show()
                   self.close()
