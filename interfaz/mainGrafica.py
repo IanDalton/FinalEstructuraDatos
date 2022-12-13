@@ -40,17 +40,17 @@ class MainWindow(QMainWindow):
             
             menu = QHBoxLayout()
             contenido = QHBoxLayout()
-            
 
 
             cargarArchivos = QPushButton()      
             nuevaConexion = QPushButton() 
-            preferencias = QPushButton()
-            cargarArchivos.setText('Cargar archivos')  #arrastra el archivo
+            preferencias = QComboBox()
+            preferencias.addItems(['Default', 'Mostrar conexiones', 'No mostrar conexiones', 'Filtrar conexiones por hora'])
+            preferencias.currentIndex.connect(self.abrirVentanaFechas_click) #currentIndex?
+            cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             nuevaConexion.setText('Nueva conexion')
             nuevaConexion.clicked.connect(self.abrirVentanaConexion_click)
-            preferencias.setText('Preferencias')
             preferencias.setStyleSheet('background-color: darkGrey')
             menu.addWidget(cargarArchivos)
             menu.addWidget(nuevaConexion)
@@ -192,6 +192,10 @@ class MainWindow(QMainWindow):
       def abrirVentanaConexion_click(self):
             self.estableciendo_conexion = ConexionWindow()
             self.estableciendo_conexion.show()
+
+      def abrirVentanaFechas_click(self):
+            self.abrir_ventanaFechas = FechaWindow()
+            self.abrir_ventanaFechas.show()
             
 
 class CargaWindow(QMainWindow):
@@ -255,14 +259,14 @@ class ConexionWindow(QMainWindow):
 
             confirmacion = QPushButton(text="Confirmar datos")
             layoutPrincipal.addWidget(confirmacion)
-            #confirmacion.clicked.connect(self.generarConexion_click)
+            confirmacion.clicked.connect(self.generarConexion_click)
 
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
       
-      # def generarConexion_click(self):
-      #       conexion = Conexion(self.dispositivo_box,Router.generar_ip,self.alta) #FALTA EL ROUTER QUE LO ELIGE EL USUARIO 
+      def generarConexion_click(self):
+            pass
 
 class FechaWindow(QMainWindow): 
       def __init__(self,pais):
@@ -289,9 +293,9 @@ class FechaWindow(QMainWindow):
             confirmar = QPushButton()
             confirmar.setText("Confirmar fecha y horario")
             fechas.addWidget(confirmar)
+            confirmar.clicked.connect(self.filtrarArbol)
 
             layoutPrincipal.addLayout(fechas)
-
             
             conexiones = QHBoxLayout()
             dispositivos = QVBoxLayout()
@@ -308,6 +312,10 @@ class FechaWindow(QMainWindow):
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+
+      def filtrarArbol(self,pais:Pais):
+            pais.conexiones.fechaLimiteInferior()
+            pais.conexiones.fechaLimiteSuperior()
 
       def update(self):
         value = self.datetime_edit.dateTime()
