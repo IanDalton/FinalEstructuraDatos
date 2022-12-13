@@ -141,7 +141,7 @@ class Pais():
             
 
     def create_departamento(self,departamento,municipio):
-        if departamento['id_departamento'] not in municipio.departamentos:
+        if int(departamento['id_departamento']) not in municipio.departamentos:
             Departamento(id=int(departamento['id_departamento']),nombre=departamento['departamento '],municipio=municipio)
         else:
             raise NameError('El ID del departamento no existe')

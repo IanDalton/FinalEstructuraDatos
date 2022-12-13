@@ -48,15 +48,15 @@ class MainWindow(QMainWindow):
 
 
             cargarArchivos = QPushButton()      
-            preferencias = QComboBox()
-            preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
-            preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if preferencias.currentIndex()==2 else None)
+            self.preferencias = QComboBox()
+            self.preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
+            self.preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if self.preferencias.currentIndex()==2 else None)
 
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
-            preferencias.setStyleSheet('background-color: darkGrey')
+            self.preferencias.setStyleSheet('background-color: darkGrey')
             menu.addWidget(cargarArchivos)
-            menu.addWidget(preferencias,2)
+            menu.addWidget(self.preferencias,2)
             
             layoutPrincipal.addLayout(menu)
             

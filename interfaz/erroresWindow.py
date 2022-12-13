@@ -1,15 +1,19 @@
 from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
+from Modulos.clases import Pais
 
 class ErroresWindow(QMainWindow): 
-    def __init__(self):
+    def __init__(self,es_municipio,errores,pais:Pais):
         super().__init__()
+        self.pais = pais
         self.setWindowTitle('MANEJO DE ERRORES')
         self.setGeometry(1350,400,300,100)
         self.se_almacena = True
+        self.es_municipio = es_municipio
+        self.errores = errores
 
         layoutPrincipal = QVBoxLayout()
 
-        aviso = QLabel(text="En la carga se encontraron errores. Como desea manejarlos?")
+        aviso = QLabel(text=f"En la carga se {len(self.errores)} encontraron errores. Como desea manejarlos?")
         layoutPrincipal.addWidget(aviso)
 
         opciones = QHBoxLayout()
@@ -45,9 +49,13 @@ class ErroresWindow(QMainWindow):
 
     def ejecutarSeleccion_click(self):
         if self.se_almacena:
-            pass
+            if self.es_municipio:
+                self.pais.save_error(self.errores,'Municipios')
+            else:
+                self.pais.save_error(self.errores,'Routers')
         else:
             pass
+        self.close()
 
 
     
