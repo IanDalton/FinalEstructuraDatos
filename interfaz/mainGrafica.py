@@ -13,23 +13,6 @@ from .cargaWindow import CargaWindow
 from .fechaWindow import FechaWindow
 from PyQt5.QtGui import QIcon
 import sys
-""" 
-dark_theme = QPalette()
-dark_theme.setColor(QPalette.Window, QColor(53, 53, 53)
-dark_theme.setColor(QPalette.WindowText, Qt.white)
-dark_theme.setColor(QPalette.Base, QColor(25, 25, 25))
-dark_theme.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
-dark_theme.setColor(QPalette.ToolTipBase, Qt.black)
-dark_theme.setColor(QPalette.ToolTipText, Qt.white)
-dark_theme.setColor(QPalette.Text, Qt.white)
-dark_theme.setColor(QPalette.Button, QColor(53, 53, 53))
-dark_theme.setColor(QPalette.ButtonText, Qt.white)
-dark_theme.setColor(QPalette.BrightText, Qt.red)
-dark_theme.setColor(QPalette.Link, QColor(42, 130, 218))
-dark_theme.setColor(QPalette.Highlight, QColor(42, 130, 218))
-dark_theme.setColor(QPalette.HighlightedText, Qt.black)
-
- """
 
 class MainWindow(QMainWindow): 
       def __init__(self,pais:Pais):
@@ -138,9 +121,6 @@ class MainWindow(QMainWindow):
             texto2 = QLabel() 
             texto2.setText('Activo')
             self.activable.addWidget(texto2)
-            
-            
-            
             
 
       #El widget que contiene al layout es el widget principal de la ventana, para mostrarlo
