@@ -24,7 +24,7 @@ class RouterWindow(QMainWindow):
             ids = QLabel(text="Id de router: ")
             self.id_ingresado = QTextEdit()
 
-            identificadores = QLabel(text="Nombre de router: ")
+            identificadores = QLabel(text="Identificador del router: ")
             self.identificador_ingresado = QTextEdit()
 
             ubicaciones = QLabel(text="Ubicacion de router: ")

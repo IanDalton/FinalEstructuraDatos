@@ -106,7 +106,7 @@ class MainWindow(QMainWindow):
             self.info = QLabel()
             settings.addWidget(self.info)
             crear_conexion = QPushButton()
-            crear_conexion.setText('Registar conexion')
+            crear_conexion.setText('Registrar conexion')
             crear_conexion.clicked.connect(self.agregar_conexion)
             self.activable = QHBoxLayout()
             settings.addLayout(self.activable)
@@ -223,9 +223,4 @@ class MainWindow(QMainWindow):
             self.ventana_agregarRouter.show()
             
 
-if __name__ == '__main__':
-      app = QApplication(sys.argv)
-      main = FechaWindow()
-      main.show()
-      app.exec()
 

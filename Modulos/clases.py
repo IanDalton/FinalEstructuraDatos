@@ -188,7 +188,7 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         self.latitud = latitud
         self.longitud = longitud
         self.conexiones_max = conexiones_max
-        self.conexiones = ListaEnlazada() #lista enlazada
+        self.conexiones = ListaEnlazada()
         self.fecha_alta = fecha_alta
         self.fecha_baja = fecha_baja
         self.pais = pais
