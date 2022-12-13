@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPus
 from qtwidgets import AnimatedToggle
 from PyQt5.QtWidgets import QMessageBox
 import pickle 
-from erroresWindow import *
+from .erroresWindow import ErroresWindow
 from Modulos.clases import * 
 
 
@@ -55,10 +55,6 @@ class CargaWindow(QMainWindow):
             self.es_municipio = not self.es_municipio
             pass
 
-      def abrirVentanaErrores_click(self):
-            self.ventanaErrores = ErroresWindow()
-            self.ventanaErrores.show()
-
       def cargarDatos_click(self):
             if self.es_municipio:
                   errores = self.pais.load_data(self.ingresar_link.toPlainText(),"Municipio")
@@ -66,6 +62,8 @@ class CargaWindow(QMainWindow):
                   errores =self.pais.load_data(self.ingresar_link.toPlainText(),"Router")
             if len(errores) > 0:
                   print('hay errores') 
-                  #hay que llamar a la funcion abrirVentanaErrores_click
+                  self.ventanaErrores = ErroresWindow(self.es_municipio,errores,self.pais)
+                  self.ventanaErrores.show()
+                  self.close()
 
 
