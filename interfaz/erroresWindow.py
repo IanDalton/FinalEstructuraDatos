@@ -14,6 +14,12 @@ class ErroresWindow(QMainWindow):
         layoutPrincipal = QVBoxLayout()
 
         aviso = QLabel(text=f"En la carga se encontraron {len(self.errores)} errores. Como desea manejarlos?")
+        font = aviso.font()
+        font.setBold(True)
+        aviso.setFont(font)
+
+        self.setFont(font)
+        
         layoutPrincipal.addWidget(aviso)
 
         opciones = QHBoxLayout()
