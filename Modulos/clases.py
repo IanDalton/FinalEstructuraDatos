@@ -51,14 +51,27 @@ class Conexion():
             return self.mac.mac == __o
             
 
-    def __ge__(self, __o: object): # self >= __o
-        return self.alta >= __o.alta
+    def __ge__(self, __o: object): # self >= __o'
+        if type(__o)==object:
+            return self.alta >= __o.alta
+        else:
+            return self.alta >= __o
     def __gt__(self, __o: object): # self > __o
-        return self.alta > __o.alta
+        if type(__o)==object:
+            return self.alta > __o.alta
+        else:
+            return self.alta > __o
+        
     def __le__(self, __o: object): # self <= __o
-        return self.alta <= __o.alta
+        if type(__o)==object:
+            return self.alta <= __o.alta
+        else:
+            return self.alta <= __o
     def __lt__(self, __o: object): # self < __o
-        return self.alta < __o.alta    
+        if type(__o)==object:
+            return self.alta < __o.alta
+        else:
+            return self.alta < __o   
     def __str__(self) -> str:
         return f'Conexion del dispotivo {self.mac.mac} a las {self.alta}'
         

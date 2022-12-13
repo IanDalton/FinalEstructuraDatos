@@ -280,7 +280,8 @@ class MainWindow(QMainWindow):
       def abrirVentanaFechas_click(self):
             self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
-            self.abrir_ventanaFechas.closeEvent.connect(self.refrescar)
+            self.preferencias.setCurrentIndex(0)
+            
       
       def abrirVentanaMunicipio_click(self):
             self.ventana_agregarMunicipios = MunicipiosWindow(self.provincia)
