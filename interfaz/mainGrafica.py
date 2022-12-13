@@ -200,7 +200,7 @@ class MainWindow(QMainWindow):
             self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
 
       def abrirVentanaCarga_click(self):
-            self.cargando_datos = CargaWindow()
+            self.cargando_datos = CargaWindow(self.pais)
             self.cargando_datos.show()
 
       def abrirVentanaFechas_click(self):

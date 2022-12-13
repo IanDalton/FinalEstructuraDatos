@@ -8,19 +8,23 @@ from Modulos.clases import *
 
 
 class CargaWindow(QMainWindow):
-      def __init__(self):
+      def __init__(self,pais):
             super().__init__()
             self.setWindowTitle("CARGA DE ARCHIVOS")
             self.setGeometry(1300,200,300,100)
             layoutPrincipal = QVBoxLayout()
-
+            self.pais=pais
+            self.es_municipio=True
             eleccion = QLabel()
             eleccion.setText("Que tipo de datos va a ingresar?")
             layoutPrincipal.addWidget(eleccion)
             contenido = QHBoxLayout()
             self.router = QPushButton(text="Routers")
+            self.router.clicked.connect(self.cambiar_seleccion)
             contenido.addWidget(self.router)
             self.municipio = QPushButton(text= "Municipios")
+            self.municipio.setEnabled(False)
+            self.municipio.clicked.connect(self.cambiar_seleccion)
             contenido.addWidget(self.municipio)
             layoutPrincipal.addLayout(contenido)
 
@@ -31,6 +35,7 @@ class CargaWindow(QMainWindow):
             link.addWidget(self.ingresar_link)
             layoutPrincipal.addLayout(link)
 
+
             confirmacion = QPushButton(text="Confirmar datos")
             layoutPrincipal.addWidget(confirmacion)
             confirmacion.clicked.connect(self.cargarDatos_click)
@@ -39,8 +44,18 @@ class CargaWindow(QMainWindow):
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
       
-      def cargarDatos_click(self,pais:Pais):
-            if self.municipio.clicked:
-                  pais.load_data(self.ingresar_link,"Municipio")
-            elif self.router.clicked:
-                  pais.load_data(self.ingresar_link,"Router")
+      def cambiar_seleccion(self):
+            if self.es_municipio:
+                  self.router.setEnabled(False)
+                  self.municipio.setEnabled(True)
+            else:
+                  self.router.setEnabled(True)
+                  self.municipio.setEnabled(False)
+            self.es_municipio = not self.es_municipio
+            pass
+
+      def cargarDatos_click(self):
+            if self.es_municipio:
+                  self.pais.load_data(self.ingresar_link.toPlainText(),"Municipio")
+            else:
+                  self.pais.load_data(self.ingresar_link.toPlainText(),"Router")
