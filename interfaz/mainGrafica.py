@@ -11,6 +11,7 @@ from .municipiosWindow import MunicipiosWindow
 from .crearConexion import CrearConexion
 from .cargaWindow import CargaWindow
 from .fechaWindow import FechaWindow
+from PyQt5.QtGui import QIcon
 import sys
 """ 
 dark_theme = QPalette()
@@ -40,6 +41,7 @@ class MainWindow(QMainWindow):
             self.router = None
 
             self.setWindowTitle("Sistema de informacion - RED WIFI PAIS DIGITAL")
+            self.setWindowIcon(QIcon("Descarga.png"))
             self.setGeometry(200,200,1000,700)
             layoutPrincipal = QVBoxLayout()
             
