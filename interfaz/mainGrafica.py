@@ -1,9 +1,10 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
+from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
-from Modulos.clases import Pais
+from Modulos.clases import Pais,Router
 import pickle
+from datetime import datetime
 
 import sys
 """ 
@@ -28,6 +29,7 @@ dark_theme.setColor(QPalette.HighlightedText, Qt.black)
 class MainWindow(QMainWindow): 
       def __init__(self,pais:Pais):
             super().__init__()
+            self.pais = pais
             self.provincia = None
             self.municipio = None
             self.departamento = None
@@ -44,8 +46,9 @@ class MainWindow(QMainWindow):
             cargarArchivos = QPushButton()      
             nuevaConexion = QPushButton() 
             preferencias = QComboBox()
-            preferencias.addItems(['Default', 'Mostrar conexiones', 'No mostrar conexiones', 'Filtrar conexiones por hora'])
-            preferencias.currentIndex.connect(self.abrirVentanaFechas_click) #currentIndex?
+            preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
+            preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if preferencias.currentIndex()==2 else None)
+
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             nuevaConexion.setText('Nueva conexion')
@@ -83,25 +86,31 @@ class MainWindow(QMainWindow):
             agregar_router.setText('Agregar Router')
             self.routers = QVBoxLayout()
             self.routers.addWidget(agregar_router)
-            contenido.addLayout(self.routers)
+            contenido.addLayout(self.routers,2)
 
             self.municipios.setAlignment(Qt.AlignTop)
             self.provincias.setAlignment(Qt.AlignTop)
             self.departamentos.setAlignment(Qt.AlignTop)
             self.routers.setAlignment(Qt.AlignTop)
-            """ 
-            dispositivos = QVBoxLayout()
-            routers.addLayout(dispositivos)
-            activable = QHBoxLayout()
+            
+            self.frame = QFrame()
+            settings = QVBoxLayout()
+            self.frame.setLayout(settings)
+            
+            self.info = QLabel()
+            settings.addWidget(self.info)
+            self.activable = QHBoxLayout()
+            settings.addLayout(self.activable)
             texto1 = QLabel() 
-            texto1.setText('Activar')
-            activable.addWidget(texto1)
-            toggle = AnimatedToggle(checked_color="#FFB000",pulse_checked_color="#44FFB000")
-            activable.addWidget(toggle)
+            texto1.setText('Desactivado')
+            self.activable.addWidget(texto1)
+            self.toggle = AnimatedToggle(checked_color="#FFB000",pulse_checked_color="#44FFB000")
+            
+            self.activable.addWidget(self.toggle)
             texto2 = QLabel() 
-            texto2.setText('Desactivar')
-            activable.addWidget(texto2)
-            routers.addLayout(activable) """
+            texto2.setText('Activo')
+            self.activable.addWidget(texto2)
+            
 
       #El widget que contiene al layout es el widget principal de la ventana, para mostrarlo
             widgetLayout = QWidget()
@@ -109,8 +118,6 @@ class MainWindow(QMainWindow):
             self.setCentralWidget(widgetLayout)
       
       def limpiar(self,sector:QHBoxLayout):
-            print(sector.count())
-
             try:
                   i=max(range(sector.count()))
                   while i > 0 :
@@ -147,21 +154,38 @@ class MainWindow(QMainWindow):
                   lbl.clicked.connect(lambda checked,dpto = depto:self.seleccionar_departamento(dpto))
                   self.departamentos.addWidget(lbl)
       def seleccionar_departamento(self,depto):
+            print(self)
             self.limpiar(self.routers)
             self.router = None
             self.departamento = depto
-            for router in depto.routers:
+            for i,router in enumerate(depto.routers):
                   lbl = QPushButton()
                   lbl.setText(str(router))
                   lbl.setStyleSheet('border:1px solid black;')
-                  lbl.clicked.connect(lambda checked,rtr = router:self.seleccionar_router(rtr))
+                  lbl.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
                   self.routers.addWidget(lbl)
             pass
-      def seleccionar_router(self,router):
+      def seleccionar_router(self,router:Router,index):
             print(router.id)
+            print(index)
+            print(self.toggle.isChecked())
+            
+            self.routers.insertWidget(index+2,self.frame)
             self.router = router
+            self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
+            if (self.router.fecha_baja is None and not self.toggle.isChecked() )or(self.router.fecha_baja and self.toggle.isChecked()):
+                  self.toggle.toggle()
+            
+            self.toggle.toggled.connect(self.modificar_router)
             print(self.provincia,self.municipio,self.departamento,self.router)
             pass
+      
+      def modificar_router(self):
+            if self.toggle.isChecked():
+                  self.router.fecha_baja = None
+            else:
+                  self.router.fecha_baja = datetime.now() if not self.router.fecha_baja else self.router.fecha_baja
+            self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
 
       def abrirVentanaCarga_click(self):
             self.cargando_datos = CargaWindow()
@@ -172,7 +196,7 @@ class MainWindow(QMainWindow):
             self.estableciendo_conexion.show()
 
       def abrirVentanaFechas_click(self):
-            self.abrir_ventanaFechas = FechaWindow()
+            self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
             
 
@@ -291,9 +315,9 @@ class FechaWindow(QMainWindow):
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
 
-      def filtrarArbol(self,pais:Pais):
-            pais.conexiones.fechaLimiteInferior()
-            pais.conexiones.fechaLimiteSuperior()
+      def filtrarArbol(self):
+            self.pais.conexiones.fechaLimiteInferior()
+            self.pais.conexiones.fechaLimiteSuperior()
 
       def update(self):
         value = self.datetime_edit.dateTime()
