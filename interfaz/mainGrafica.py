@@ -41,7 +41,6 @@ class MainWindow(QMainWindow):
             self.router = None
 
             self.setWindowTitle("Sistema de informacion - RED WIFI PAIS DIGITAL")
-            self.setWindowIcon(QIcon("Descarga.png"))
             self.setGeometry(200,200,1000,700)
             layoutPrincipal = QVBoxLayout()
             
@@ -49,14 +48,19 @@ class MainWindow(QMainWindow):
             contenido = QHBoxLayout()
 
 
-            cargarArchivos = QPushButton()      
+            cargarArchivos = QPushButton()     
+            cargarArchivos.setStyleSheet('QPushButton {background-color: #75AADB; color: black}')
+            font_archivos = cargarArchivos.font()
+            font_archivos.setBold(True)
+            cargarArchivos.setFont(font_archivos)
             self.preferencias = QComboBox()
+            self.preferencias.setStyleSheet('QComboBox {background-color: #75AADB; color: black}')
+            self.preferencias.setFont(font_archivos)
             self.preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
             self.preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if self.preferencias.currentIndex()==2 else None)
 
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
-            self.preferencias.setStyleSheet('background-color: darkGrey')
             menu.addWidget(cargarArchivos)
             menu.addWidget(self.preferencias,2)
             
@@ -78,6 +82,8 @@ class MainWindow(QMainWindow):
             contenido.addLayout(self.municipios)
             self.agregarMunicipios = QPushButton()
             self.agregarMunicipios.setText('Municipio nuevo')
+            self.agregarMunicipios.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            self.agregarMunicipios.setFont(font_archivos)
             self.municipios.addWidget(self.agregarMunicipios)
             self.agregarMunicipios.clicked.connect(lambda clicked:self.abrirVentanaMunicipio_click() if self.provincia else None)
             self.departamentos = QVBoxLayout()
@@ -85,9 +91,13 @@ class MainWindow(QMainWindow):
             agregarDepartamentos = QPushButton()
             agregarDepartamentos.setText('Departamento nuevo')
             self.departamentos.addWidget(agregarDepartamentos)
+            agregarDepartamentos.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            agregarDepartamentos.setFont(font_archivos)
             agregarDepartamentos.clicked.connect(lambda clicked:self.abrirVentanaDepartamento_click() if self.municipio else None)
             agregar_router = QPushButton()
             agregar_router.setText('Agregar Router')
+            agregar_router.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            agregar_router.setFont(font_archivos)
             agregar_router.clicked.connect(lambda clicked:self.abrirVentanaRouter_click() if self.departamento else None)
             self.routers = QVBoxLayout()
             self.routers.addWidget(agregar_router)
@@ -114,7 +124,7 @@ class MainWindow(QMainWindow):
             texto1 = QLabel() 
             texto1.setText('Desactivado')
             self.activable.addWidget(texto1)
-            self.toggle = AnimatedToggle(checked_color="#FFB000",pulse_checked_color="#44FFB000")
+            self.toggle = AnimatedToggle(checked_color="#843511",pulse_checked_color="#843511")
             
             self.activable.addWidget(self.toggle)
             texto2 = QLabel() 
