@@ -219,7 +219,7 @@ class MainWindow(QMainWindow):
             self.ventana_agregarDepartamento.show()
 
       def abrirVentanaRouter_click(self):
-            self.ventana_agregarRouter = RouterWindow(self.departamento)
+            self.ventana_agregarRouter = RouterWindow(self.departamento,self.pais)
             self.ventana_agregarRouter.show()
             
 

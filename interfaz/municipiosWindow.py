@@ -9,26 +9,32 @@ class MunicipiosWindow(QMainWindow):
             super().__init__()
             self.setWindowTitle("INSERTAR MUNICIPIO")
             self.setGeometry(1350,400,300,50)
+            self.provincia = provincia
             
             layoutPrincipal = QVBoxLayout()
 
             id = QHBoxLayout()
             nombre = QHBoxLayout()
             ids = QLabel(text="Id de municipio: ")
-            id_ingresado = QTextEdit()
+            self.id_ingresado = QTextEdit()
             nombres = QLabel(text="Nombre de municipio: ")
-            nombre_ingresado = QTextEdit()
+            self.nombre_ingresado = QTextEdit()
             id.addWidget(ids)
-            id.addWidget(id_ingresado)
+            id.addWidget(self.id_ingresado)
             nombre.addWidget(nombres)
-            nombre.addWidget(nombre_ingresado)
+            nombre.addWidget(self.nombre_ingresado)
             layoutPrincipal.addLayout(id)
             layoutPrincipal.addLayout(nombre)
 
             confirmar = QPushButton(text="Confirmar datos")
             layoutPrincipal.addWidget(confirmar)
 
+            confirmar.clicked.connect(self.generarMunicipio)
 
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+      
+      def generarMunicipio(self):  
+            Municipio(self.id_ingresado.toPlainText(),self.nombre_ingresado.toPlainText(),self.provincia)
+            self.close()
