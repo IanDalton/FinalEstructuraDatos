@@ -15,15 +15,15 @@ class FechaWindow(QMainWindow):
             fechas = QHBoxLayout()
 
             fecha1 = QFormLayout()
-            self.datetime_edit1 = QDateTimeEdit(self, calendarPopup=True)
-            self.datetime_edit1.dateTimeChanged.connect(self.update)
-            fecha1.addRow('Desde:', self.datetime_edit1)
+            self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
+            self.datetime_edit.dateTimeChanged.connect(self.update)
+            fecha1.addRow('Desde:', self.datetime_edit)
             fechas.addLayout(fecha1)
 
             fecha2 = QFormLayout()
-            self.datetime_edit2 = QDateTimeEdit(self, calendarPopup=True)
-            self.datetime_edit2.dateTimeChanged.connect(self.update)
-            fecha2.addRow('Hasta:', self.datetime_edit2)
+            self.datetime_edit = QDateTimeEdit(self, calendarPopup=True)
+            self.datetime_edit.dateTimeChanged.connect(self.update)
+            fecha2.addRow('Hasta:', self.datetime_edit)
             fechas.addLayout(fecha2)
 
             confirmar = QPushButton()

@@ -48,17 +48,14 @@ class MainWindow(QMainWindow):
 
 
             cargarArchivos = QPushButton()      
-            nuevaConexion = QPushButton() 
             preferencias = QComboBox()
             preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
             preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if preferencias.currentIndex()==2 else None)
 
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
-            nuevaConexion.setText('Nueva conexion')
             preferencias.setStyleSheet('background-color: darkGrey')
             menu.addWidget(cargarArchivos)
-            menu.addWidget(nuevaConexion)
             menu.addWidget(preferencias,2)
             
             layoutPrincipal.addLayout(menu)
@@ -106,7 +103,7 @@ class MainWindow(QMainWindow):
             self.info = QLabel()
             settings.addWidget(self.info)
             crear_conexion = QPushButton()
-            crear_conexion.setText('Registar conexion')
+            crear_conexion.setText('Registrar conexion')
             crear_conexion.clicked.connect(self.agregar_conexion)
             self.activable = QHBoxLayout()
             settings.addLayout(self.activable)
@@ -219,13 +216,8 @@ class MainWindow(QMainWindow):
             self.ventana_agregarDepartamento.show()
 
       def abrirVentanaRouter_click(self):
-            self.ventana_agregarRouter = RouterWindow(self.departamento)
+            self.ventana_agregarRouter = RouterWindow(self.departamento,self.pais)
             self.ventana_agregarRouter.show()
             
 
-if __name__ == '__main__':
-      app = QApplication(sys.argv)
-      main = FechaWindow()
-      main.show()
-      app.exec()
 
