@@ -245,31 +245,33 @@ class MainWindow(QMainWindow):
                   
       def seleccionar_departamento(self,depto,default=1):
             print(self)
-            self.limpiar(self.routers)
-            if default:
-                  self.router = None
+            
             self.agregar_router.setEnabled(True)
             sel_router = None
             self.departamento = depto
-            for i,router in enumerate(depto.routers):
-                  content = QFrame()
-                  hbox = QHBoxLayout()
-                  content.setLayout(hbox)
-                  btn = QPushButton()
-                  btn.setText('EXPANDIR')
-                  hbox.addWidget(QLabel(text=f'{router}'),alignment=Qt.AlignLeft)
-                  if self.preferencias.currentIndex()==1:
-                        hbox.addWidget(QLabel(text=f'{len(router.conexiones)}/{router.conexiones_max}'),alignment=Qt.AlignRight)
-                  btn.setStyleSheet('border:1px solid black;')
-                  btn.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
-                  hbox.addWidget(btn,2,alignment=Qt.AlignRight)
-                  content.setStyleSheet('border:1px solid black;')
-                  if router == self.router and self.router:
-                        sel_router = (router,i)
+            if default:
+                  self.limpiar(self.routers)
+                  self.router = None
+                  
+                  for i,router in enumerate(depto.routers):
+                        content = QFrame()
+                        hbox = QHBoxLayout()
+                        content.setLayout(hbox)
+                        btn = QPushButton()
+                        btn.setText('EXPANDIR')
+                        hbox.addWidget(QLabel(text=f'{router}'),alignment=Qt.AlignLeft)
+                        if self.preferencias.currentIndex()==1:
+                              hbox.addWidget(QLabel(text=f'{len(router.conexiones)}/{router.conexiones_max}'),alignment=Qt.AlignRight)
+                        btn.setStyleSheet('border:1px solid black;')
+                        btn.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
+                        hbox.addWidget(btn,2,alignment=Qt.AlignRight)
+                        content.setStyleSheet('border:1px solid black;')
+                        if router == self.router and self.router:
+                              sel_router = (router,i)
 
-                  self.routers.addWidget(content)
-            if sel_router:
-                  self.seleccionar_router(sel_router[0],sel_router[1])
+                        self.routers.addWidget(content)
+                  if sel_router:
+                        self.seleccionar_router(sel_router[0],sel_router[1])
             pass
 
 
@@ -279,7 +281,8 @@ class MainWindow(QMainWindow):
             self.routers.insertWidget(index+2,self.frame)
             self.router = router
             
-            self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
+            self.info.setText(f'Desde: {self.router.fecha_alta.strftime("%d/%m/%Y %H:%M.%S")} Hasta: {self.router.fecha_baja.strftime("%d/%m/%Y %H:%M.%S")if self.router.fecha_baja else None}')
+            
             if (self.router.fecha_baja is None and not self.toggle.isChecked() )or(self.router.fecha_baja and self.toggle.isChecked()):
                   self.toggle.toggle()
             
@@ -291,6 +294,7 @@ class MainWindow(QMainWindow):
             self.toggle.toggled.connect(self.modificar_router)
             self.crear_conexion.setEnabled(self.toggle.isChecked())
             print(self.provincia,self.municipio,self.departamento,self.router)
+            
             pass
       
       def modificar_router(self):
@@ -301,8 +305,8 @@ class MainWindow(QMainWindow):
                   self.router.fecha_baja = datetime.now() if not self.router.fecha_baja else self.router.fecha_baja
                   for conexion in self.router.conexiones:
                         conexion.mac.desconectar(self.router)
-            self.info.setText(f'Desde: {self.router.fecha_alta} Hasta: {self.router.fecha_baja}')
-            self.refrescar()
+            self.info.setText(f'Desde: {self.router.fecha_alta.strftime("%d/%m/%Y %H:%M.%S")} Hasta: {self.router.fecha_baja.strftime("%d/%m/%Y %H:%M.%S")if self.router.fecha_baja else None}')
+            #self.refrescar()
 
       def abrirVentanaCarga_click(self):
             self.cargando_datos = CargaWindow(self.pais,self.refrescar)
