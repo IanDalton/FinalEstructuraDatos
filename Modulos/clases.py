@@ -6,7 +6,7 @@ from .verificador import verificador_municipios
 import numpy as np
 import csv,os
 
-class Dispositivo():
+class Dispositivo(): # La idea de la clase dispositivo es por si uno ya existe se pueda cargar directamente a las conexiones
     def __init__(self,mac,pais) -> None:
         self.mac = mac
         self.status_conexion = None
@@ -18,7 +18,7 @@ class Dispositivo():
             return self.mac == __o.mac
         else:
             return self.mac == __o
-    def conectar(self,router):
+    def conectar(self,router): # Se intenta conectar al router. Si el dispositivo ya esta conectado, se deconecta y se reconecta al nuevo router
         
         try:
             if not self.status_conexion:
@@ -44,13 +44,12 @@ class Conexion():
         self.ip = ip
         self.router = router
 
-    def __eq__(self, __o) -> bool:
+    def __eq__(self, __o) -> bool: # Todo esto es para que se pueda ordenar en el arbol
         if type(__o) == object: 
             return self.ip == __o.ip
         elif type(__o) == Dispositivo:
             return self.mac.mac == __o
             
-
     def __ge__(self, __o: object): # self >= __o'
         if type(__o)==object:
             return self.alta >= __o.alta
@@ -141,7 +140,7 @@ class Pais():
     def get_provincia(self,id) -> object:
         return self.provincias[self.provincias.index(id)]
 
-    def actualizar_conexiones(self):
+    def actualizar_conexiones(self): # Se actualizan todos los valores de todas las provincias
         for prov in self.provincias:
             prov.actualizar_conexiones()
 
@@ -240,7 +239,7 @@ class Departamento():
         else:
             return self.id == __o
 
-class Router(): # Armar un dict que le asigne la ip a una mac
+class Router():
     def __init__(self,id:int,identificador:str,ubicacion:str,latitud,longitud,pais:Pais,departamento:Departamento,conexiones_max=20,fecha_alta=datetime.now(),fecha_baja=None) -> None:
         self.id = id
         self.identificador = identificador
@@ -248,9 +247,9 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         self.latitud = latitud
         self.longitud = longitud
         self.conexiones_max = conexiones_max
-        self.conexiones = ListaEnlazada()
+        self.conexiones = ListaEnlazada() # Usamos lista enlazada ya que no sabemos cuando y en que orden se va a desconectar el dispositivo. Se podria usar un dict por cada ip pero esto es mas liviano
         self.fecha_alta = fecha_alta
-        self.fecha_baja = fecha_baja
+        self.fecha_baja = fecha_baja # Si
         self.pais = pais
         departamento.routers.add(self)
     
@@ -268,7 +267,7 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         else:
             raise ValueError()
 
-    def generar_ip(self)->str:
+    def generar_ip(self)->str: # Revisamos todos los elementos de la lista hasta que conseguimos una IP libre
         base = '192.168.68.'
         #revisamos la lista de conexiones hasta encontrar una ip libre
         nro_esperado = 0
@@ -282,27 +281,3 @@ class Router(): # Armar un dict que le asigne la ip a una mac
         dato = self.conexiones.delete_node(dispo)
         dato.baja = datetime.now()
         
-        
-if __name__ == '__main__':
-    arg = Pais('Argentina',4)
-    bsas = Provincia('Buenos Aires',arg)
-    Provincia('cu',arg)
-    Provincia('cuso',arg)
-    lomas = Municipio(1,'Lomas de Zamora',bsas)
-    temperley = Departamento(1,'Temperley',lomas)
-    router = Router(1,None,1,1,arg,temperley)
-    celu = Dispositivo(1)
-    
-    ac = Dispositivo(12)
-    celu.conectar(router)
-
-
-    ac.conectar(router)
-
-    print(arg.conexiones.root.derecho.dato)
-    """ arg.load_data('Datos\municipios.csv','Municipio') """
-    arg.save()
-
-    for provincia in arg.provincias:
-        print(provincia.nombre)
-    pass
