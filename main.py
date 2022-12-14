@@ -8,7 +8,9 @@ from Modulos.verificador import ids_municipios
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('bandaloschinos.paisdigital.v1') 
 
-try: # Verificamos la existencia de el archivo y si no, se generan las provincias
+# Verificamos la existencia de el archivo y si no, se generan las provincias
+
+try: 
     with open('archivo.pickle','rb') as arch:
         arg = pickle.load(arch)
 except FileNotFoundError:

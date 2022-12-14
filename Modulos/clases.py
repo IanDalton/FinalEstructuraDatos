@@ -6,7 +6,7 @@ from .verificador import verificador_municipios
 import numpy as np
 import csv,os
 
-class Dispositivo(): # La idea de la clase dispositivo es por si uno ya existe se pueda cargar directamente a las conexiones
+class Dispositivo(): # La idea de la clase dispositivo es, por si uno ya existe, se pueda cargar directamente a las conexiones
     def __init__(self,mac,pais) -> None:
         self.mac = mac
         self.status_conexion = None
