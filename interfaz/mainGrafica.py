@@ -152,9 +152,6 @@ class MainWindow(QMainWindow):
             texto2.setText('Activo')
             self.activable.addWidget(texto2)
             
-            
-            
-            
 
       #El widget que contiene al layout es el widget principal de la ventana, para mostrarlo
             widgetLayout = QWidget()

@@ -45,9 +45,6 @@ class FechaWindow(QMainWindow):
             
             conexiones = QHBoxLayout()
             self.dispositivos = QVBoxLayout()
-            boton = QPushButton()
-            boton.setText("Para eliminar")
-            self.dispositivos.addWidget(boton)
             informacion = QVBoxLayout()
             self.createTable() #agregamos la tabla
             informacion.addWidget(self.tableWidget)
