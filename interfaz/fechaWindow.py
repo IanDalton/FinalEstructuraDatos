@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
+from PyQt5.QtWidgets import QScrollArea,QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
 from Modulos.clases import *
 
@@ -14,6 +14,9 @@ class FechaWindow(QMainWindow):
             self.conexiones = None
             layoutPrincipal = QVBoxLayout()
             fechas = QHBoxLayout()
+
+
+
 
             fecha1 = QFormLayout()
             self.datetime_edit1 = QDateTimeEdit(self, calendarPopup=True)
@@ -48,13 +51,21 @@ class FechaWindow(QMainWindow):
             informacion = QVBoxLayout()
             self.createTable() #agregamos la tabla
             informacion.addWidget(self.tableWidget)
-            conexiones.addLayout(self.dispositivos)
-            conexiones.addLayout(informacion) 
+             
             layoutPrincipal.addLayout(conexiones)
 
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
+
+
+            scroll = QScrollArea()
+            content = QWidget()
+            content.setLayout(self.dispositivos)
+            scroll.setWidget(content)
+            scroll.setWidgetResizable(True)
+            conexiones.addWidget(scroll)
+            conexiones.addLayout(informacion)
 
       def filtrarArbol(self):
             self.limpiar(self.dispositivos,-1)

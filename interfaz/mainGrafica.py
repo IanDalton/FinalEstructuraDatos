@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtWidgets import QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
+from PyQt5.QtWidgets import QScrollArea,QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
 from qtwidgets import AnimatedToggle
 from Modulos.clases import *
 import pickle
@@ -13,23 +13,6 @@ from .cargaWindow import CargaWindow
 from .fechaWindow import FechaWindow
 from PyQt5.QtGui import QIcon
 import sys
-""" 
-dark_theme = QPalette()
-dark_theme.setColor(QPalette.Window, QColor(53, 53, 53)
-dark_theme.setColor(QPalette.WindowText, Qt.white)
-dark_theme.setColor(QPalette.Base, QColor(25, 25, 25))
-dark_theme.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
-dark_theme.setColor(QPalette.ToolTipBase, Qt.black)
-dark_theme.setColor(QPalette.ToolTipText, Qt.white)
-dark_theme.setColor(QPalette.Text, Qt.white)
-dark_theme.setColor(QPalette.Button, QColor(53, 53, 53))
-dark_theme.setColor(QPalette.ButtonText, Qt.white)
-dark_theme.setColor(QPalette.BrightText, Qt.red)
-dark_theme.setColor(QPalette.Link, QColor(42, 130, 218))
-dark_theme.setColor(QPalette.Highlight, QColor(42, 130, 218))
-dark_theme.setColor(QPalette.HighlightedText, Qt.black)
-
- """
 
 class MainWindow(QMainWindow): 
       def __init__(self,pais:Pais):
@@ -80,9 +63,30 @@ class MainWindow(QMainWindow):
                   prov.clicked.connect(lambda checked ,arg = i:self.seleccionar_provincia(arg))
                   self.provincias.addWidget(prov)
 
+            
+            muni_scroll = QScrollArea()
+            muni_content = QWidget()
+            depto_scroll = QScrollArea()
+            depto_content = QScrollArea()
+            router_scroll = QScrollArea()
+            router_content = QWidget()
+
+
+            muni_scroll.setWidget(muni_content)
+            depto_scroll.setWidget(depto_content)
+            router_scroll.setWidget(router_content)
+
+            muni_scroll.setWidgetResizable(True)
+            depto_scroll.setWidgetResizable(True)
+            router_scroll.setWidgetResizable(True)
+
             contenido.addLayout(self.provincias)
+            contenido.addWidget(muni_scroll,1)
+            contenido.addWidget(depto_scroll,1)
+            contenido.addWidget(router_scroll,2)
+            
+
             self.municipios = QVBoxLayout()
-            contenido.addLayout(self.municipios)
             self.agregarMunicipios = QPushButton()
             self.agregarMunicipios.setText('Municipio nuevo')
             self.agregarMunicipios.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
@@ -90,21 +94,25 @@ class MainWindow(QMainWindow):
             self.municipios.addWidget(self.agregarMunicipios)
             self.agregarMunicipios.clicked.connect(lambda clicked:self.abrirVentanaMunicipio_click() if self.provincia else None)
             self.departamentos = QVBoxLayout()
-            contenido.addLayout(self.departamentos)
-            agregarDepartamentos = QPushButton()
-            agregarDepartamentos.setText('Departamento nuevo')
-            self.departamentos.addWidget(agregarDepartamentos)
-            agregarDepartamentos.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
-            agregarDepartamentos.setFont(font_archivos)
-            agregarDepartamentos.clicked.connect(lambda clicked:self.abrirVentanaDepartamento_click() if self.municipio else None)
-            agregar_router = QPushButton()
-            agregar_router.setText('Agregar Router')
-            agregar_router.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
-            agregar_router.setFont(font_archivos)
-            agregar_router.clicked.connect(lambda clicked:self.abrirVentanaRouter_click() if self.departamento else None)
+            self.agregarDepartamentos = QPushButton()
+            self.agregarDepartamentos.setText('Departamento nuevo')
+            self.departamentos.addWidget(self.agregarDepartamentos)
+            self.agregarDepartamentos.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            self.agregarDepartamentos.setFont(font_archivos)
+            self.agregarDepartamentos.clicked.connect(lambda clicked:self.abrirVentanaDepartamento_click() if self.municipio else None)
+            self.agregar_router = QPushButton()
+            self.agregar_router.setText('Agregar Router')
+            self.agregar_router.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            self.agregar_router.setFont(font_archivos)
+            self.agregar_router.clicked.connect(lambda clicked:self.abrirVentanaRouter_click() if self.departamento else None)
             self.routers = QVBoxLayout()
-            self.routers.addWidget(agregar_router)
-            contenido.addLayout(self.routers,2)
+            self.routers.addWidget(self.agregar_router)
+            
+
+            muni_content.setLayout(self.municipios)
+            depto_content.setLayout(self.departamentos)
+            router_content.setLayout(self.routers)
+            
 
             self.municipios.setAlignment(Qt.AlignTop)
             self.provincias.setAlignment(Qt.AlignTop)
@@ -123,7 +131,12 @@ class MainWindow(QMainWindow):
             self.conexiones.setLayout(self.vbox)
             settings.addWidget(self.conexiones)
 
-            
+
+            self.agregar_router.setEnabled(False)
+            self.agregarDepartamentos.setEnabled(False)
+            self.agregarMunicipios.setEnabled(False)
+
+
             self.crear_conexion.setText('Registrar conexion')
             self.crear_conexion.clicked.connect(self.agregar_conexion)
             self.activable = QHBoxLayout()
@@ -197,7 +210,11 @@ class MainWindow(QMainWindow):
                   self.municipio = None
                   self.departamento = None
                   self.router = None
+                  self.agregar_router.setEnabled(False)
+                  self.agregarDepartamentos.setEnabled(False)
+            self.agregarMunicipios.setEnabled(True)
             self.provincia = prov
+            
             for muni in prov.municipios:
                   lbl = QPushButton()
                   if self.preferencias.currentIndex()==1:
@@ -213,6 +230,8 @@ class MainWindow(QMainWindow):
             if default:
                   self.router = None
                   self.departamento = None
+                  self.agregar_router.setEnabled(False)
+            self.agregarDepartamentos.setEnabled(True)
             self.municipio = muni
             for depto in muni.departamentos:
                   
@@ -230,6 +249,7 @@ class MainWindow(QMainWindow):
             self.limpiar(self.routers)
             if default:
                   self.router = None
+            self.agregar_router.setEnabled(True)
             sel_router = None
             self.departamento = depto
             for i,router in enumerate(depto.routers):
@@ -286,9 +306,8 @@ class MainWindow(QMainWindow):
             self.refrescar()
 
       def abrirVentanaCarga_click(self):
-            self.cargando_datos = CargaWindow(self.pais)
+            self.cargando_datos = CargaWindow(self.pais,self.refrescar)
             self.cargando_datos.show()
-            self.cargando_datos.closeEvent.connect(self.refrescar)
 
       def abrirVentanaFechas_click(self):
             self.abrir_ventanaFechas = FechaWindow(self.pais)
@@ -297,19 +316,18 @@ class MainWindow(QMainWindow):
             
       
       def abrirVentanaMunicipio_click(self):
-            self.ventana_agregarMunicipios = MunicipiosWindow(self.provincia)
+            self.ventana_agregarMunicipios = MunicipiosWindow(self.provincia,self.refrescar)
             self.ventana_agregarMunicipios.show()
-            self.ventana_agregarMunicipios.closeEvent.connect(self.refrescar)
+
 
       def abrirVentanaDepartamento_click(self):
-            self.ventana_agregarDepartamento = DepartamentosWindow(self.municipio)
+            self.ventana_agregarDepartamento = DepartamentosWindow(self.municipio,self.refrescar)
             self.ventana_agregarDepartamento.show()
-            self.ventana_agregarDepartamento.closeEvent.connect(self.refrescar)
+
 
       def abrirVentanaRouter_click(self):
-            self.ventana_agregarRouter = RouterWindow(self.departamento,self.pais)
+            self.ventana_agregarRouter = RouterWindow(self.departamento,self.pais,self.refrescar)
             self.ventana_agregarRouter.show()
-            self.ventana_agregarRouter.destroyed.connect(self.refrescar)
-            
+
 
 

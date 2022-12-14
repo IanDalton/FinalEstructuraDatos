@@ -5,8 +5,9 @@ from qtwidgets import AnimatedToggle
 from Modulos.clases import *
 
 class RouterWindow(QMainWindow): 
-      def __init__(self,departamento:Departamento,pais:Pais):
+      def __init__(self,departamento:Departamento,pais:Pais,refresh):
             super().__init__()
+            self.refresh = refresh
             self.setWindowTitle("INSERTAR ROUTER")
             self.setGeometry(1400,300,300,100)
             self.departamento = departamento
@@ -71,5 +72,6 @@ class RouterWindow(QMainWindow):
             Router(self.id_ingresado.toPlainText(),self.identificador_ingresado.toPlainText(),
             self.ubicacion_ingresada.toPlainText(),self.latitud_ingresada.toPlainText(),
             self.longitud_ingresada.toPlainText(),self.pais,self.departamento)
+            self.refresh()
             self.close()
 

@@ -208,8 +208,8 @@ class Municipio():
         self.total_conectados = 0
         for depto in self.departamentos:
             depto.actualizar_conexiones()
-            self.total = depto.total
-            self.total_conectados = depto.total_conectados
+            self.total += depto.total
+            self.total_conectados += depto.total_conectados
             
     def __hash__(self) -> int:
         return hash(self.id)
@@ -231,8 +231,9 @@ class Departamento():
         self.total = 0
         self.total_conectados = 0
         for router in self.routers:
-            self.total += router.conexiones_max
-            self.total_conectados += len(router.conexiones)
+            if not router.fecha_baja:
+                self.total += router.conexiones_max
+                self.total_conectados += len(router.conexiones)
     def __eq__(self, __o: object) -> bool:
         if type(__o)==object:
             return self.id==__o.id

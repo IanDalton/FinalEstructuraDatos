@@ -8,7 +8,8 @@ from Modulos.clases import *
 
 
 class CargaWindow(QMainWindow):
-      def __init__(self,pais:Pais):
+      def __init__(self,pais:Pais,refresh):
+            self.refresh = refresh
             super().__init__()
             self.setWindowTitle("CARGA DE ARCHIVOS")
             self.setGeometry(1300,200,300,100)
@@ -72,6 +73,7 @@ class CargaWindow(QMainWindow):
             if len(errores) > 0:
                   self.ventanaErrores = ErroresWindow(self.es_municipio,errores,self.pais)
                   self.ventanaErrores.show()
+                  self.refresh()
                   self.close()
 
 

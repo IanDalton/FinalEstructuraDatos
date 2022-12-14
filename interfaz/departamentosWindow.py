@@ -6,7 +6,8 @@ from Modulos.clases import *
 
 
 class DepartamentosWindow(QMainWindow):
-      def __init__(self,municipio:Municipio):
+      def __init__(self,municipio:Municipio,refresh):
+            self.refresh = refresh
             super().__init__()
             self.setWindowTitle("INSERTAR DEPARTAMENTO")
             self.setGeometry(1300,200,300,100)
@@ -44,4 +45,5 @@ class DepartamentosWindow(QMainWindow):
       
       def generarDepartamento(self):  
             Departamento(self.id_ingresado.toPlainText(),self.nombre_ingresado.toPlainText(),self.municipio)
+            self.refresh()
             self.close()

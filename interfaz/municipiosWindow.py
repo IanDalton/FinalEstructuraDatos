@@ -5,8 +5,9 @@ from qtwidgets import AnimatedToggle
 from Modulos.clases import *
 
 class MunicipiosWindow(QMainWindow):
-      def __init__(self,provincia:Provincia):
+      def __init__(self,provincia:Provincia,refresh):
             super().__init__()
+            self.refresh = refresh
             self.setWindowTitle("INSERTAR MUNICIPIO")
             self.setGeometry(1350,400,300,50)
             self.provincia = provincia
@@ -44,4 +45,5 @@ class MunicipiosWindow(QMainWindow):
       
       def generarMunicipio(self):  
             Municipio(self.id_ingresado.toPlainText(),self.nombre_ingresado.toPlainText(),self.provincia)
+            self.refresh()
             self.close()
