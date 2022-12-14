@@ -43,6 +43,7 @@ class CargaWindow(QMainWindow):
             text_link.setFont(font)
             link.addWidget(text_link)
             btn = QPushButton(text='Cargar archivo')
+            btn.setFont(font)
             btn.clicked.connect(self.open)
             self.ingresar_link = QLabel()
             link.addWidget(self.ingresar_link)
