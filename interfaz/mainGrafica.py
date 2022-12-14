@@ -27,6 +27,9 @@ class MainWindow(QMainWindow):
             self.setGeometry(200,200,1000,700)
             layoutPrincipal = QVBoxLayout()
             
+
+            self.setWindowIcon(QIcon('descarga.png'))
+
             menu = QHBoxLayout()
             contenido = QHBoxLayout()
 
