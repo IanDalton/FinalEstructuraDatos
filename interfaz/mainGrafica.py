@@ -1,9 +1,8 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtWidgets import QScrollArea,QFrame,QMainWindow,QVBoxLayout,QLabel,QTextEdit,QPushButton,QHBoxLayout,QApplication,QWidget,QFormLayout,QDateTimeEdit,QTableWidget,QHeaderView,QTableWidgetItem,QComboBox  
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QScrollArea,QFrame,QMainWindow,QVBoxLayout,QLabel,QPushButton,QHBoxLayout,QWidget,QComboBox  
 from qtwidgets import AnimatedToggle
 from Modulos.clases import *
-import pickle
 from datetime import datetime
 from .routerWindow import RouterWindow
 from .departamentosWindow import DepartamentosWindow
@@ -11,8 +10,6 @@ from .municipiosWindow import MunicipiosWindow
 from .crearConexion import CrearConexion
 from .cargaWindow import CargaWindow
 from .fechaWindow import FechaWindow
-from PyQt5.QtGui import QIcon
-import sys
 
 class MainWindow(QMainWindow): 
       def __init__(self,pais:Pais):
@@ -39,6 +36,8 @@ class MainWindow(QMainWindow):
             font_archivos = cargarArchivos.font()
             font_archivos.setBold(True)
             cargarArchivos.setFont(font_archivos)
+
+            # Barra de preferencias
             self.preferencias = QComboBox()
             self.preferencias.setStyleSheet('QComboBox {background-color: #75AADB; color: black}')
             self.preferencias.setFont(font_archivos)
