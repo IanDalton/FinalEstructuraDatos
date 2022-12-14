@@ -62,6 +62,7 @@ class CargaWindow(QMainWindow):
             else:
                   self.router.setEnabled(True)
                   self.municipio.setEnabled(False)
+                  self.municipio.setStyleSheet('QPushButton {background-color: #FCBF49; color: black}')
             self.es_municipio = not self.es_municipio
             pass
 
