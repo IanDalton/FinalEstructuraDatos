@@ -14,7 +14,7 @@ class CargaWindow(QMainWindow):
             self.setGeometry(1300,200,300,100)
             layoutPrincipal = QVBoxLayout()
             self.pais=pais
-            self.es_municipio=True
+            self.es_municipio=None
             eleccion = QLabel()
             eleccion.setText("Que tipo de datos va a ingresar?")
             font = eleccion.font()
@@ -26,13 +26,13 @@ class CargaWindow(QMainWindow):
             self.router = QPushButton(text="Routers")
             self.router.setStyleSheet('QPushButton {background-color: #843511; color: white}')
             self.router.setFont(font)
-            self.router.clicked.connect(self.cambiar_seleccion)
+            self.router.clicked.connect(lambda clicked:self.cambiar_seleccion(False))
             contenido.addWidget(self.router)
 
             self.municipio = QPushButton(text= "Municipios")
             self.municipio.setStyleSheet('QPushButton {background-color: #843511; color: white}')
             self.municipio.setFont(font)
-            self.municipio.clicked.connect(self.cambiar_seleccion)
+            self.municipio.clicked.connect(lambda clicked:self.cambiar_seleccion(True))
             contenido.addWidget(self.municipio)
             layoutPrincipal.addLayout(contenido)
 
@@ -69,8 +69,9 @@ class CargaWindow(QMainWindow):
             self.confirmacion.setEnabled(True)
 
 
-      def cambiar_seleccion(self):
-            if self.es_municipio:
+      def cambiar_seleccion(self,valor):
+            self.es_municipio = valor
+            if not self.es_municipio:
                   self.router.setEnabled(False)
                   self.municipio.setEnabled(True)
                   
@@ -82,7 +83,7 @@ class CargaWindow(QMainWindow):
                   
                   self.municipio.setStyleSheet('QPushButton {background-color: #FCBF49; color: black}')
                   self.router.setStyleSheet('QPushButton {background-color: #843511; color: white}')
-            self.es_municipio = not self.es_municipio
+            
             pass
 
       def cargarDatos_click(self):
@@ -104,6 +105,14 @@ class CargaWindow(QMainWindow):
                   msg.setText("El archivo no tiene el formato correcto")
                   msg.setWindowTitle("Error formato archivo")
                   msg.setDetailedText("Tiene que ser un archivo del formato CSV")
+                  msg.setStandardButtons(QMessageBox.Ok)
+                  msg.exec()
+            except KeyError:
+                  msg = QMessageBox()
+                  msg.setIcon(QMessageBox.Warning)
+                  msg.setText("El archivo no tiene el formato correcto")
+                  msg.setWindowTitle("Error formato archivo")
+                  msg.setDetailedText("El nombre de las columnas no esta bien definido")
                   msg.setStandardButtons(QMessageBox.Ok)
                   msg.exec()
 
