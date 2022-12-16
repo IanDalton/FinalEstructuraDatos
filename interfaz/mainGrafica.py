@@ -37,12 +37,17 @@ class MainWindow(QMainWindow):
             font_archivos.setBold(True)
             cargarArchivos.setFont(font_archivos)
 
+            analisis_fechas = QPushButton()
+            analisis_fechas.clicked.connect(self.abrirVentanaFechas_click)
+            analisis_fechas.setStyleSheet('QPushButton {background-color: #75AADB; color: black}')
+            analisis_fechas.setText('Filtrar por fechas')
+
+
             # Barra de preferencias
             self.preferencias = QComboBox()
             self.preferencias.setStyleSheet('QComboBox {background-color: #75AADB; color: black}')
             self.preferencias.setFont(font_archivos)
-            self.preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones', 'Filtrar conexiones por hora'])
-            self.preferencias.currentIndexChanged.connect(lambda checked :self.abrirVentanaFechas_click() if self.preferencias.currentIndex()==2 else None)
+            self.preferencias.addItems(['No mostrar conexiones (default)', 'Mostrar conexiones'])
 
             self.setFont(font_archivos)
 
@@ -50,6 +55,7 @@ class MainWindow(QMainWindow):
             cargarArchivos.setText('Cargar archivos') 
             cargarArchivos.clicked.connect(self.abrirVentanaCarga_click)
             menu.addWidget(cargarArchivos)
+            menu.addWidget(analisis_fechas)
             menu.addWidget(self.preferencias,2)
             
             layoutPrincipal.addLayout(menu)
@@ -79,6 +85,7 @@ class MainWindow(QMainWindow):
             router_scroll.setWidget(router_content)
 
             muni_scroll.setWidgetResizable(True)
+            muni_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
             depto_scroll.setWidgetResizable(True)
             router_scroll.setWidgetResizable(True)
 
@@ -212,7 +219,10 @@ class MainWindow(QMainWindow):
                   self.agregarDepartamentos.setEnabled(False)
             self.agregarMunicipios.setEnabled(True)
             self.provincia = prov
-            
+            if len(prov.municipios)==0:
+                  t = QLabel(text=f'La provincia {prov.nombre} no tiene municipios registrados')
+                  t.setWordWrap(True)
+                  self.municipios.addWidget(t)
             for muni in prov.municipios.values():
                   lbl = QPushButton()
                   if self.preferencias.currentIndex()==1:
@@ -231,6 +241,10 @@ class MainWindow(QMainWindow):
                   self.agregar_router.setEnabled(False)
             self.agregarDepartamentos.setEnabled(True)
             self.municipio = muni
+            if len(muni.departamentos)==0:
+                  t = QLabel(f'El municipio {muni.nombre} no tiene departamentos registrados')
+                  t.setWordWrap(True)
+                  self.departamentos.addWidget(t)
             for depto in muni.departamentos.values():
                   
                   lbl = QPushButton()
@@ -248,29 +262,32 @@ class MainWindow(QMainWindow):
             self.agregar_router.setEnabled(True)
             sel_router = None
             self.departamento = depto
+            self.limpiar(self.routers)
             if default:
-                  self.limpiar(self.routers)
                   self.router = None
-                  
-                  for i,router in enumerate(depto.routers.values()):
-                        content = QFrame()
-                        hbox = QHBoxLayout()
-                        content.setLayout(hbox)
-                        btn = QPushButton()
-                        btn.setText('EXPANDIR')
-                        hbox.addWidget(QLabel(text=f'{router}'),alignment=Qt.AlignLeft)
-                        if self.preferencias.currentIndex()==1:
-                              hbox.addWidget(QLabel(text=f'{len(router.conexiones)}/{router.conexiones_max}'),alignment=Qt.AlignRight)
-                        btn.setStyleSheet('border:1px solid black;')
-                        btn.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
-                        hbox.addWidget(btn,2,alignment=Qt.AlignRight)
-                        content.setStyleSheet('border:1px solid black;')
-                        if router == self.router and self.router: # Hay un router seleccionado y es el que esta en el index actual
-                              sel_router = (router,i)
 
-                        self.routers.addWidget(content)
-                  if sel_router:
-                        self.seleccionar_router(sel_router[0],sel_router[1])
+            if len(depto.routers) == 0:
+                  self.routers.addWidget(QLabel(text=f'El departamento {depto.nombre} no tiene routers registrados'))
+                  
+            for i,router in enumerate(depto.routers.values()):
+                  content = QFrame()
+                  hbox = QHBoxLayout()
+                  content.setLayout(hbox)
+                  btn = QPushButton()
+                  btn.setText('EXPANDIR')
+                  hbox.addWidget(QLabel(text=f'{router}'),alignment=Qt.AlignLeft)
+                  if self.preferencias.currentIndex()==1:
+                        hbox.addWidget(QLabel(text=f'{len(router.conexiones)}/{router.conexiones_max}'),alignment=Qt.AlignRight)
+                  btn.setStyleSheet('border:1px solid black;')
+                  btn.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
+                  hbox.addWidget(btn,2,alignment=Qt.AlignRight)
+                  content.setStyleSheet('border:1px solid black;')
+                  if router == self.router and self.router: # Hay un router seleccionado y es el que esta en el index actual
+                        sel_router = (router,i)
+
+                  self.routers.addWidget(content)
+            if sel_router:
+                  self.seleccionar_router(sel_router[0],sel_router[1])
             pass
 
 
@@ -314,7 +331,7 @@ class MainWindow(QMainWindow):
       def abrirVentanaFechas_click(self):
             self.abrir_ventanaFechas = FechaWindow(self.pais)
             self.abrir_ventanaFechas.show()
-            self.preferencias.setCurrentIndex(0)
+            
             
       
       def abrirVentanaMunicipio_click(self):

@@ -143,7 +143,7 @@ class Pais():
         return self.provincias[id]
 
     def actualizar_conexiones(self): # Se actualizan todos los valores de todas las provincias
-        for prov in self.provincias:
+        for prov in self.provincias.values():
             prov.actualizar_conexiones()
 
 
@@ -184,7 +184,7 @@ class Provincia():
     def actualizar_conexiones(self):
         self.total = 0
         self.total_conectados = 0
-        for muni in self.municipios:
+        for muni in self.municipios.values():
             muni.actualizar_conexiones()
             self.total += muni.total
             self.total_conectados += muni.total_conectados
@@ -207,7 +207,7 @@ class Municipio():
     def actualizar_conexiones(self):
         self.total = 0
         self.total_conectados = 0
-        for depto in self.departamentos:
+        for depto in self.departamentos.values():
             depto.actualizar_conexiones()
             self.total += depto.total
             self.total_conectados += depto.total_conectados
@@ -231,7 +231,7 @@ class Departamento():
     def actualizar_conexiones(self):
         self.total = 0
         self.total_conectados = 0
-        for router in self.routers:
+        for router in self.routers.values():
             if not router.fecha_baja:
                 self.total += router.conexiones_max
                 self.total_conectados += len(router.conexiones)
