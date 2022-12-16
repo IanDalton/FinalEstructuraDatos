@@ -10,7 +10,7 @@ class Dispositivo(): # La idea de la clase dispositivo es, por si uno ya existe,
     def __init__(self,mac,pais) -> None:
         self.mac = mac
         self.status_conexion = None
-        pais.dispositivos.add(self)
+        pais.dispositivos[self.mac] = self
     def __hash__(self) -> int:
         return hash(self.mac)
     def __eq__(self, __o: object) -> bool:
@@ -77,9 +77,9 @@ class Conexion():
 class Pais():
     def __init__(self,nombre:str) -> None:
         self.nombre = nombre
-        self.provincias = list() # Saque el set porque es necesario un orden y es mas rapido para ubicar el archivo
+        self.provincias = dict() 
         self.conexiones = Arbol()
-        self.dispositivos = set()
+        self.dispositivos = dict()
     def save(self):
         with open('archivo.pickle','wb') as arch:
             pickle.dump(self,arch,protocol=pickle.HIGHEST_PROTOCOL)
@@ -111,8 +111,11 @@ class Pais():
                         except NameError as error:
                             router['error'] = error
                             errores.append(router)
-                        except ValueError as error:
-                            router['error'] = error
+                        except KeyError as error:
+                            router['error'] = 'La provincia o el municipio que cargaste no existe'
+                            errores.append(router)
+                        except ValueError:
+                            router['error'] = 'El formato del id departamento esta mal'
                             errores.append(router)
                         
         return errores
@@ -133,12 +136,11 @@ class Pais():
             raise NameError
 
     def get_departamento(self,id:int,municipio)->object:
-
-        return municipio.departamentos[municipio.departamentos.index(id)]
+        return  municipio.departamentos[id]
     def get_municipio(self,id,provincia)-> object:
-        return provincia.municipios[provincia.municipios.index(id)]
+        return provincia.municipios[id]
     def get_provincia(self,id) -> object:
-        return self.provincias[self.provincias.index(id)]
+        return self.provincias[id]
 
     def actualizar_conexiones(self): # Se actualizan todos los valores de todas las provincias
         for prov in self.provincias:
@@ -149,7 +151,7 @@ class Pais():
         provincia = self.get_provincia(municipio['provincia_id'])
         try:  # Estoy bastante contento de esto! Basicamente intenta conseguir el municipio y si no lo encuentra lo genera
             muni = self.get_municipio(municipio['municipio_id'],provincia)
-        except ValueError:
+        except KeyError:
             muni = Municipio(provincia=provincia,id=municipio['municipio_id'],nombre=municipio['municipio'])
             
         return muni
@@ -175,8 +177,8 @@ class Provincia():
     def __init__(self,nombre:str,pais:Pais,provincia_id) -> None:
         self.id = provincia_id
         self.nombre = nombre
-        self.municipios = list()
-        pais.provincias.append(self)
+        self.municipios = dict()
+        pais.provincias[self.id] = self
         self.total = 0
         self.total_conectados = 0
     def actualizar_conexiones(self):
@@ -198,8 +200,8 @@ class Municipio():
     def __init__(self,id:int,nombre:str,provincia:Provincia) -> None:
         self.id = id
         self.nombre = nombre
-        self.departamentos = list()
-        provincia.municipios.append(self)
+        self.departamentos = dict()
+        provincia.municipios[self.id]=self
         self.total = 0
         self.total_conectados = 0
     def actualizar_conexiones(self):
@@ -222,10 +224,10 @@ class Departamento():
     def __init__(self,id:int,nombre:str,municipio:Municipio) -> None:
         self.id = id
         self.nombre = nombre
-        self.routers = set()
+        self.routers = dict()
         self.total = 0
         self.total_conectados = 0
-        municipio.departamentos.append(self)
+        municipio.departamentos[id] = self
     def actualizar_conexiones(self):
         self.total = 0
         self.total_conectados = 0
@@ -251,7 +253,10 @@ class Router():
         self.fecha_alta = fecha_alta
         self.fecha_baja = fecha_baja # Si
         self.pais = pais
-        departamento.routers.add(self)
+        self.ips = self.generar_todas_ips()
+        
+        
+        departamento.routers[id] = self
     
     def __len__(self):
         return len(self.conexiones)
@@ -266,18 +271,20 @@ class Router():
             self.conexiones.append(conexion)
         else:
             raise ValueError()
-
+    def generar_todas_ips(self)->set:
+        st = set()
+        for i in range(self.conexiones_max):
+            st.add(f'192.168.68.{str(i).rjust(2,"0")}')
+        return st
     def generar_ip(self)->str: # Revisamos todos los elementos de la lista hasta que conseguimos una IP libre
-        base = '192.168.68.'
         #revisamos la lista de conexiones hasta encontrar una ip libre
-        nro_esperado = 0
-        for conexion in self.conexiones:
-            if int(conexion.ip[-2:]) != nro_esperado:
-                break
-            nro_esperado += 1
-        return f'{base}{str(nro_esperado).rjust(2,"0")}'
+
+        ip = self.ips.pop()
+        
+        return ip
 
     def desconectar(self,dispo:Dispositivo):
         dato = self.conexiones.delete_node(dispo)
+        self.ips.add(dato.ip)
         dato.baja = datetime.now()
         

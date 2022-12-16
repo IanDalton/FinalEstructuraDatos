@@ -63,7 +63,7 @@ class CrearConexion(QMainWindow):
             self.clear()
             self.dispositivos = QComboBox()
             self.dispositivos.addItem('Seleccionar un dispositivo...')
-            for dispo in self.pais.dispositivos:
+            for dispo in self.pais.dispositivos.values():
                   self.dispositivos.addItem(dispo.mac)
             self.contenido.addWidget(self.dispositivos)
             self.dispositivos.currentIndexChanged.connect(lambda:self.confirmacion.setEnabled(False) if self.dispositivos.currentIndex()==0 else self.confirmacion.setEnabled(True) )
@@ -83,7 +83,8 @@ class CrearConexion(QMainWindow):
                   dispo.conectar(self.router)
                   
             else:
-                  dispo = list(self.pais.dispositivos)[self.dispositivos.currentIndex()-1]
+                  data = self.dispositivos.itemText(self.dispositivos.currentIndex())
+                  dispo = self.pais.dispositivos.get(data)
                   dispo.conectar(self.router)
             self.refresh()
             self.close()

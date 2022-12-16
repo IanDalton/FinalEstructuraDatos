@@ -98,7 +98,7 @@ class CargaWindow(QMainWindow):
                         self.ventanaErrores.show()
                         self.refresh()
                         self.close()
-            except:
+            except UnicodeDecodeError:
                   msg = QMessageBox()
                   msg.setIcon(QMessageBox.Warning)
                   msg.setText("El archivo no tiene el formato correcto")

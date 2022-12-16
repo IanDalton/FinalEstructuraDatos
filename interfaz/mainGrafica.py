@@ -59,7 +59,7 @@ class MainWindow(QMainWindow):
             self.provincias = QVBoxLayout()
             self.provincias.addWidget(QPushButton())
 
-            for i in pais.provincias:
+            for i in pais.provincias.values():
                   prov = QPushButton()
                   prov.setText(i.nombre)
                   prov.clicked.connect(lambda checked ,arg = i:self.seleccionar_provincia(arg))
@@ -165,13 +165,13 @@ class MainWindow(QMainWindow):
             if self.preferencias.currentIndex()==1:
                   self.pais.actualizar_conexiones()
             self.limpiar(self.provincias)
-            for i in self.pais.provincias:
+            for provincia in self.pais.provincias.values():
                   prov = QPushButton()
                   if self.preferencias.currentIndex()==1:
-                        prov.setText(f'{i.total_conectados}\{i.total}  {i.nombre}')
+                        prov.setText(f'{provincia.total_conectados}\{provincia.total}  {provincia.nombre}')
                   else:
-                        prov.setText(f'{i.nombre}')
-                  prov.clicked.connect(lambda checked ,arg = i:self.seleccionar_provincia(arg))
+                        prov.setText(f'{provincia.nombre}')
+                  prov.clicked.connect(lambda checked ,arg = provincia:self.seleccionar_provincia(arg))
                   self.provincias.addWidget(prov)
             if not self.provincia:
                   return
@@ -192,10 +192,9 @@ class MainWindow(QMainWindow):
 
       def limpiar(self,sector:QHBoxLayout,limit = 0):
             try:
-                  i=max(range(sector.count()))
-                  while i > limit :
-                        sector.itemAt(i).widget().setParent(None)
-                        i-=1
+                  for i in reversed(range(sector.count())): # Usamos un for en vez de un while ya que for usa mas operaciones en c y por ende es mas rapido.
+                        if i != limit:
+                              sector.itemAt(i).widget().setParent(None)
             except ValueError:
                   pass
             except AttributeError:
@@ -214,7 +213,7 @@ class MainWindow(QMainWindow):
             self.agregarMunicipios.setEnabled(True)
             self.provincia = prov
             
-            for muni in prov.municipios:
+            for muni in prov.municipios.values():
                   lbl = QPushButton()
                   if self.preferencias.currentIndex()==1:
                         lbl.setText(f'{muni.total_conectados}\{muni.total}  {muni.nombre}')
@@ -232,7 +231,7 @@ class MainWindow(QMainWindow):
                   self.agregar_router.setEnabled(False)
             self.agregarDepartamentos.setEnabled(True)
             self.municipio = muni
-            for depto in muni.departamentos:
+            for depto in muni.departamentos.values():
                   
                   lbl = QPushButton()
                   if self.preferencias.currentIndex()==1:
@@ -253,7 +252,7 @@ class MainWindow(QMainWindow):
                   self.limpiar(self.routers)
                   self.router = None
                   
-                  for i,router in enumerate(depto.routers):
+                  for i,router in enumerate(depto.routers.values()):
                         content = QFrame()
                         hbox = QHBoxLayout()
                         content.setLayout(hbox)
@@ -266,7 +265,7 @@ class MainWindow(QMainWindow):
                         btn.clicked.connect(lambda checked,rtr = router,index=i:self.seleccionar_router(rtr,index))
                         hbox.addWidget(btn,2,alignment=Qt.AlignRight)
                         content.setStyleSheet('border:1px solid black;')
-                        if router == self.router and self.router:
+                        if router == self.router and self.router: # Hay un router seleccionado y es el que esta en el index actual
                               sel_router = (router,i)
 
                         self.routers.addWidget(content)
