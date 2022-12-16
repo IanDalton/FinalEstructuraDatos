@@ -20,6 +20,7 @@ class FechaWindow(QMainWindow):
 
             fecha1 = QFormLayout()
             self.datetime_edit1 = QDateTimeEdit(self, calendarPopup=True)
+            self.datetime_edit1.setDateTime(datetime.now())
             self.datetime_edit1.dateTimeChanged.connect(self.update)
             fecha1.addRow('Desde:', self.datetime_edit1)
             fechas.addLayout(fecha1)
@@ -27,6 +28,7 @@ class FechaWindow(QMainWindow):
             fecha2 = QFormLayout()
             self.datetime_edit2 = QDateTimeEdit(self, calendarPopup=True)
             self.datetime_edit2.dateTimeChanged.connect(self.update)
+            self.datetime_edit2.setDateTime(datetime.now())
             fecha2.addRow('Hasta:', self.datetime_edit2)
             fechas.addLayout(fecha2)
 

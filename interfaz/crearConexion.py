@@ -26,7 +26,8 @@ class CrearConexion(QMainWindow):
             self.setFont(font)
 
             modo.setAlignment(Qt.AlignTop)
-            self.opciones = AnimatedToggle()
+            self.opciones = AnimatedToggle(checked_color="#843511",pulse_checked_color="#843511")
+
             self.opciones.toggled.connect(lambda selected:self.seleccionar_dispo() if not self.opciones.isChecked() else self.crear_dispo())
             modo.addWidget(self.opciones)
             creacion = QLabel(text='Crear un nuevo dispositivo')
@@ -47,6 +48,7 @@ class CrearConexion(QMainWindow):
 
 
             self.confirmacion = QPushButton(text="Confirmar datos")
+            self.confirmacion.setEnabled(False)
             layoutPrincipal.addLayout(self.contenido)
             layoutPrincipal.addWidget(self.confirmacion)
             

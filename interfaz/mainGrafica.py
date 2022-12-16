@@ -41,6 +41,7 @@ class MainWindow(QMainWindow):
             analisis_fechas.clicked.connect(self.abrirVentanaFechas_click)
             analisis_fechas.setStyleSheet('QPushButton {background-color: #75AADB; color: black}')
             analisis_fechas.setText('Filtrar por fechas')
+            analisis_fechas.setFont(font_archivos)
 
 
             # Barra de preferencias
@@ -98,7 +99,7 @@ class MainWindow(QMainWindow):
             self.municipios = QVBoxLayout()
             self.agregarMunicipios = QPushButton()
             self.agregarMunicipios.setText('Municipio nuevo')
-            self.agregarMunicipios.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            self.agregarMunicipios.setStyleSheet('QPushButton {background-color: #843511; color: white}') 
             self.agregarMunicipios.setFont(font_archivos)
             self.municipios.addWidget(self.agregarMunicipios)
             self.agregarMunicipios.clicked.connect(lambda clicked:self.abrirVentanaMunicipio_click() if self.provincia else None)
@@ -106,12 +107,12 @@ class MainWindow(QMainWindow):
             self.agregarDepartamentos = QPushButton()
             self.agregarDepartamentos.setText('Departamento nuevo')
             self.departamentos.addWidget(self.agregarDepartamentos)
-            self.agregarDepartamentos.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            self.agregarDepartamentos.setStyleSheet('QPushButton {background-color: #843511; color: white}') 
             self.agregarDepartamentos.setFont(font_archivos)
             self.agregarDepartamentos.clicked.connect(lambda clicked:self.abrirVentanaDepartamento_click() if self.municipio else None)
             self.agregar_router = QPushButton()
             self.agregar_router.setText('Agregar Router')
-            self.agregar_router.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
+            self.agregar_router.setStyleSheet('QPushButton {background-color: #843511; color: white}') 
             self.agregar_router.setFont(font_archivos)
             self.agregar_router.clicked.connect(lambda clicked:self.abrirVentanaRouter_click() if self.departamento else None)
             self.routers = QVBoxLayout()
@@ -148,6 +149,7 @@ class MainWindow(QMainWindow):
 
             self.crear_conexion.setText('Registrar conexion')
             self.crear_conexion.clicked.connect(self.agregar_conexion)
+            
             self.activable = QHBoxLayout()
             settings.addLayout(self.activable)
             settings.addWidget(self.crear_conexion)
@@ -208,6 +210,7 @@ class MainWindow(QMainWindow):
             self.limpiar(self.municipios)
             self.limpiar(self.departamentos)
             self.limpiar(self.routers)
+            self.agregarMunicipios.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
             if default:
                   self.municipio = None
                   self.departamento = None
@@ -238,6 +241,7 @@ class MainWindow(QMainWindow):
                   self.router = None
                   self.departamento = None
                   self.agregar_router.setEnabled(False)
+                  self.agregar_router.setStyleSheet('QPushButton {background-color: #843511; color: white}')
             self.agregarDepartamentos.setEnabled(True)
             self.agregarDepartamentos.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
             self.municipio = muni
