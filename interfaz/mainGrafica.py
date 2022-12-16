@@ -166,7 +166,6 @@ class MainWindow(QMainWindow):
             widgetLayout = QWidget()
             widgetLayout.setLayout(layoutPrincipal)
             self.setCentralWidget(widgetLayout)
-      
 
       def refrescar(self):
             if self.preferencias.currentIndex()==1:
@@ -195,8 +194,6 @@ class MainWindow(QMainWindow):
             self.abrir_ventanaConexion = CrearConexion(self.pais,self.router,self.refrescar)
             self.abrir_ventanaConexion.show()
             
-
-
       def limpiar(self,sector:QHBoxLayout,limit = 0):
             try:
                   for i in reversed(range(sector.count())): # Usamos un for en vez de un while ya que for usa mas operaciones en c y por ende es mas rapido.
@@ -217,6 +214,8 @@ class MainWindow(QMainWindow):
                   self.router = None
                   self.agregar_router.setEnabled(False)
                   self.agregarDepartamentos.setEnabled(False)
+                  self.agregarDepartamentos.setStyleSheet('QPushButton {background-color: #843511; color: white}')
+                  self.agregar_router.setStyleSheet('QPushButton {background-color: #843511; color: white}')
             self.agregarMunicipios.setEnabled(True)
             self.provincia = prov
             if len(prov.municipios)==0:
@@ -240,6 +239,7 @@ class MainWindow(QMainWindow):
                   self.departamento = None
                   self.agregar_router.setEnabled(False)
             self.agregarDepartamentos.setEnabled(True)
+            self.agregarDepartamentos.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
             self.municipio = muni
             if len(muni.departamentos)==0:
                   t = QLabel(f'El municipio {muni.nombre} no tiene departamentos registrados')
@@ -263,6 +263,7 @@ class MainWindow(QMainWindow):
             sel_router = None
             self.departamento = depto
             self.limpiar(self.routers)
+            self.agregar_router.setStyleSheet('QPushButton {background-color: #FCBF49; color: black;}')
             if default:
                   self.router = None
 
